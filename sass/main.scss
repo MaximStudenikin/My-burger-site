@@ -1,0 +1,292 @@
+@import "fonts";
+
+html {
+  font-family: 'ubuntu-regular', sans-serif;
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #221f1f;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap{
+  min-width: 1100px;
+  position: relative;
+}
+
+.container{
+  width: 940px;
+  min-height: 100vh;
+  padding:0 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome__page{
+  position: relative;
+}
+// todo оптимизировать код
+.welcome__page-bg{
+  position: absolute;
+  height: 100vh;
+  width: 99vw;
+  background-color: #000;
+  background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg") ;
+  background-position: top right, center center;
+  background-attachment: fixed, fixed;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  z-index: -1;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 0 0 0;
+}
+
+.nav__list{
+  display: flex;
+  font-family: 'ubuntu-regular', sans-serif;
+  list-style-type: disc;
+  margin: 0 15px 0 185px;
+  text-transform: uppercase;
+
+  .nav__item{
+    color: #fff;
+    margin: 0 16px;
+    &:first-child{
+      list-style-type: none;
+    }
+  }
+  .nav__link{
+    color: #fff;
+  }
+}
+
+.pagination__list{
+  position: fixed;
+  top: 95px;
+  right: 53px;
+  color: #fff;
+  font-size: 26px;
+  z-index: 3;
+
+  .pagination__item{
+    margin: 16px 0;
+  }
+
+  .pagination__link--activ{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .pagination__link-dot{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+  }
+}
+
+.btn{
+  display: block;
+  width: 100px;
+  text-align: center;
+  height: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #e45028;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:hover{
+    background-color: #C1401E;
+  }
+
+}
+
+/* welcome page */
+
+.welcome__page-content{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: auto;
+  top: -95px;
+}
+.section__big-heading{
+  font-family: 'gagalin-regular', sans-serif;;
+  font-size: 65px;
+  color: #f9b43b;
+  margin: 90px 0 0 0;
+  padding: 0;
+  align-self: left;
+
+  span{
+    font-family: 'lifehackmedium', sans-serif;
+    color: #fff;
+  }
+
+}
+
+.section__img{
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  margin: 0 48px 0 0;
+}
+
+.section__img-overfolov{
+  background: url("../img/welcome_page_drops.png") no-repeat;
+  width: 451px;
+  height: 241px;
+  position: absolute;
+  top: 45px;
+  left: -30px;
+}
+
+.scroll__down{
+  position: relative;
+  margin:0 auto;
+  top: -25px;
+}
+
+.scroll__down-link {
+  background: url(../img/welcome_page_arrow_scroll.png) center center no-repeat;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+}
+
+
+/* about as */
+
+//todo оптимизировать код
+.about__as-bg{
+  position: absolute;
+  height: 100vh;
+  width: 99vw;
+  background-color: #fff;
+  background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg") ;
+  background-position: center center;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.about__as-content{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+.about__as-big-heading{
+  font-family: 'gagalin-regular', sans-serif;
+  text-align: center;
+  font-size:72px;
+  margin: 78px 0 87px 0;
+}
+
+.about__as-list{
+  font-family: 'ubuntu-light', sans-serif;
+  font-size: 14px;
+  color: #2f3234;
+  margin: auto 0 300px 0;
+  align-items: center;
+
+.about__as-item{
+  display: flex;
+  flex-direction: column;
+  margin: 0 36px 0 0;
+
+  &:last-child{
+    margin: 0;
+  }
+}
+
+  .about__as-img{
+    margin: 0 auto 35px auto;
+  }
+
+  .about__as-list-heading{
+    font-family: 'lifehackmedium', sans-serif;
+    font-size:24px;
+    text-align: center;
+    color: #2f3234;
+    margin: 0 0 19px 0;
+  }
+
+  .about__as-list-text{
+    width: 280px;
+    opacity: .8;
+  }
+}
+
+.about__as-list{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.reviews__page-bg{
+  position: absolute;
+  height: 100vh;
+  width: 99vw;
+  background-color: #000;
+  z-index: -1;
+}
+
+.reviews__list{
+  display: flex;
+  flex-flow: row wrap;
+  width: 99vw;
+  height: 100vh;
+
+  .reviews__item {
+    flex-basis: 50vh;
+    height: 50vh;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .reviews__img {
+    height: 50vh;
+    max-width: 50vw;
+  }
+}

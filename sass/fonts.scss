@@ -1,0 +1,45 @@
+/* Fonts */
+
+/* font-family: 'ubuntu-light', sans-serif; */
+
+@font-face {
+  font-family: 'ubuntu-light';
+  src: url('../fonts/ubuntu/ubuntu-light/ubuntu-light.eot');
+  src: url('../fonts/ubuntu/ubuntu-light/ubuntu-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ubuntu/ubuntu-light/ubuntu-light.woff') format('woff'),   url('../fonts/ubuntu/ubuntu-light/ubuntu-light.woff2') format('woff2'), url('../fonts/ubuntu/ubuntu-light/ubuntu-light.ttf') format('truetype'),
+url('../fonts/ubuntu/ubuntu-light/ubuntu-light.svg#ubunturegular') format('svg');
+}
+
+/* font-family: 'ubuntu-regular', sans-serif; */
+
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.eot');
+  src: url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.woff') format('woff'),   url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.woff2') format('woff2'), url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.ttf') format('truetype'),
+  url('../fonts/ubuntu/ubuntu-regular/ubuntu-regular.svg#ubunturegular') format('svg');
+}
+
+/* font-family: 'gagalin-regular', sans-serif; */
+
+@font-face {
+  font-family: 'gagalin-regular';
+  src: url('../fonts/gagalin/gagalin-regular.eot');
+  src: url('../fonts/gagalin/gagalin-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/gagalin/gagalin-regular.woff') format('woff'),
+  url('../fonts/gagalin/gagalin-regular.woff2') format('woff2'),
+  url('../fonts/gagalin/gagalin-regular.ttf') format('truetype'),
+  url('../fonts/gagalin/gagalin-regular.svg#gagalinregular') format('svg');
+}
+
+/* font-family: 'lifehackmedium', sans-serif; */
+
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url('../fonts/lifehack/lifehack_medium-webfont.eot');
+  src: url('../fonts/lifehack/lifehack_medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lifehack/lifehack_medium-webfont.woff') format('woff'),   url('../fonts/lifehack/lifehack_medium-webfont.woff2') format('woff2'), url('../fonts/lifehack/lifehack_medium-webfont.ttf') format('truetype'),
+url('../fonts/lifehack/lifehack_medium-webfont.svg#ubunturegular') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
