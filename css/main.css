@@ -281,31 +281,35 @@ a {
 
 /* line 226, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   font-family: 'ubuntu-light', sans-serif;
   font-size: 14px;
   color: #2f3234;
-  margin: auto 0 300px 0;
+  margin: 90px auto;
   align-items: center;
 }
 
-/* line 233, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 236, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-item {
   display: flex;
   flex-direction: column;
   margin: 0 36px 0 0;
+  flex-basis: 280px;
 }
 
-/* line 238, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 241, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-item:last-child {
   margin: 0;
 }
 
-/* line 243, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 246, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-img {
   margin: 0 auto 35px auto;
 }
 
-/* line 247, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 250, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-list-heading {
   font-family: 'lifehackmedium', sans-serif;
   font-size: 24px;
@@ -314,20 +318,12 @@ a {
   margin: 0 0 19px 0;
 }
 
-/* line 255, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 258, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-list-text {
-  width: 280px;
   opacity: .8;
 }
 
-/* line 261, D:/Portfolio/burgers/html/sass/main.scss */
-.about__as-list {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-/* line 267, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 263, D:/Portfolio/burgers/html/sass/main.scss */
 .reviews__page-bg {
   position: absolute;
   height: 100vh;
@@ -336,7 +332,7 @@ a {
   z-index: -1;
 }
 
-/* line 275, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 273, D:/Portfolio/burgers/html/sass/main.scss */
 .reviews__list {
   display: flex;
   flex-flow: row wrap;
@@ -344,18 +340,58 @@ a {
   height: 100vh;
 }
 
-/* line 281, D:/Portfolio/burgers/html/sass/main.scss */
+/* line 279, D:/Portfolio/burgers/html/sass/main.scss */
 .reviews__list .reviews__item {
+  position: relative;
   flex-basis: 50vh;
   height: 50vh;
   flex-grow: 1;
   overflow: hidden;
+  color: #fff;
 }
 
-/* line 288, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__img {
+/* line 287, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item .reviews__img {
   height: 50vh;
   max-width: 50vw;
+  filter: grayscale(100%);
+  z-index: 1;
+}
+
+/* line 294, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item .reviews__text {
+  position: absolute;
+  display: block;
+  font-family: 'ubuntu-light', sans-serif;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  padding: 50px 30px;
+  width: 230px;
+  z-index: 999;
+  left: -9999px;
+  top: 0;
+}
+
+/* line 306, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item .reviews__text span {
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 14px;
+  margin: 0 0 32px 0;
+}
+
+/* line 313, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item:hover .reviews__text {
+  left: 0;
+}
+
+/* line 317, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item .btn.reviews__text--btn {
+  background-color: #2f3234;
+}
+
+/* line 320, D:/Portfolio/burgers/html/sass/main.scss */
+.reviews__list .reviews__item .btn.reviews__text--btn:hover {
+  background-color: #1f2122;
 }
 
 /*# sourceMappingURL=../css/main.map */
