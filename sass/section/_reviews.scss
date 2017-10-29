@@ -6,8 +6,6 @@
   z-index: -1;
 }
 
-
-
 .reviews__list {
   display: flex;
   flex-flow: row wrap;
@@ -53,14 +51,18 @@
       left: 0;
     }
 
-    .btn.reviews__text--btn{
-      background-color: #2f3234;
+  }
 
-      &:hover{
-        background-color: #1f2122;
-      }
+}
+
+.reviews__text--btn{
+
+  .btn{
+    background-color: #2f3234;
+
+    &:hover{
+      background-color: #1f2122;
     }
-
   }
 
 }
