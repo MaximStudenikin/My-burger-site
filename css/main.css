@@ -29,108 +29,45 @@
   font-weight: normal;
 }
 
-/* line 3, D:/Portfolio/burgers/html/sass/main.scss */
-html {
-  font-family: 'ubuntu-regular', sans-serif;
-  font-size: 13px;
-  line-height: 1.42;
-}
-
-/* line 9, D:/Portfolio/burgers/html/sass/main.scss */
 html,
 body {
   height: 100%;
 }
 
-/* line 14, D:/Portfolio/burgers/html/sass/main.scss */
 body {
   margin: 0;
   padding: 0;
-  border: 0;
   color: #221f1f;
+  font-family: 'ubuntu-regular', sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 21, D:/Portfolio/burgers/html/sass/main.scss */
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 27, D:/Portfolio/burgers/html/sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 31, D:/Portfolio/burgers/html/sass/main.scss */
-.wrap {
-  min-width: 1100px;
-  position: relative;
-}
-
-/* line 36, D:/Portfolio/burgers/html/sass/main.scss */
-.container {
-  width: 940px;
-  min-height: 100vh;
-  padding: 0 15px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-/* line 45, D:/Portfolio/burgers/html/sass/main.scss */
-.welcome__page {
-  position: relative;
-}
-
-/* line 49, D:/Portfolio/burgers/html/sass/main.scss */
-.welcome__page-bg {
-  position: absolute;
-  height: 100vh;
-  width: 99vw;
-  background-color: #000;
-  background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg");
-  background-position: top right, center center;
-  background-attachment: fixed, fixed;
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
-  z-index: -1;
-}
-
-/* line 62, D:/Portfolio/burgers/html/sass/main.scss */
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 15px 0 0 0;
-}
-
-/* line 69, D:/Portfolio/burgers/html/sass/main.scss */
-.nav__list {
-  display: flex;
-  font-family: 'ubuntu-regular', sans-serif;
-  list-style-type: disc;
-  margin: 0 15px 0 185px;
-  text-transform: uppercase;
-}
-
-/* line 76, D:/Portfolio/burgers/html/sass/main.scss */
-.nav__list .nav__item {
-  color: #fff;
-  margin: 0 16px;
-}
-
-/* line 79, D:/Portfolio/burgers/html/sass/main.scss */
-.nav__list .nav__item:first-child {
-  list-style-type: none;
-}
-
-/* line 83, D:/Portfolio/burgers/html/sass/main.scss */
-.nav__list .nav__link {
-  color: #fff;
-}
-
-/* line 88, D:/Portfolio/burgers/html/sass/main.scss */
 .pagination__list {
   position: fixed;
   top: 95px;
@@ -140,12 +77,10 @@ a {
   z-index: 3;
 }
 
-/* line 96, D:/Portfolio/burgers/html/sass/main.scss */
 .pagination__list .pagination__item {
   margin: 16px 0;
 }
 
-/* line 100, D:/Portfolio/burgers/html/sass/main.scss */
 .pagination__list .pagination__link--activ {
   position: relative;
   width: 30px;
@@ -156,7 +91,6 @@ a {
   vertical-align: middle;
 }
 
-/* line 110, D:/Portfolio/burgers/html/sass/main.scss */
 .pagination__list .pagination__link-dot {
   position: relative;
   display: inline-block;
@@ -169,181 +103,241 @@ a {
   vertical-align: middle;
 }
 
-/* line 123, D:/Portfolio/burgers/html/sass/main.scss */
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.maincontent {
+  height: 100%;
+  min-height: 650px;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header, section {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.31);
+  min-width: 940px;
+  min-height: 650px;
+}
+
 .btn {
-  display: block;
-  width: 100px;
-  text-align: center;
-  height: 20px;
-  padding: 15px;
-  border-radius: 5px;
+  min-width: 6.125rem;
+  font-size: 0.8125rem;
+  padding: 0.9375rem;
+  border-radius: 0.3125rem;
+  font-weight: 500;
   background-color: #e45028;
   text-transform: uppercase;
   color: #fff;
 }
 
-/* line 134, D:/Portfolio/burgers/html/sass/main.scss */
 .btn:hover {
   background-color: #C1401E;
 }
 
-/* welcome page */
-/* line 142, D:/Portfolio/burgers/html/sass/main.scss */
-.welcome__page-content {
+.welcome__page {
+  background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg");
+  background-position: top right, center center;
+  background-attachment: fixed, fixed;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin: auto;
-  top: -95px;
 }
 
-/* line 150, D:/Portfolio/burgers/html/sass/main.scss */
-.section__big-heading {
-  font-family: 'gagalin-regular', sans-serif;
-  font-size: 65px;
-  color: #f9b43b;
-  margin: 90px 0 0 0;
-  padding: 0;
-  align-self: left;
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0 0 0;
 }
 
-/* line 158, D:/Portfolio/burgers/html/sass/main.scss */
-.section__big-heading span {
-  font-family: 'lifehackmedium', sans-serif;
+.logo--header {
+  margin: 0 auto 0 0;
+}
+
+.nav {
+  margin: 0 0.9375rem 0 0;
+}
+
+.nav__list {
+  display: flex;
+  font-family: 'ubuntu-regular', sans-serif;
+  list-style-type: disc;
+  text-transform: uppercase;
+}
+
+.nav__list .nav__item {
+  color: #fff;
+  margin: 0 1rem;
+}
+
+.nav__list .nav__item:first-child {
+  list-style-type: none;
+}
+
+.nav__list .nav__link {
   color: #fff;
 }
 
-/* line 165, D:/Portfolio/burgers/html/sass/main.scss */
-.section__img {
-  justify-content: center;
+.nav__list .nav__link:hover {
+  text-decoration: underline;
+}
+
+.welcome__page-container {
+  height: 100%;
   display: flex;
-  padding: 0;
-  margin: 0 48px 0 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* line 172, D:/Portfolio/burgers/html/sass/main.scss */
-.section__img-overfolov {
-  background: url("../img/welcome_page_drops.png") no-repeat;
-  width: 451px;
-  height: 241px;
-  position: absolute;
-  top: 45px;
-  left: -30px;
+.welcome__page-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 0 15% 0;
+  flex-grow: 1;
 }
 
-/* line 181, D:/Portfolio/burgers/html/sass/main.scss */
+.section__img, .welcome__page-description {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.section__img {
+  margin: auto 0;
+}
+
+.welcome__page-description {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__big-heading {
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 4.5rem;
+  color: #f9b43b;
+  padding: 60px 0 0 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.section__big-heading span {
+  font-family: 'lifehackmedium', sans-serif;
+  color: #fff;
+  font-size: 4.0625rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .scroll__down {
   position: relative;
   margin: 0 auto;
   top: -25px;
 }
 
-/* line 187, D:/Portfolio/burgers/html/sass/main.scss */
 .scroll__down-link {
-  background: url(../img/welcome_page_arrow_scroll.png) center center no-repeat;
+  background: url("../img/welcome_page_arrow_scroll.png") center center no-repeat;
   height: 25px;
   width: 25px;
   display: inline-block;
 }
 
-/* about as */
-/* line 198, D:/Portfolio/burgers/html/sass/main.scss */
-.about__as-bg {
-  position: absolute;
-  height: 100vh;
-  width: 99vw;
-  background-color: #fff;
+/*.welcome__page{
+  position: relative;
+}*/
+.about__as {
   background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg");
   background-position: center center;
   background-attachment: fixed, fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
-}
-
-/* line 211, D:/Portfolio/burgers/html/sass/main.scss */
-.about__as-content {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  margin: auto;
 }
 
-/* line 219, D:/Portfolio/burgers/html/sass/main.scss */
-.about__as-big-heading {
+.about__as-heading {
   font-family: 'gagalin-regular', sans-serif;
+  color: #2f3234;
   text-align: center;
-  font-size: 72px;
-  margin: 78px 0 87px 0;
+  margin: 3.125rem 0 3.75rem 0;
+  padding: 0;
 }
 
-/* line 226, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list {
   display: flex;
   justify-content: space-between;
   align-content: center;
   font-family: 'ubuntu-light', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #2f3234;
-  margin: 90px auto;
+  margin: 5.625rem auto;
   align-items: center;
 }
 
-/* line 236, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-item {
   display: flex;
   flex-direction: column;
-  margin: 0 36px 0 0;
+  margin: 0 2.25rem 0 0;
   flex-basis: 280px;
 }
 
-/* line 241, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-item:last-child {
   margin: 0;
 }
 
-/* line 246, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-img {
-  margin: 0 auto 35px auto;
+  margin: 0 auto 2.1875rem auto;
 }
 
-/* line 250, D:/Portfolio/burgers/html/sass/main.scss */
 .about__as-list .about__as-list-heading {
   font-family: 'lifehackmedium', sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
   color: #2f3234;
-  margin: 0 0 19px 0;
+  margin: 0 0 1.1875rem 0;
 }
 
-/* line 258, D:/Portfolio/burgers/html/sass/main.scss */
-.about__as-list .about__as-list-text {
+.about__as-list .about__as-text {
   opacity: .8;
 }
 
-/* line 263, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__page-bg {
-  position: absolute;
-  height: 100vh;
-  width: 99vw;
+/*.about__as-content{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}*/
+.reviews {
   background-color: #000;
-  z-index: -1;
+  overflow: hidden;
 }
 
-/* line 273, D:/Portfolio/burgers/html/sass/main.scss */
 .reviews__list {
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: 100vh;
+  flex-wrap: wrap;
 }
 
-/* line 279, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item {
+.reviews__item {
   position: relative;
-  /* flex-basis: 50%; */
   height: 50%;
   width: 25%;
   flex-grow: 1;
@@ -351,16 +345,13 @@ a {
   color: #fff;
 }
 
-/* line 288, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item .reviews__img {
-  height: 100%;
+.reviews__item .reviews__img {
   width: 100%;
+  max-width: 100%;
   filter: grayscale(100%);
-  z-index: 1;
 }
 
-/* line 295, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item .reviews__text {
+.reviews__item .reviews__text {
   position: absolute;
   display: block;
   font-family: 'ubuntu-light', sans-serif;
@@ -373,26 +364,20 @@ a {
   top: 0;
 }
 
-/* line 307, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item .reviews__text span {
+.reviews__item .reviews__text span {
   font-family: 'gagalin-regular', sans-serif;
   font-size: 14px;
   margin: 0 0 32px 0;
 }
 
-/* line 314, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item:hover .reviews__text {
+.reviews__item:hover .reviews__text {
   left: 0;
 }
 
-/* line 318, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item .btn.reviews__text--btn {
+.reviews__text--btn .btn {
   background-color: #2f3234;
 }
 
-/* line 321, D:/Portfolio/burgers/html/sass/main.scss */
-.reviews__list .reviews__item .btn.reviews__text--btn:hover {
+.reviews__text--btn .btn:hover {
   background-color: #1f2122;
 }
-
-/*# sourceMappingURL=../css/main.map */

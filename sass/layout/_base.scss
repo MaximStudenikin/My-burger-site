@@ -1,0 +1,78 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #221f1f;
+  font-family: 'ubuntu-regular', sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.pagination__list{
+  position: fixed;
+  top: 95px;
+  right: 53px;
+  color: #fff;
+  font-size: 26px;
+  z-index: 3;
+
+  .pagination__item{
+    margin: 16px 0;
+  }
+
+  .pagination__link--activ{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  .pagination__link-dot{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+  }
+}

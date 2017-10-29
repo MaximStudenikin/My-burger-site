@@ -1,0 +1,153 @@
+
+// todo оптимизировать код
+.welcome__page{
+  background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg") ;
+  background-position: top right, center center;
+  background-attachment: fixed, fixed;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  //margin: auto;
+  //position: absolute;
+  //height: 100vh;
+  //width: 99vw;
+  //background-color: #000;
+  //top: -95px;
+  //z-index: -1;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(10px) 0 0 0;
+  //padding: 15px 0 0 0;
+}
+
+.logo--header{
+  margin: 0 auto 0 0;
+}
+.nav{
+  margin: 0 rem(15px) 0 0;
+}
+
+.nav__list{
+  display: flex;
+  font-family: 'ubuntu-regular', sans-serif;
+  list-style-type: disc;
+  text-transform: uppercase;
+  //margin: 0 15px 0 185px;
+
+  .nav__item{
+    color: #fff;
+    margin: 0 rem(16px);
+
+    &:first-child{
+      list-style-type: none;
+    }
+  }
+
+  .nav__link{
+    color: #fff;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.welcome__page-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__page-content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 0 15% 0;
+  flex-grow: 1;
+  //position: relative;
+  //justify-content: space-between;
+  //margin: auto;
+  //top: -95px;
+}
+
+.section__img, .welcome__page-description{
+  display: flex;
+  flex-basis: 50%;
+}
+
+.section__img {
+  margin: auto 0;
+}
+
+.welcome__page-description{
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.section__big-heading{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: rem(72px);
+  color: #f9b43b;
+  padding: 60px 0 0 0;
+  margin: 0;
+  font-weight: 400;
+  //flex-direction: column;
+  //justify-content: center;
+  //margin: 90px 0 0 0;
+  //align-self: left;
+
+  span{
+    font-family: 'lifehackmedium', sans-serif;
+    color: #fff;
+    font-size: rem(65px);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+}
+
+.scroll__down{
+  position: relative;
+  margin:0 auto;
+  top: -25px;
+}
+
+.scroll__down-link {
+  background: url("../img/welcome_page_arrow_scroll.png") center center no-repeat;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+}
+
+
+/*.welcome__page{
+  position: relative;
+}*/
+
+//.section__img{
+//  justify-content: center;
+//  //display: flex;
+//  padding: 0;
+//  margin: 0 rem(48px) 0 0;
+//}
+
+//.section__img-overfolov{
+//  background: url("../img/welcome_page_drops.png") no-repeat;
+//  width: 451px;
+//  height: 241px;
+//  position: absolute;
+//  top: 45px;
+//  left: -30px;
+//}
