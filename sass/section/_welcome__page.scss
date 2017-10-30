@@ -1,4 +1,3 @@
-
 // todo оптимизировать код
 .welcome__page{
   background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg") ;
@@ -10,13 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  //margin: auto;
-  //position: absolute;
-  //height: 100vh;
-  //width: 99vw;
-  //background-color: #000;
-  //top: -95px;
-  //z-index: -1;
 }
 
 .header{
@@ -25,7 +17,6 @@
   justify-content: space-between;
   align-items: center;
   padding: rem(10px) 0 0 0;
-  //padding: 15px 0 0 0;
 }
 
 .logo--header{
@@ -40,7 +31,6 @@
   font-family: 'ubuntu-regular', sans-serif;
   list-style-type: disc;
   text-transform: uppercase;
-  //margin: 0 15px 0 185px;
 
   .nav__item{
     color: #fff;
@@ -75,10 +65,6 @@
   align-content: center;
   padding: 0 0 15% 0;
   flex-grow: 1;
-  //position: relative;
-  //justify-content: space-between;
-  //margin: auto;
-  //top: -95px;
 }
 
 .section__img, .welcome__page-description{
@@ -103,19 +89,14 @@
   padding: 60px 0 0 0;
   margin: 0;
   font-weight: 400;
-  //flex-direction: column;
-  //justify-content: center;
-  //margin: 90px 0 0 0;
-  //align-self: left;
+}
 
-  span{
-    font-family: 'lifehackmedium', sans-serif;
-    color: #fff;
-    font-size: rem(65px);
-    font-weight: 500;
-    line-height: 1;
-  }
-
+.description-text {
+  font-family: 'lifehackmedium', sans-serif;
+  color: #fff;
+  font-size: rem(65px);
+  font-weight: 500;
+  line-height: 1;
 }
 
 .scroll__down{
@@ -130,24 +111,3 @@
   width: 25px;
   display: inline-block;
 }
-
-
-/*.welcome__page{
-  position: relative;
-}*/
-
-//.section__img{
-//  justify-content: center;
-//  //display: flex;
-//  padding: 0;
-//  margin: 0 rem(48px) 0 0;
-//}
-
-//.section__img-overfolov{
-//  background: url("../img/welcome_page_drops.png") no-repeat;
-//  width: 451px;
-//  height: 241px;
-//  position: absolute;
-//  top: 45px;
-//  left: -30px;
-//}

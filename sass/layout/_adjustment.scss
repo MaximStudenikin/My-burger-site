@@ -12,8 +12,6 @@
 
 .container{
   width: 940px;
-  //min-height: 100vh;
-  //padding:0 15px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -29,11 +27,7 @@ header, section{
 }
 
 .btn {
-  //display: block;
-  //width: 100px;
   min-width: rem(98px);
-  //text-align: center;
-  //height: 20px;
   font-size: rem(13px);
   padding: rem(15px);
   border-radius: rem(5px);
@@ -41,6 +35,7 @@ header, section{
   background-color: #e45028;
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
 
   &:hover {
     background-color: #C1401E;

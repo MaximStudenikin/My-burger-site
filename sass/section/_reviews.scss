@@ -1,8 +1,6 @@
 .reviews{
-  //position: absolute;
-  //height: 100%;
   background-color: #000;
-  overflow: hidden;
+
 }
 
 .reviews__list {
@@ -12,37 +10,42 @@
 
 .reviews__item {
   position: relative;
-  //flex-basis: 50%;
-  height: 50%;
   width: 25%;
   flex-grow: 1;
   overflow: hidden;
-  //flex: 1 1;
   color: #fff;
 
   .reviews__img {
     width: 100%;
     max-width: 100%;
+    height: 100%;
     filter: grayscale(100%);
-    //z-index: 1;
   }
 
   .reviews__text {
     position: absolute;
     display: block;
     font-family: 'ubuntu-light', sans-serif;
-    font-size: 14px;
+    font-size: rem(19px);
     margin: 0 0 20px 0;
-    padding:50px 30px;
-    width:230px;
-    z-index: 999;
+    padding: 50px 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
     left: -9999px;
     top: 0;
+    background-color: rgba(20,20,20, .70);
+    font-weight: 300;
+    line-height: 1.70;
 
     span {
       font-family: 'gagalin-regular', sans-serif;
-      font-size: 14px;
+      font-size: rem(19px);
       margin: 0 0 32px 0;
+    }
+
+    p {
+      width: 270px;
     }
   }
 
