@@ -16,14 +16,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(10px) 0 0 0;
+  padding: 6px 0 0 0;
 }
 
 .logo--header{
   margin: 0 auto 0 0;
 }
 .nav{
-  margin: 0 rem(15px) 0 0;
+  font-size: 13px;
 }
 
 .nav__list{
@@ -34,7 +34,7 @@
 
   .nav__item{
     color: #fff;
-    margin: 0 rem(16px);
+    margin: 0 18px;
 
     &:first-child{
       list-style-type: none;
@@ -63,7 +63,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0 0 15% 0;
+  padding: 0 0px 49% 30px;
   flex-grow: 1;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .section__img {
-  margin: auto 0;
+  margin: -5.5px auto;
 }
 
 .welcome__page-description{
@@ -84,25 +84,27 @@
 
 .section__big-heading{
   font-family: 'gagalin-regular', sans-serif;
-  font-size: rem(72px);
+  font-size: 72px;
   color: #f9b43b;
-  padding: 60px 0 0 0;
+  padding: 80px 0 0 0;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .description-text {
   font-family: 'lifehackmedium', sans-serif;
   color: #fff;
-  font-size: rem(65px);
+  font-size: 62px;
   font-weight: 500;
   line-height: 1;
 }
 
 .scroll__down{
   position: relative;
-  margin:0 auto;
-  top: -25px;
+  margin: 0 auto;
+  /* top: 0; */
+  bottom: 37%;
 }
 
 .scroll__down-link {
