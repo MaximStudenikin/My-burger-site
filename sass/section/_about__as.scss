@@ -2,28 +2,20 @@
 .about__as{
   background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg") ;
   background-position: center center;
-  background-attachment: fixed, fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-  //position: absolute;
-  //height: 100vh;
-  //width: 99vw;
-  //background-color: #fff;
-  //margin: auto;
 }
 
 .about__as-heading{
   font-family: 'gagalin-regular', sans-serif;
   color: #2f3234;
   text-align: center;
-  margin: rem(50px) 0 rem(60px) 0;
+  margin: 50px 0 60px 0;
   padding: 0;
-  //font-size:72px;
-  //margin: 78px 0 87px 0;
 }
 
 .about__as-list{
@@ -31,16 +23,15 @@
   justify-content: space-between;
   align-content: center;
   font-family: 'ubuntu-light', sans-serif;
-  font-size: rem(14px);
+  font-size: 14px;
   color: #2f3234;
-  margin: rem(90px) auto;
+  margin: 19px auto;
   align-items: center;
 
   .about__as-item{
     display: flex;
     flex-direction: column;
-    margin: 0 rem(36px) 0 0;
-    flex-basis: 280px;
+    flex-basis: 300px;
 
     &:last-child{
       margin: 0;
@@ -48,26 +39,19 @@
   }
 
   .about__as-img{
-    margin: 0 auto rem(35px) auto;
+    margin: 0 auto 35px auto;
   }
 
-  .about__as-list-heading{
+  h3{
     font-family: 'lifehackmedium', sans-serif;
-    font-size: rem(24px);
+    font-size: 24px;
     text-align: center;
     color: #2f3234;
-    margin: 0 0 rem(19px) 0;
+    margin: 0 0 7px 0;
   }
 
-  .about__as-text{
+  p{
     opacity: .8;
   }
-}
 
-/*.about__as-content{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-}*/
+}

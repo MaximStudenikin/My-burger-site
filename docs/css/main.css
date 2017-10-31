@@ -328,6 +328,7 @@ header, section {
   flex-grow: 1;
   overflow: hidden;
   color: #fff;
+  font-size: 0;
 }
 
 .reviews__item .reviews__img {

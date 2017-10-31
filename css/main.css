@@ -1,4 +1,3 @@
-/* Fonts */
 /* font-family: 'ubuntu-light', sans-serif; */
 @font-face {
   font-family: 'ubuntu-light';
@@ -70,37 +69,34 @@ a {
 
 .pagination__list {
   position: fixed;
-  top: 95px;
-  right: 53px;
+  top: 75px;
+  right: 29px;
   color: #fff;
-  font-size: 26px;
-  z-index: 3;
+  z-index: 999;
 }
 
 .pagination__list .pagination__item {
-  margin: 16px 0;
+  margin: 7px 0;
 }
 
 .pagination__list .pagination__link--activ {
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   display: inline-block;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
-  vertical-align: middle;
 }
 
 .pagination__list .pagination__link-dot {
   position: relative;
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   left: 50%;
   background: #fff;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  vertical-align: middle;
+  transform: translate(-50%, -100%);
 }
 
 .wrap {
@@ -131,14 +127,15 @@ header, section {
 }
 
 .btn {
-  min-width: 6.125rem;
+  min-width: 3.125rem;
   font-size: 0.8125rem;
-  padding: 0.9375rem;
+  padding: 0.625rem 0.9375rem;
   border-radius: 0.3125rem;
   font-weight: 500;
   background-color: #e45028;
   text-transform: uppercase;
   color: #fff;
+  text-align: center;
 }
 
 .btn:hover {
@@ -162,7 +159,7 @@ header, section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.625rem 0 0 0;
+  padding: 6px 0 0 0;
 }
 
 .logo--header {
@@ -170,7 +167,7 @@ header, section {
 }
 
 .nav {
-  margin: 0 0.9375rem 0 0;
+  font-size: 13px;
 }
 
 .nav__list {
@@ -182,7 +179,7 @@ header, section {
 
 .nav__list .nav__item {
   color: #fff;
-  margin: 0 1rem;
+  margin: 0 18px;
 }
 
 .nav__list .nav__item:first-child {
@@ -210,7 +207,7 @@ header, section {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0 0 15% 0;
+  padding: 0 0px 49% 30px;
   flex-grow: 1;
 }
 
@@ -220,7 +217,7 @@ header, section {
 }
 
 .section__img {
-  margin: auto 0;
+  margin: -5.5px auto;
 }
 
 .welcome__page-description {
@@ -230,17 +227,18 @@ header, section {
 
 .section__big-heading {
   font-family: 'gagalin-regular', sans-serif;
-  font-size: 4.5rem;
+  font-size: 72px;
   color: #f9b43b;
-  padding: 60px 0 0 0;
+  padding: 80px 0 0 0;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1;
 }
 
-.section__big-heading span {
+.description-text {
   font-family: 'lifehackmedium', sans-serif;
   color: #fff;
-  font-size: 4.0625rem;
+  font-size: 62px;
   font-weight: 500;
   line-height: 1;
 }
@@ -248,7 +246,8 @@ header, section {
 .scroll__down {
   position: relative;
   margin: 0 auto;
-  top: -25px;
+  /* top: 0; */
+  bottom: 37%;
 }
 
 .scroll__down-link {
@@ -258,13 +257,9 @@ header, section {
   display: inline-block;
 }
 
-/*.welcome__page{
-  position: relative;
-}*/
 .about__as {
   background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg");
   background-position: center center;
-  background-attachment: fixed, fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -277,7 +272,7 @@ header, section {
   font-family: 'gagalin-regular', sans-serif;
   color: #2f3234;
   text-align: center;
-  margin: 3.125rem 0 3.75rem 0;
+  margin: 50px 0 60px 0;
   padding: 0;
 }
 
@@ -286,17 +281,16 @@ header, section {
   justify-content: space-between;
   align-content: center;
   font-family: 'ubuntu-light', sans-serif;
-  font-size: 0.875rem;
+  font-size: 14px;
   color: #2f3234;
-  margin: 5.625rem auto;
+  margin: 19px auto;
   align-items: center;
 }
 
 .about__as-list .about__as-item {
   display: flex;
   flex-direction: column;
-  margin: 0 2.25rem 0 0;
-  flex-basis: 280px;
+  flex-basis: 300px;
 }
 
 .about__as-list .about__as-item:last-child {
@@ -304,31 +298,23 @@ header, section {
 }
 
 .about__as-list .about__as-img {
-  margin: 0 auto 2.1875rem auto;
+  margin: 0 auto 35px auto;
 }
 
-.about__as-list .about__as-list-heading {
+.about__as-list h3 {
   font-family: 'lifehackmedium', sans-serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
   color: #2f3234;
-  margin: 0 0 1.1875rem 0;
+  margin: 0 0 7px 0;
 }
 
-.about__as-list .about__as-text {
+.about__as-list p {
   opacity: .8;
 }
 
-/*.about__as-content{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-}*/
 .reviews {
   background-color: #000;
-  overflow: hidden;
 }
 
 .reviews__list {
@@ -338,16 +324,17 @@ header, section {
 
 .reviews__item {
   position: relative;
-  height: 50%;
   width: 25%;
   flex-grow: 1;
   overflow: hidden;
   color: #fff;
+  font-size: 0;
 }
 
 .reviews__item .reviews__img {
   width: 100%;
   max-width: 100%;
+  height: 100%;
   filter: grayscale(100%);
 }
 
@@ -355,19 +342,28 @@ header, section {
   position: absolute;
   display: block;
   font-family: 'ubuntu-light', sans-serif;
-  font-size: 14px;
-  margin: 0 0 20px 0;
-  padding: 50px 30px;
-  width: 230px;
-  z-index: 999;
+  font-size: 13px;
+  padding: 42px 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
   left: -9999px;
   top: 0;
+  background-color: rgba(20, 20, 20, 0.7);
+  font-weight: 300;
+  line-height: 1.9;
 }
 
 .reviews__item .reviews__text span {
   font-family: 'gagalin-regular', sans-serif;
   font-size: 14px;
   margin: 0 0 32px 0;
+}
+
+.reviews__item .reviews__text p {
+  width: 230px;
+  margin: 17px 0;
+  letter-spacing: 0.6px;
 }
 
 .reviews__item:hover .reviews__text {
