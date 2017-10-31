@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="maincontent">
   <aside class="pagination">
     <ul class="pagination__list">
       <li class="pagination__item"><a href="#" class="pagination__link pagination__link--activ"><span class="pagination__link-dot"></span></a></li>
@@ -21,13 +22,14 @@
     </ul>
   </aside>
   <header class="welcome__page">
-    <div class="welcome__page-bg"></div>
-    <div class="container">
-    <nav class="nav_tag">
-      <div class="nav">
-      <a href="#" class="logo">
+    <!--<div class="welcome__page-bg"></div>-->
+    <div class="container welcome__page-container">
+      <div class="header">
+      <a href="#" class="logo logo--header">
         <img src="./img/logo.png" alt="My burger" class="logo__img">
       </a>
+    <nav class="nav_teg">
+      <div class="nav">
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
@@ -36,15 +38,19 @@
         <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
       </ul>
-      <a href="#" class="btn">Заказать</a>
       </div>
     </nav>
+        <a href="#" class="btn">Заказать</a>
+      </div>
       <div class="welcome__page-content">
         <div class="section__img">
-        <div class="section__img-overfolov"></div>
-        <img src="./img/welcome_page_steam.png" alt="alt" class="section__img-big">
+          <img src="./img/drops.png"  alt="alt">
+          <!--<div class="section__img-overfolov"></div>-->
+        <!--<img src="./img/welcome_page_steam.png" alt="alt" class="section__img-big">-->
         </div>
+        <div class="welcome__page-description">
         <h1 class="section__big-heading">Мы делаем <span>натуральные бургеры</span></h1>
+      </div>
       </div>
       <aside class="scroll__down">
         <a href="#" class="scroll__down-link">
@@ -53,103 +59,104 @@
     </div>
   </header>
   <section class="about__as">
-    <div class="about__as-bg"></div>
-    <div class="about__as-content">
+    <!--<div class="about__as-bg"></div>-->
+    <!--<div class="about__as-content">-->
       <div class="container">
-      <h2 class="about__as-big-heading">Мы лучшие</h2>
+      <h2 class="section__big-heading about__as-heading">Мы лучшие</h2>
       <ul class="about__as-list">
         <li class="about__as-item">
           <img src="./img/Icon/meet.png" alt="100% свежее мясо" class="about__as-img">
           <h3 class="about__as-list-heading">100% свежее мясо</h3>
-          <p class="about__as-list-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+          <p class="about__as-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
         </li>
         <li class="about__as-item">
           <img src="./img/Icon/hand.png" alt="Ручная  сборка" class="about__as-img">
           <h3 class="about__as-list-heading">Ручная  сборка</h3>
-          <p class="about__as-list-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+          <p class="about__as-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
         </li>
         <li class="about__as-item">
           <img src="./img/Icon/natural.png" alt="Натуральные
 ингредиенты" class="about__as-img">
           <h3 class="about__as-list-heading">Натуральные
             ингредиенты</h3>
-          <p class="about__as-list-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+          <p class="about__as-text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
         </li>
       </ul>
     </div>
-    </div>
+    <!--</div>-->
   </section>
   <section class="reviews">
     <div class="reviews__page-bg"></div>
     <div class="reviews__content">
-      <ul class="reviews__list">
+      <ul class="reviews__list reviews__text--btn">
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_1.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_2.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_3.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-            <img src="./img/steck/steck_photo_4.jpg" alt="" class="reviews__img">
+            <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
             <div class="reviews__text">
               <span>Константин Спилберг</span>
               <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-              <a class="btn reviews__text--btn" href="#">Подробнее</a>
+              <a class="btn" href="#">Подробнее</a>
             </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_5.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_6.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_7.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
         <li class="reviews__item">
-          <img src="./img/steck/steck_photo_8.jpg" alt="" class="reviews__img">
+          <img src="./img/steck/photo-1438763298591-75a0d42b7265.png" alt="" class="reviews__img">
           <div class="reviews__text">
             <span>Константин Спилберг</span>
             <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-            <a class="btn reviews__text--btn" href="#">Подробнее</a>
+            <a class="btn" href="#">Подробнее</a>
           </div>
         </li>
       </ul>
     </div>
   </section>
+</div>
 </div>
 </body>
 </html>
