@@ -359,10 +359,6 @@ header, section {
   .about__as-list p {
     opacity: .8; }
 
-.team {
-  background: url("../img/team_bg.jpg") no-repeat center;
-  background-size: cover; }
-
 .reviews {
   background-color: #000; }
 
