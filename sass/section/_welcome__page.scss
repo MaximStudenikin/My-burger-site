@@ -62,18 +62,19 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  padding: 0 0px 49% 30px;
+  align-items: center;
   flex-grow: 1;
+  margin: 45px 0 0 26px;
 }
 
 .section__img, .welcome__page-description{
   display: flex;
+  align-self: flex-start;
   flex-basis: 50%;
 }
 
 .section__img {
-  margin: -5.5px auto;
+  margin: -60px 0 0 0px;
 }
 
 .welcome__page-description{
@@ -88,7 +89,7 @@
   color: #f9b43b;
   padding: 80px 0 0 0;
   margin: 0;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1;
 }
 
@@ -96,15 +97,14 @@
   font-family: 'lifehackmedium', sans-serif;
   color: #fff;
   font-size: 62px;
-  font-weight: 500;
-  line-height: 1;
+  margin: 28px 0 0 0;
+  display: inline-block;
 }
 
 .scroll__down{
   position: relative;
   margin: 0 auto;
-  /* top: 0; */
-  bottom: 37%;
+  bottom: 35%;
 }
 
 .scroll__down-link {
