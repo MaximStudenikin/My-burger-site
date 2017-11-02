@@ -4,11 +4,13 @@
 
 //layout
 @import "layout/_fonts";
+@import "layout/_tag__css-reset.scss";
 @import "layout/_base";
 @import "layout/_adjustment";
 
 //section
 @import "section/_welcome__page";
 @import "section/_about__as";
+@import "section/_team";
 @import "section/_reviews";
 
