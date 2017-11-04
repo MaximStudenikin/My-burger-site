@@ -1,0 +1,55 @@
+.menu{
+  position: relative;
+  background: url("../img/menu_bg.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-size:14px;
+  font-family: 'ubuntu-light', sans-serif;
+}
+
+.color-white{
+  @include colo-white;
+}
+
+.menu__accordeon{
+
+}
+
+.horizontal__accordeon{
+  position: absolute;
+  right: 0;
+  display: flex;
+  width: 640px;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+
+  .accordeon__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .accordeon__trigger{
+    position: absolute;
+    //top: 40%;
+    //left: -140%;
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    white-space: nowrap;
+    margin:0;
+    padding:0;
+    transform: rotate(-90deg);
+    background: url("../img/menu_section_1.jpg") no-repeat center;
+  }
+
+  .accordeon__inner-item{
+    background: rgba(40,50,52,.86);
+
+  p{
+    width: 470px;
+  }
+  }
+}

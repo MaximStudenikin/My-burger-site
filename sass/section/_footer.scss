@@ -1,0 +1,44 @@
+.footer{
+  background: #2f3234;
+  height: 60px;
+  color: #ffffff;
+  font-family: 'ubuntu-light', sans-serif;
+  padding: 10px 5px;
+  min-width: 940px;
+}
+
+.footer__address, .footer__social{
+  display: flex;
+  width:50%;
+}
+
+.footer__address {
+  flex-direction: column;
+}
+
+.address{
+  font-style: normal;
+}
+
+.phone{
+  font-family: 'ubuntu-regular', sans-serif;
+  color: $orange;
+  font-weight: bold;
+}
+
+.social__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.social__icon{
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  opacity: .3;
+  &:hover{
+    opacity:1
+  }
+}
