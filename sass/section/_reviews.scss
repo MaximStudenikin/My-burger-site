@@ -21,6 +21,9 @@
   overflow: hidden;
   color: #fff;
   font-size: 0;
+  @include tablets{
+    flex-basis: 50%;
+  }
 
   .reviews__img {
     width: 100%;

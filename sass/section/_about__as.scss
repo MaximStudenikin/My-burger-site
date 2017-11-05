@@ -19,6 +19,9 @@
 }
 
 .about__as-list{
+  @include tablets{
+    padding: 0 10%;
+  }
   display: flex;
   justify-content: space-between;
   align-content: center;
