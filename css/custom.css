@@ -1,0 +1,359 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Exo+2:100,400,400i,500");
+.btn {
+  position: relative;
+  z-index: 5;
+  top: 17.5rem;
+  border-radius: 3px;
+  background-color: #FF6D6D;
+  width: 190px;
+  height: 50px;
+  font-size: 16px;
+  font-family: 'Exo 2', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 14px;
+}
+
+.section-label {
+  color: #FF6D6D !important;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #282828;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Exo 2', sans-serif;
+  color: #282828;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: 'Exo 2', sans-serif;
+  line-height: 2.271;
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Exo 2', sans-serif;
+  color: #282828;
+  line-height: 1.625;
+}
+
+q {
+  font-size: 16px;
+  font-family: 'Exo 2', sans-serif;
+  color: #fff;
+  line-height: 1.625;
+}
+
+q::before {
+  content: '“';
+}
+
+q::after {
+  content: '”';
+}
+
+/* Centered texts in each section
+	* --------------------------------------- */
+#bg_video {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  /* in case the video doesn't fit the whole page*/
+  background-image: url(img/header_video.mp4);
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+  /*cover video background */
+}
+
+/* Layer with position absolute in order to have it over the video
+		* --------------------------------------- */
+#header .slogan {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  left: 0;
+  top: 17.5rem;
+}
+
+.fa-play-circle,
+.fa-pause-circle {
+  font-size: 6em;
+}
+
+.play_btn {
+  display: block;
+  position: relative;
+  z-index: 5;
+  top: 4rem;
+  margin: 0 auto;
+}
+
+.hint {
+  z-index: 5;
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  color: #575757;
+  line-height: 1.857;
+  position: relative;
+  top: 195px;
+}
+
+#section2 {
+  background: #fff !important;
+  text-align: left;
+  color: #282828;
+}
+
+#section2 h2 {
+  width: 498px;
+  margin-bottom: 50px;
+}
+
+#section2 span {
+  color: #FF6D6D;
+}
+
+#section2 p {
+  opacity: 1;
+  width: 680px !important;
+  margin: 20px 0 !important;
+}
+
+#section2 .intro {
+  margin: 180px 220px;
+  position: relative;
+  bottom: 95px;
+}
+
+#section2 .section-label {
+  margin: 5px !important;
+}
+
+#section2 .figur {
+  border-radius: 10px;
+  position: relative;
+  top: 205px;
+  opacity: 0.8;
+}
+
+#section2 .figur::after {
+  content: '';
+  border: 568px solid transparent;
+  border-right: 0px solid #FF6D6D;
+  border-bottom: 520px solid #FF6D6D;
+}
+
+#section3 {
+  background: url(../img/section_bg_photo.png) no-repeat;
+  background-size: cover;
+}
+
+#section3 .section-header {
+  position: relative;
+  bottom: 40px;
+  text-align: center;
+}
+
+#section3 .section-header .section-label {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#section3 .intro {
+  margin: 90px 0;
+}
+
+#section3 h3 {
+  color: #282828;
+}
+
+#section3 p {
+  width: 72%;
+}
+
+#section3 span {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 30px auto;
+}
+
+#section3 .intro-1 {
+  background: url(../img/icon/section_3_iconsprait.png) 3% 0%;
+}
+
+#section3 .intro-2 {
+  background: url(../img/icon/section_3_iconsprait.png) 48% 0%;
+}
+
+#section3 .intro-3 {
+  background: url(../img/icon/section_3_iconsprait.png) 98% 0%;
+}
+
+#section4 {
+  background: #fff !important;
+  text-align: left;
+  color: #282828;
+}
+
+#section4 h2 {
+  width: 498px;
+  margin-bottom: 50px;
+}
+
+#section4 span {
+  color: #FF6D6D;
+}
+
+#section4 p {
+  opacity: 1;
+  width: 680px !important;
+  margin: 20px 0 !important;
+}
+
+#section4 .intro {
+  margin: 180px 220px;
+  position: relative;
+  bottom: 60px;
+}
+
+#section4 .section-label {
+  margin: 5px !important;
+}
+
+#section4 .figur {
+  text-align: center;
+  position: relative;
+  left: 70px;
+  display: block;
+  top: 110px;
+}
+
+#section4 .shape {
+  position: absolute;
+  opacity: 1.0;
+  border-radius: 10px;
+  bottom: 480px;
+}
+
+#section4 .shape::after {
+  content: '';
+  border: 525px solid transparent;
+  border-bottom: 480px solid #FF6D6D;
+  border-left: 480px solid #FF6D6D;
+}
+
+#section5 {
+  background: url(../img/section_bg.png) no-repeat;
+  background-size: cover;
+}
+
+#section5 .review {
+  position: relative;
+  bottom: 60px;
+}
+
+#section5 q {
+  width: 55%;
+  display: block;
+  margin: 0 auto;
+}
+
+#section5 .person-info {
+  margin: 0 0 25px 0;
+}
+
+#section5 .person-info .person-label {
+  color: #FF6D6D;
+  font-size: 16px;
+}
+
+#section5 .person-info .person-img {
+  margin: 0 0 25px 0;
+  border: 2px solid #1d1e24;
+}
+
+#section5 .partners {
+  position: relative;
+  top: 100px;
+}
+
+#section5 .partners .logo {
+  display: inline-block;
+  margin: 0 100px;
+}
+
+#section5 .partners .logo:nth-child(1) {
+  background: url(../img/logos_sprite.png) no-repeat;
+  width: 130px;
+  height: 75px;
+}
+
+#section5 .partners .logo:nth-child(2) {
+  background: url(../img/logos_sprite.png) -155px no-repeat;
+  width: 130px;
+  height: 75px;
+}
+
+#section5 .partners .logo:nth-child(3) {
+  background: url(../img/logos_sprite.png) -290px no-repeat;
+  width: 130px;
+  height: 85px;
+}
+
+#section5 .partners .logo:nth-child(4) {
+  background: url(../img/logos_sprite.png) -425px no-repeat;
+  width: 130px;
+  height: 75px;
+}
+
+#section5 .partners .logo:nth-child(5) {
+  background: url(../img/logos_sprite.png) -565px no-repeat;
+  width: 130px;
+  height: 75px;
+}
+
+#section6 .figur {
+  position: relative;
+  bottom: -70px;
+  width: 65%;
+}
+
+#section6 .section-text {
+  margin: 50px auto;
+}
+
+#section6 .shape {
+  position: absolute;
+  opacity: 1.0;
+  border-radius: 10px;
+  bottom: 480px;
+  z-index: -1;
+  right: 0;
+}
+
+#section6 .shape::after {
+  content: '';
+  border: 525px solid transparent;
+  border-bottom: 480px solid #FF6D6D;
+  border-right: 480px solid #FF6D6D;
+}

@@ -1,0 +1,300 @@
+// import file
+@import "settings";
+
+.btn{
+	position: relative;
+	z-index: 5;
+	top: 17.5rem;
+	@include btn;
+}
+
+.section-label{
+	color: $activ_color !important;
+}
+
+h1 {
+	@include header_heading;
+}
+
+h2 {
+	@include heading_2;
+}
+
+h3 {
+	@include heading_3;
+}
+
+p {
+	@include paragraph;
+}
+
+q{
+	@include quote;
+}
+
+q::before {
+	content: '“';
+}
+q::after {
+	content: '”';
+}
+
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	#bg_video{
+		position: absolute;
+		z-index: 4;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+		background-color: black; /* in case the video doesn't fit the whole page*/
+		background-image: url(img/header_video.mp4);
+		background-position: center center;
+		background-size: contain;
+		object-fit: cover; /*cover video background */
+	}
+
+		/* Layer with position absolute in order to have it over the video
+		* --------------------------------------- */
+		#header .slogan{
+			position: absolute;
+			z-index: 5;
+			width: 100%;
+			left: 0;
+			top: 17.5rem;
+		}
+
+		.fa-play-circle,
+		.fa-pause-circle{
+			font-size: 6em;
+		}
+
+		.play_btn{
+			display: block;
+			position: relative;
+			z-index: 5;
+			top: 4rem;
+			margin: 0 auto;
+		}
+		.hint{
+			z-index: 5;
+			@include Small;
+			position: relative;
+			top: 195px;
+		} 
+
+		#section2 {
+			background: $white !important;
+			text-align: left;
+			color: $text_color;
+			h2{
+				width: 498px;
+				margin-bottom: 50px;
+			} span {
+				color: $activ_color;
+			} p {
+				opacity: 1;
+				width: 680px !important;
+				margin: 20px 0 !important;
+			} .intro {
+				margin: 180px 220px;
+				position: relative;
+				bottom: 95px;
+			} .section-label {
+				margin: 5px !important;
+			}
+
+			.figur {
+				border-radius: 10px;
+				position: relative;
+				top: 205px;
+				opacity: 0.8;
+			}
+
+			.figur::after {
+				content: ''; 
+				border: 568px solid transparent;
+				border-right: 0px solid $activ_color;
+				border-bottom: 520px solid $activ_color;
+			}
+
+		}
+
+		#section3 {
+			background: $section_bg_img_1 no-repeat;
+			background-size: cover;
+			.section-header{
+				position: relative;
+				bottom: 40px;
+				text-align: center;
+				.section-label{
+					width: 50%;
+					margin: 0 auto;
+				}
+			}
+			.intro{
+				margin: 90px 0;
+			}
+			h3 {
+				color: $heading_color;
+			} 
+			p{
+				width: 72%;
+			}
+			span {
+				display: block;
+				width: 80px;
+				height: 80px;
+				margin: 30px auto;
+			} 
+
+			.intro-1{
+				background: $icon_sprait_section_3 3% 0%;
+			} 
+			.intro-2{
+				background: $icon_sprait_section_3 48% 0%;
+			} 
+			.intro-3{
+				background: $icon_sprait_section_3 98% 0%;
+			}
+		}
+
+		#section4 {
+			background: $white !important;
+			text-align: left;
+			color: $text_color;
+			h2{
+				width: 498px;
+				margin-bottom: 50px;
+			} span {
+				color: $activ_color;
+			} p {
+				opacity: 1;
+				width: 680px !important;
+				margin: 20px 0 !important;
+			}
+			.intro {
+				margin: 180px 220px;
+				position: relative;
+				bottom: 60px;
+			} 
+
+			.section-label {
+				margin: 5px !important;
+			}
+
+			.figur {
+				text-align: center;
+				position: relative;
+				left: 70px;
+				display: block;
+				top: 110px;
+			}
+
+			.shape {
+				position: absolute;
+				opacity: 1.0;
+				border-radius: 10px;
+				bottom: 480px;
+			}
+
+			.shape::after {
+				content: ''; 
+				border: 525px solid transparent;
+				border-bottom: 480px solid $activ_color;
+				border-left: 480px solid $activ_color;
+			}
+
+		}
+
+		#section5 {
+			background: $specific_bg_img_2 no-repeat;
+			background-size: cover;
+			.review{
+				position: relative;
+				bottom: 60px;
+			}
+			q {
+				width: 55%;
+				display: block;
+				margin: 0 auto;
+			}
+			.person-info{
+				margin: 0 0 25px 0;
+				.person-label {
+					color: $activ_color;
+					font-size: $paragraph;
+				}
+
+				.person-img{
+					margin: 0 0 25px 0;
+					border: 2px solid #1d1e24;
+				}
+			}
+
+			.partners{
+				position: relative;
+				top: 100px;
+				.logo{
+					display: inline-block;
+					margin: 0 100px;
+				}
+				.logo:nth-child(1){
+					background: $logos_sprite no-repeat;
+					width: 130px;
+					height: 75px;
+				}
+				.logo:nth-child(2){
+					background: $logos_sprite -155px no-repeat;
+					width: 130px;
+					height: 75px;
+				}
+				.logo:nth-child(3){
+					background: $logos_sprite -290px no-repeat;
+					width: 130px;
+					height: 85px;
+				}
+				.logo:nth-child(4){
+					background: $logos_sprite -425px no-repeat;
+					width: 130px;
+					height: 75px;
+				}
+				.logo:nth-child(5){
+					background: $logos_sprite -565px no-repeat;
+					width: 130px;
+					height: 75px;
+				}
+			}
+
+		}
+
+		#section6{
+			.figur {
+				position: relative;
+				bottom: -70px;
+				width: 65%;
+			}
+			.section-text {
+				margin: 50px auto;
+			}
+			.shape {
+				position: absolute;
+				opacity: 1.0;
+				border-radius: 10px;
+				bottom: 480px;
+				z-index: -1;
+				right: 0;
+			}
+
+			.shape::after {
+				content: ''; 
+				border: 525px solid transparent;
+				border-bottom: 480px solid $activ_color;
+				border-right: 480px solid $activ_color;
+			}
+		}
