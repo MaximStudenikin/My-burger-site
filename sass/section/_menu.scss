@@ -10,9 +10,10 @@
 .menu__title{
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 8%;
   @include big-heading;
   @include colo-white;
+  padding: 0;
 }
 
 .horizontal__accordeon {
@@ -21,6 +22,7 @@
   top: 0;
   bottom: 0;
   display: flex;
+  overflow: hidden;
 
   .accordeon__item {
     display: flex;
@@ -30,9 +32,18 @@
   .accordeon__trigger {
     position: relative;
     display: block;
-    width: 100px;
+    width: 76px;
     height: 100%;
-    background: url("../img/menu_section_1.jpg");
+    background: url("../img/menu_section_1.jpg") no-repeat center;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(25, 25, 25, .8);
+    }
   }
 
   .accordeon__trigger-title {
@@ -42,14 +53,15 @@
     transform: rotate(-90deg);
     padding: 0;
     position: absolute;
-    top: 410px;
-    right: -180px;
+    top: 313px;
+    right: -93px;
+    z-index: 1;
+    font-size: 40px;
   }
 
   .accordeon__inner-item {
     width: 0;
-    background: #000;
-    opacity: .7;
+    background: rgba(40,50,52, 0.9);
     height:100%;
     overflow: hidden;
 
@@ -61,7 +73,7 @@
 
   .accordeon__item--activ{
     .accordeon__inner-item{
-      width: 500px;
+      width: 0px;
     }
   }
 

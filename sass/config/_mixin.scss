@@ -17,6 +17,10 @@
   line-height: 1;
 }
 
+@mixin team__section-title{
+  padding:0;
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;

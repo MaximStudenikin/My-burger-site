@@ -92,4 +92,5 @@ header, section{
     padding: 0;
   }
 @include big-heading;
+  @include team__section-title;
 }
