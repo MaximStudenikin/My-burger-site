@@ -92,33 +92,24 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+header, section {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.31);
+  min-height: 650px; }
+
 .wrap {
-  width: 100%;
   position: relative;
+  width: 100%;
   min-height: 100%;
   overflow: hidden; }
 
-.maincontent {
-  height: 100%;
-  min-height: 650px; }
-
-.container-no_center {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row; }
-
 .container {
   position: relative;
+  display: flex;
   width: 95%;
   max-width: 940px;
   margin: 0 auto;
-  display: flex;
   flex-direction: column; }
-
-header, section {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.31);
-  min-height: 650px; }
 
 .btn {
   min-width: 50px;
@@ -286,12 +277,6 @@ header, section {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  @media screen and (max-width: 768px) {
-    .welcome__page-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0 20%; } }
 
 .welcome__page-content {
   width: 100%;
@@ -300,6 +285,12 @@ header, section {
   align-items: center;
   flex-grow: 1;
   margin: 45px 0 0 26px; }
+  @media screen and (max-width: 768px) {
+    .welcome__page-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20%; } }
 
 .section__img, .welcome__page-description {
   display: flex;
@@ -307,7 +298,13 @@ header, section {
   flex-basis: 50%; }
 
 .section__img {
+  display: block;
+  min-width: 100%;
+  width: 100%;
   margin: -60px 0 0 0px; }
+  @media screen and (max-width: 768px) {
+    .section__img {
+      margin: 0; } }
 
 .welcome__page-description {
   flex-direction: column;
@@ -548,7 +545,10 @@ header, section {
     width: 0px; }
 
 .reviews {
-  background-color: #000; }
+  background-color: #000;
+  font-family: 'ubuntu-light', sans-serif;
+  font-size: 13px;
+  color: #fff; }
 
 .reviews__content {
   height: 100%; }
@@ -556,29 +556,20 @@ header, section {
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 .reviews__item {
   position: relative;
   width: 25%;
-  height: 50%;
-  flex-grow: 1;
-  overflow: hidden;
-  color: #fff;
-  font-size: 0; }
+  height: 50%; }
   @media screen and (max-width: 768px) {
     .reviews__item {
-      flex-basis: 50%; } }
-  .reviews__item .reviews__img {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    filter: grayscale(100%); }
+      width: 50%;
+      height: 25%; } }
   .reviews__item .reviews__text {
     position: absolute;
     display: block;
-    font-family: 'ubuntu-light', sans-serif;
-    font-size: 13px;
     padding: 42px 10px;
     width: 100%;
     height: 100%;
@@ -588,6 +579,11 @@ header, section {
     background-color: rgba(20, 20, 20, 0.7);
     font-weight: 300;
     line-height: 1.9; }
+    @media screen and (max-width: 768px) {
+      .reviews__item .reviews__text {
+        font-size: 0.875rem;
+        padding: 0 12%;
+        text-align: center; } }
     .reviews__item .reviews__text span {
       font-family: 'gagalin-regular', sans-serif;
       font-size: 14px;
@@ -598,6 +594,11 @@ header, section {
       letter-spacing: 0.6px; }
   .reviews__item:hover .reviews__text {
     left: 0; }
+
+.reviews__img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%); }
 
 .reviews__text--btn .btn {
   background-color: #2f3234; }
@@ -637,7 +638,7 @@ header, section {
 
 @media screen and (max-width: 768px) {
   .form__section-two {
-    width: 53%; } }
+    width: 50%; } }
 
 .form__block-title {
   color: #fff; }
@@ -704,15 +705,25 @@ header, section {
   height: 60px;
   color: #ffffff;
   font-family: 'ubuntu-light', sans-serif;
-  padding: 10px 5px;
-  min-width: 940px; }
-  @media screen and (max-width: 768px) {
-    .footer {
-      min-width: 768px; } }
+  padding: 10px 5px; }
 
-.footer__address, .footer__social {
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 940px; }
+  @media screen and (max-width: 480px) {
+    .footer__container {
+      flex-direction: column; } }
+
+.footer__left, .footer__right {
   display: flex;
   width: 50%; }
+
+.footer__right {
+  display: flex;
+  justify-content: flex-end; }
 
 .footer__address {
   flex-direction: column; }
@@ -728,8 +739,7 @@ header, section {
 .social__list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 200px; }
+  width: 160px; }
 
 .social__icon {
   width: 20px;

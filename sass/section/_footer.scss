@@ -5,15 +5,28 @@
   color: #ffffff;
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px;
-  min-width: 940px;
-  @include tablets{
-    min-width: 768px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 940px;
+  @include phones {
+    flex-direction: column;
   }
 }
 
-.footer__address, .footer__social{
+
+.footer__left, .footer__right{
   display: flex;
   width:50%;
+}
+
+.footer__right{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer__address {
@@ -33,8 +46,7 @@
 .social__list{
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 200px;
+  width: 160px;
 }
 
 .social__icon{

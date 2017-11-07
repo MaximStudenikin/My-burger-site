@@ -54,12 +54,6 @@
 }
 
 .welcome__page-container{
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 20%;
-  }
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -74,6 +68,12 @@
   align-items: center;
   flex-grow: 1;
   margin: 45px 0 0 26px;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20%;
+  }
 }
 
 .section__img, .welcome__page-description{
@@ -83,8 +83,16 @@
 }
 
 .section__img {
+  display: block;
+  min-width: 100%;
+  width:100%;
   margin: -60px 0 0 0px;
+  @include tablets{
+    margin: 0;
+  }
 }
+
+
 
 .welcome__page-description{
   flex-direction: column;
