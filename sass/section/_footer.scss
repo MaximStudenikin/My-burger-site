@@ -6,6 +6,9 @@
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px;
   min-width: 940px;
+  @include tablets{
+    min-width: 768px;
+  }
 }
 
 .footer__address, .footer__social{

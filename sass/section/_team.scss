@@ -16,8 +16,9 @@
   @include tablets{
     position: static;
     width: 100%;
-    padding: 80px 35%;
+    padding: 80px 25%;
   }
+
   position: absolute;
   background: rgba(40,50,52,.86);
   width:50%;
@@ -27,7 +28,6 @@
 }
 
 .vertical__accordeon{
-
   margin: 70px 0 0 0;
   @include tablets{
     padding: 0 20%;
@@ -59,6 +59,9 @@
   .accordeon__inner-item {
     height: 130px;
     overflow: hidden;
+    @include tablets{
+      height: 300px;
+    }
   }
 
   .accordeon__trigger{
