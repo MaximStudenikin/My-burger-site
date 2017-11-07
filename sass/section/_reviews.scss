@@ -41,7 +41,7 @@
 
     @include tablets {
       font-size: rem(14px);
-      padding: 0 12%;
+      padding: 2% 20%;
       text-align: center;
     }
 
@@ -55,6 +55,9 @@
       width: 230px;
       margin: 17px 0;
       letter-spacing: 0.6px;
+      @include tablets{
+        margin: 10px 0;
+      }
     }
   }
 

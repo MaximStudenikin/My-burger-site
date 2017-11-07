@@ -16,6 +16,10 @@
 
 .oreder__title{
   @include big-heading;
+
+  @include tablets{
+    margin: 30px 0 0 10px;
+  }
 }
 
 .form__section-one, .form__section-two{
@@ -25,12 +29,13 @@
 .form__section-one{
   margin: 0 20px 0 0;
   @include tablets{
+    width: 66%;
     margin: 0;
   }
 }
 .form__section-two{
   @include tablets{
-    width:50%;
+    width:auto;
   }
 }
 

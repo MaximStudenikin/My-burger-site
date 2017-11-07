@@ -16,7 +16,7 @@
   @include tablets{
     position: static;
     width: 100%;
-    padding: 80px 25%;
+    padding: 14.2% 30.6%;
   }
 
   position: absolute;
@@ -30,7 +30,7 @@
 .vertical__accordeon{
   margin: 70px 0 0 0;
   @include tablets{
-    padding: 0 20%;
+    margin: 120px 30px 0 50px;
   }
 
   .accordeon__inner{
@@ -41,6 +41,7 @@
   .accordeon__trigger{
     display: flex;
     align-items: center;
+    color: #fff;
 
     &:before{
       content: "";
@@ -50,6 +51,9 @@
       border-bottom-width: 0;
       border-top-color: #f9b43b;
       margin: 0 9px 0 0;
+      @include tablets{
+        margin: 0 14px 0 -17px;
+      }
     }
 
   }
@@ -60,11 +64,12 @@
     height: 130px;
     overflow: hidden;
     @include tablets{
-      height: 300px;
+      height: 220px;
     }
   }
 
   .accordeon__trigger{
+    color: #f9b43b;
     &:before{
       transform: rotate(-180deg);
     }
@@ -89,14 +94,19 @@
   text-align: left;
   color: #f9b43b;
   display: flex;
+  @include tablets{
+    font-size: 24px;
+    white-space: nowrap;
+    line-height: 1.6;
+  }
 }
 
 .team__img{
   width: 100px;
   margin: 0 20px 0 0;
   @include tablets{
-    width: 65%;
-    margin: auto;
+    width: 48%;
+    margin: 0 50px 0 0;
   }
 
   img{
@@ -115,7 +125,7 @@
 .team__description{
 
   @include tablets{
-    margin: 25px 0 0 0;
+    margin: 14px 0 0 -56px;
     padding: 0 30%;
     text-align: center;
   }
@@ -128,6 +138,9 @@
 p{
   width: 208px;
   margin: 13px 0 0 0;
+  @include tablets{
+    width: 334px;
+  }
 }
 }
 
