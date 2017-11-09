@@ -258,6 +258,9 @@ header, section {
     @media screen and (max-width: 768px) {
       .welcome__page .section__heading {
         left: 3%; } }
+    @media screen and (max-width: 480px) {
+      .welcome__page .section__heading {
+        font-size: 63px; } }
 
 .header {
   width: 100%;
@@ -320,6 +323,10 @@ header, section {
     .section__img {
       margin: 18px 0 0 -13px;
       min-width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .section__img {
+      margin: -13px 0 0 -53px;
+      min-width: 130%; } }
 
 .welcome__page-description {
   flex-direction: column;
@@ -327,6 +334,10 @@ header, section {
   @media screen and (max-width: 768px) {
     .welcome__page-description {
       margin: -47px 0 0 -32px; } }
+  @media screen and (max-width: 480px) {
+    .welcome__page-description {
+      margin: -36px 0 0 -72px;
+      width: 30rem; } }
 
 .description-text {
   font-family: 'lifehackmedium', sans-serif;
@@ -334,6 +345,10 @@ header, section {
   font-size: 62px;
   margin: 28px 0 0 0;
   display: inline-block; }
+  @media screen and (max-width: 480px) {
+    .description-text {
+      font-size: 52px;
+      margin: 14px 0 0 0; } }
 
 .scroll__down {
   position: relative;
@@ -342,6 +357,9 @@ header, section {
   @media screen and (max-width: 768px) {
     .scroll__down {
       bottom: -147px; } }
+  @media screen and (max-width: 480px) {
+    .scroll__down {
+      bottom: -74px; } }
 
 .scroll__down-link {
   background: url("../img/welcome_page_arrow_scroll.png") center center no-repeat;
