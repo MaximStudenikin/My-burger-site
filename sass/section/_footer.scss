@@ -5,6 +5,9 @@
   color: #ffffff;
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px;
+  @include phones{
+    height: 115px;
+  }
 }
 
 .footer__container {
@@ -22,31 +25,52 @@
 .footer__left, .footer__right{
   display: flex;
   width:50%;
+  @include phones{
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .footer__right{
   display: flex;
   justify-content: flex-end;
+  @include phones{
+    justify-content: center;
+    margin: 17px 0 0 0;
+  }
 }
 
 .footer__address {
   flex-direction: column;
+  @include phones{
+    margin: 9px 0 0 0;
+  }
 }
 
 .address{
   font-style: normal;
+  @include phones{
+    font-size: 14px;
+  }
 }
 
 .phone{
   font-family: 'ubuntu-regular', sans-serif;
   color: $orange;
   font-weight: bold;
+  @include phones{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .social__list{
   display: flex;
   justify-content: space-between;
   width: 160px;
+  @include phones{
+    width: 30%;
+  }
 }
 
 .social__icon{

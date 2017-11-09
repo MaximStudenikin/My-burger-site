@@ -9,6 +9,11 @@
     position: absolute;
     top: 10%;
     left: 10%;
+    @include tablets{
+      top: 6%;
+      left: 12%;
+      font-size: 50px;
+    }
   }
 }
 
@@ -31,6 +36,9 @@
     width: 76px;
     height: 100%;
     background: url("../img/menu_section_1.jpg") no-repeat center;
+    @include phones{
+      width: 80px;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -53,6 +61,9 @@
     right: -93px;
     z-index: 1;
     font-size: 40px;
+    @include phones{
+      top: 72%;
+    }
   }
 
   .accordeon__inner-item {
