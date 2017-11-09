@@ -5,15 +5,11 @@
   color: #fff;
   font-size:14px;
   font-family: 'ubuntu-light', sans-serif;
-}
-
-.menu__title{
-  position: absolute;
-  top: 10%;
-  left: 8%;
-  @include big-heading;
-  @include colo-white;
-  padding: 0;
+  .section__heading{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
 }
 
 .horizontal__accordeon {
@@ -47,13 +43,13 @@
   }
 
   .accordeon__trigger-title {
-    @include big-heading;
     @include colo-white;
+    font-family: 'gagalin-regular', sans-serif;
     white-space: nowrap;
     transform: rotate(-90deg);
     padding: 0;
     position: absolute;
-    top: 313px;
+    top: 390px;
     right: -93px;
     z-index: 1;
     font-size: 40px;

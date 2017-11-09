@@ -1,23 +1,12 @@
-//todo оптимизировать код
 .about__as{
-  background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg") ;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: url("../img/about_as_sectiom_bg.jpg") no-repeat center;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-}
-
-.about__as-heading{
-  font-family: 'gagalin-regular', sans-serif;
-  color: #2f3234;
-  text-align: center;
-  margin: 50px 0 60px 0;
-  padding: 0;
-  @include tablets{
-    margin: 111px 0 0 0;
+  .section__heading{
+    margin: 108px 3px 0 0;
   }
 }
 
@@ -31,7 +20,7 @@
   font-family: 'ubuntu-light', sans-serif;
   font-size: 14px;
   color: #2f3234;
-  margin: 19px auto;
+  margin: 79px 10px 0 0;
   align-items: center;
 
   .about__as-item{

@@ -3,19 +3,34 @@
   @return $px / 16px+0rem;
 }
 
+//@mixin welcome__page-container{
+//  //display: flex;
+//  //flex-direction: column;
+//  //justify-content: center;
+//
+//}
+
 @mixin colo-white{
   color: #fff;
 }
 
-@mixin big-heading{
-  font-family: 'gagalin-regular', sans-serif;
-  font-size: 72px;
-  color: #f9b43b;
-  padding: 80px 0 0 0;
-  margin: 0;
-  font-weight: 200;
-  line-height: 1;
+@mixin menu__title{
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  @include colo-white;
+  padding: 0;
 }
+
+//@mixin big-heading{
+//  font-family: 'gagalin-regular', sans-serif;
+//  font-size: 72px;
+//  color: #f9b43b;
+//  padding: 80px 0 0 0;
+//  margin: 0;
+//  font-weight: 200;
+//  line-height: 1;
+//}
 
 @mixin team__section-title{
   padding:0;
