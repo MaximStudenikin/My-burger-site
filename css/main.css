@@ -376,6 +376,10 @@ header, section {
   text-align: center; }
   .about__as .section__heading {
     margin: 108px 3px 0 0; }
+    @media screen and (max-width: 480px) {
+      .about__as .section__heading {
+        margin: 48px 3px 0 0;
+        font-size: 50px; } }
 
 .about__as-list {
   display: flex;
@@ -389,6 +393,10 @@ header, section {
   @media screen and (max-width: 768px) {
     .about__as-list {
       margin: 167px 0 0 0; } }
+  @media screen and (max-width: 480px) {
+    .about__as-list {
+      flex-direction: column;
+      margin: 83px 0 0 0; } }
   .about__as-list .about__as-item {
     display: flex;
     flex-direction: column;
@@ -396,18 +404,37 @@ header, section {
     @media screen and (max-width: 768px) {
       .about__as-list .about__as-item {
         margin: 0 25px 0 0; } }
+    @media screen and (max-width: 480px) {
+      .about__as-list .about__as-item {
+        display: block;
+        flex-basis: 160px; } }
     .about__as-list .about__as-item:last-child {
       margin: 0; }
   .about__as-list .about__as-img {
     margin: 0 auto 35px auto; }
+    @media screen and (max-width: 480px) {
+      .about__as-list .about__as-img {
+        float: left;
+        margin: 0 27px 0 14px; } }
   .about__as-list h3 {
     font-family: 'lifehackmedium', sans-serif;
     font-size: 24px;
     text-align: center;
     color: #2f3234;
     margin: 0 0 7px 0; }
+    @media screen and (max-width: 480px) {
+      .about__as-list h3 {
+        width: 100%;
+        width: 100%;
+        margin: -7px 0 0 -200px;
+        white-space: nowrap; } }
   .about__as-list p {
     opacity: .8; }
+    @media screen and (max-width: 480px) {
+      .about__as-list p {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0 0px 30px; } }
 
 .team {
   position: relative;
@@ -420,6 +447,10 @@ header, section {
     .team {
       display: flex;
       flex-direction: column; } }
+  @media screen and (max-width: 768px) and (max-width: 480px) {
+    .team .section__heading {
+      font-size: 50px;
+      margin: -8px 0 0 -9px; } }
 
 .team__content {
   position: absolute;
@@ -439,6 +470,9 @@ header, section {
   @media screen and (max-width: 768px) {
     .vertical__accordeon {
       margin: 120px 30px 0 50px; } }
+  @media screen and (max-width: 480px) {
+    .vertical__accordeon {
+      margin: 89px 0 0 0; } }
   .vertical__accordeon .accordeon__inner {
     width: 100%;
     margin: 0 0 0 17px; }
