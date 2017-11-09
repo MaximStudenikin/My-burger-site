@@ -1,37 +1,48 @@
-//todo оптимизировать код
 .about__as{
-  background-image: url("../img/about_as_sectiom_texture.png"), url("../img/about_as_sectiom_bg.jpg") ;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: url("../img/about_as_sectiom_bg.jpg") no-repeat center;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
-}
-
-.about__as-heading{
-  font-family: 'gagalin-regular', sans-serif;
-  color: #2f3234;
-  text-align: center;
-  margin: 50px 0 60px 0;
-  padding: 0;
+  .section__heading{
+    margin: 108px 3px 0 0;
+    @include phones{
+      margin: 48px 3px 0 0;
+      font-size: 50px;
+    }
+  }
 }
 
 .about__as-list{
+  @include tablets{
+    margin: 167px 0 0 0;
+  }
   display: flex;
   justify-content: space-between;
   align-content: center;
   font-family: 'ubuntu-light', sans-serif;
   font-size: 14px;
   color: #2f3234;
-  margin: 19px auto;
+  margin: 79px 10px 0 0;
   align-items: center;
+  @include phones{
+    flex-direction: column;
+    margin: 83px 0 0 0;
+  }
 
   .about__as-item{
     display: flex;
     flex-direction: column;
     flex-basis: 300px;
+    @include tablets{
+      margin: 0 25px 0 0;
+    }
+
+    @include phones{
+      display: block;
+      flex-basis: 160px;
+    }
 
     &:last-child{
       margin: 0;
@@ -40,6 +51,10 @@
 
   .about__as-img{
     margin: 0 auto 35px auto;
+    @include phones{
+      float: left;
+      margin: 0 27px 0 14px;
+    }
   }
 
   h3{
@@ -48,10 +63,21 @@
     text-align: center;
     color: #2f3234;
     margin: 0 0 7px 0;
+    @include phones{
+      width: 100%;
+      width: 100%;
+      margin: -7px 0 0 -200px;
+      white-space: nowrap;
+    }
   }
 
   p{
     opacity: .8;
+    @include phones{
+      width: 100%;
+      text-align: left;
+      margin: 10px 0 0px 30px;
+    }
   }
 
 }

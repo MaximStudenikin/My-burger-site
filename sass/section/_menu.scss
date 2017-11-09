@@ -1,0 +1,87 @@
+.menu{
+  position: relative;
+  background: url("../img/menu_bg.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-size:14px;
+  font-family: 'ubuntu-light', sans-serif;
+  .section__heading{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    @include tablets{
+      top: 6%;
+      left: 12%;
+      font-size: 50px;
+    }
+  }
+}
+
+.horizontal__accordeon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+
+  .accordeon__item {
+    display: flex;
+    height:100%;
+  }
+
+  .accordeon__trigger {
+    position: relative;
+    display: block;
+    width: 76px;
+    height: 100%;
+    background: url("../img/menu_section_1.jpg") no-repeat center;
+    @include phones{
+      width: 80px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(25, 25, 25, .8);
+    }
+  }
+
+  .accordeon__trigger-title {
+    @include colo-white;
+    font-family: 'gagalin-regular', sans-serif;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    padding: 0;
+    position: absolute;
+    top: 390px;
+    right: -93px;
+    z-index: 1;
+    font-size: 40px;
+    @include phones{
+      top: 72%;
+    }
+  }
+
+  .accordeon__inner-item {
+    width: 0;
+    background: rgba(40,50,52, 0.9);
+    height:100%;
+    overflow: hidden;
+
+    p {
+      padding:50px;
+      width: 100%;
+    }
+  }
+
+  .accordeon__item--activ{
+    .accordeon__inner-item{
+      width: 0px;
+    }
+  }
+
+}

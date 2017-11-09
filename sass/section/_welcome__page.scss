@@ -1,14 +1,19 @@
-// todo оптимизировать код
 .welcome__page{
-  background-image: url("../img/welcome_page_texture.png"), url("../img/welcome_page_bg.jpg") ;
-  background-position: top right, center center;
-  background-attachment: fixed, fixed;
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
+  background: url("../img/welcome_page_bg.jpg") no-repeat center;
+  background-size: cover;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+  //display: flex;
+  //justify-content: space-between;
+  //align-content: center;
+  .section__heading{
+    padding: 80px 0 0 0;
+    @include tablets{
+      left: 3%;
+    }
+    @include phones{
+      font-size: 63px;
+    }
+  }
 }
 
 .header{
@@ -17,6 +22,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 6px 0 0 0;
+  @include tablets{
+    padding: 10px 13px 0 5px;;
+  }
 }
 
 .logo--header{
@@ -27,13 +35,17 @@
 }
 
 .nav__list{
+  @include tablets{
+    display: none;
+  }
+
   display: flex;
   font-family: 'ubuntu-regular', sans-serif;
   list-style-type: disc;
   text-transform: uppercase;
 
   .nav__item{
-    color: #fff;
+    color: $white;
     margin: 0 18px;
 
     &:first-child{
@@ -50,14 +62,6 @@
   }
 }
 
-.welcome__page-container{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .welcome__page-content{
   width: 100%;
   display: flex;
@@ -65,6 +69,13 @@
   align-items: center;
   flex-grow: 1;
   margin: 45px 0 0 26px;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20%;
+  }
 }
 
 .section__img, .welcome__page-description{
@@ -74,23 +85,30 @@
 }
 
 .section__img {
+  display: block;
+  width:100%;
   margin: -60px 0 0 0px;
+
+  @include tablets{
+    margin: 18px 0 0 -13px;
+    min-width: 100%;
+  }
+  @include phones{
+    margin: -13px 0 0 -53px;
+    min-width: 130%;
+  }
 }
 
 .welcome__page-description{
   flex-direction: column;
   justify-content: center;
-}
-
-
-.section__big-heading{
-  font-family: 'gagalin-regular', sans-serif;
-  font-size: 72px;
-  color: #f9b43b;
-  padding: 80px 0 0 0;
-  margin: 0;
-  font-weight: 200;
-  line-height: 1;
+  @include tablets{
+    margin: -47px 0 0 -32px;
+  }
+  @include phones{
+    margin: -36px 0 0 -72px;
+    width: 30rem;
+  }
 }
 
 .description-text {
@@ -99,12 +117,22 @@
   font-size: 62px;
   margin: 28px 0 0 0;
   display: inline-block;
+  @include phones{
+    font-size: 52px;
+    margin: 14px 0 0 0;
+  }
 }
 
 .scroll__down{
+  @include tablets{
+    bottom: -147px;
+  }
+  @include phones{
+    bottom: -74px;
+  }
   position: relative;
   margin: 0 auto;
-  bottom: 35%;
+  bottom: -80px;
 }
 
 .scroll__down-link {

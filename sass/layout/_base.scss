@@ -1,9 +1,19 @@
+html{
+  @include tablets {
+    font-size: rem(15px);
+  }
+  @include phones {
+    font-size: rem(13px);
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   color: #221f1f;
@@ -26,14 +36,3 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-

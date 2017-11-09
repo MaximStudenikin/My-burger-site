@@ -1,4 +1,155 @@
 .team{
+  position: relative;
   background: url("../img/team_bg.jpg") no-repeat center;
   background-size: cover;
+  color: #fff;
+  font-size:14px;
+  font-family: 'ubuntu-light', sans-serif;
+@include tablets{
+  display: flex;
+  flex-direction: column;
+  .section__heading{
+    @include phones{
+      font-size: 50px;
+      margin: -8px 0 0 -9px;
+    }
+  }
+}
+}
+
+
+.team__content{
+  @include tablets{
+    position: static;
+    width: 100%;
+    padding: 14.2% 30.6%;
+  }
+
+  position: absolute;
+  background: rgba(40,50,52,.86);
+  width:50%;
+  height:100%;
+  right: 0;
+  padding: 80px;
+}
+
+.vertical__accordeon{
+  margin: 70px 0 0 0;
+  @include tablets{
+    margin: 120px 30px 0 50px;
+  }
+  @include phones{
+    margin: 89px 0 0 0;
+  }
+
+  .accordeon__inner{
+    width: 100%;
+    margin: 0 0 0 17px;
+  }
+
+  .accordeon__trigger{
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    &:before{
+      content: "";
+      height: 0;
+      width: 0;
+      border: 5px solid transparent;
+      border-bottom-width: 0;
+      border-top-color: #f9b43b;
+      margin: 0 9px 0 0;
+      @include tablets{
+        margin: 0 14px 0 -17px;
+      }
+    }
+
+  }
+
+.accordeon__item--activ{
+
+  .accordeon__inner-item {
+    height: 130px;
+    overflow: hidden;
+    @include tablets{
+      height: 220px;
+    }
+  }
+
+  .accordeon__trigger{
+    color: #f9b43b;
+    &:before{
+      transform: rotate(-180deg);
+    }
+  }
+
+}
+
+.accordeon__inner-item{
+  display: flex;
+  height: 0;
+  overflow: hidden;
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.accordeon__trigger{
+  font-family:'Gagalin', sans-serif;
+  font-size: 14px;
+  line-height: 2.01;
+  text-align: left;
+  color: #f9b43b;
+  display: flex;
+  @include tablets{
+    font-size: 24px;
+    white-space: nowrap;
+    line-height: 1.6;
+  }
+}
+
+.team__img{
+  width: 100px;
+  margin: 0 20px 0 0;
+  @include tablets{
+    width: 48%;
+    margin: 0 50px 0 0;
+  }
+
+  img{
+    display: block;
+    max-width:100%;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
+.accordeon__inner-item{
+  margin:17px 0 0 0;
+}
+
+
+.team__description{
+
+  @include tablets{
+    margin: 14px 0 0 -56px;
+    text-align: center;
+  }
+
+  span{
+    font-weight: bold;
+    font-size:14px;
+  }
+
+p{
+  width: 208px;
+  margin: 13px 0 0 0;
+  @include tablets{
+    width: 334px;
+  }
+}
+}
+
 }
