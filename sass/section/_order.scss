@@ -127,7 +127,9 @@
 }
 
 .form__buttons{
+  @include phones{
   flex-direction: column;
   display: flex;
   align-items: center;
+  }
 }
