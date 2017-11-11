@@ -3,7 +3,7 @@
   background: url("../img/menu_bg.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
-  font-size:14px;
+  font-size:rem(14px);
   font-family: 'ubuntu-light', sans-serif;
   .section__heading{
     position: absolute;
@@ -12,7 +12,7 @@
     @include tablets{
       top: 6%;
       left: 12%;
-      font-size: 50px;
+      font-size: rem(50px);
     }
   }
 }
@@ -60,7 +60,7 @@
     top: 390px;
     right: -93px;
     z-index: 1;
-    font-size: 40px;
+    font-size: rem(40px);
     @include phones{
       top: 72%;
     }
@@ -73,14 +73,14 @@
     overflow: hidden;
 
     p {
-      padding:50px;
+      padding:rem(50px);
       width: 100%;
     }
   }
 
   .accordeon__item--activ{
     .accordeon__inner-item{
-      width: 0px;
+      width: 0;
     }
   }
 

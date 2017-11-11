@@ -6,17 +6,17 @@
   flex-direction: column;
   text-align: center;
   .section__heading{
-    margin: 108px 3px 0 0;
+    margin: rem(108px) rem(3px) 0 0;
     @include phones{
-      margin: 48px 3px 0 0;
-      font-size: 50px;
+      margin: rem(48px) rem(3px) 0 0;
+      font-size: rem(50px);
     }
   }
 }
 
 .about__as-list{
   @include tablets{
-    margin: 167px 0 0 0;
+    margin: rem(167px) 0 0 0;
   }
   display: flex;
   justify-content: space-between;
@@ -24,11 +24,11 @@
   font-family: 'ubuntu-light', sans-serif;
   font-size: 14px;
   color: #2f3234;
-  margin: 79px 10px 0 0;
+  margin: rem(79px) rem(10px) 0 0;
   align-items: center;
   @include phones{
     flex-direction: column;
-    margin: 83px 0 0 0;
+    margin: rem(83px) 0 0 0;
   }
 
   .about__as-item{
@@ -36,7 +36,7 @@
     flex-direction: column;
     flex-basis: 300px;
     @include tablets{
-      margin: 0 25px 0 0;
+      margin: 0 rem(25px) 0 0;
     }
 
     @include phones{
@@ -50,23 +50,23 @@
   }
 
   .about__as-img{
-    margin: 0 auto 35px auto;
+    margin: 0 auto rem(35px) auto;
     @include phones{
       float: left;
-      margin: 0 27px 0 14px;
+      margin: 0 rem(27px) 0 rem(14px);
     }
   }
 
   h3{
     font-family: 'lifehackmedium', sans-serif;
-    font-size: 24px;
+    font-size: rem(24px);
     text-align: center;
     color: #2f3234;
-    margin: 0 0 7px 0;
+    margin: 0 0 rem(7px) 0;
     @include phones{
       width: 100%;
       width: 100%;
-      margin: -7px 0 0 -200px;
+      margin: rem(-7px) 0 0 rem(-200px);
       white-space: nowrap;
     }
   }
@@ -76,7 +76,7 @@
     @include phones{
       width: 100%;
       text-align: left;
-      margin: 10px 0 0px 30px;
+      margin: rem(10px) 0 0 rem(30px);
     }
   }
 

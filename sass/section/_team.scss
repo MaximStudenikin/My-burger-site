@@ -3,15 +3,15 @@
   background: url("../img/team_bg.jpg") no-repeat center;
   background-size: cover;
   color: #fff;
-  font-size:14px;
+  font-size:rem(14px);
   font-family: 'ubuntu-light', sans-serif;
 @include tablets{
   display: flex;
   flex-direction: column;
   .section__heading{
     @include phones{
-      font-size: 50px;
-      margin: -8px 0 0 -9px;
+      font-size: rem(50px);
+      margin: rem(-8px) 0 0 rem(-9px);
     }
   }
 }
@@ -30,21 +30,21 @@
   width:50%;
   height:100%;
   right: 0;
-  padding: 80px;
+  padding: rem(80px);
 }
 
 .vertical__accordeon{
-  margin: 70px 0 0 0;
+  margin: rem(70px) 0 0 0;
   @include tablets{
     margin: 18% 7%;
   }
   @include phones{
-    margin: 89px 0 0 0;
+    margin: rem(89px) 0 0 0;
   }
 
   .accordeon__inner{
     width: 100%;
-    margin: 0 0 0 17px;
+    margin: 0 0 0 rem(17px);
     @include tablets{
       margin: 0 0 0 -33%;
     }
@@ -62,9 +62,9 @@
       border: 5px solid transparent;
       border-bottom-width: 0;
       border-top-color: #f9b43b;
-      margin: 0 9px 0 0;
+      margin: 0 rem(9px) 0 0;
       @include tablets{
-        margin: 0 14px 0 -17px;
+        margin: 0 rem(14px) 0 rem(-17px);
       }
     }
 
@@ -101,13 +101,13 @@
 
 .accordeon__trigger{
   font-family:'Gagalin', sans-serif;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 2.01;
   text-align: left;
   color: #f9b43b;
   display: flex;
   @include tablets{
-    font-size: 24px;
+    font-size: rem(24px);
     white-space: nowrap;
     line-height: 1.6;
   }
@@ -115,10 +115,10 @@
 
 .team__img{
   width: 100px;
-  margin: 0 20px 0 0;
+  margin: 0 rem(20px) 0 0;
   @include tablets{
     width: 17%;
-    margin: 0 24px 0 0;
+    margin: 0 rem(24px) 0 0;
   }
 
   img{
@@ -130,25 +130,25 @@
 }
 
 .accordeon__inner-item{
-  margin:17px 0 0 0;
+  margin:rem(17px) 0 0 0;
 }
 
 
 .team__description{
 
   @include tablets{
-    margin: 9px 0 0 -20px;;
+    margin: rem(9px) 0 0 rem(-20px);
     text-align: center;
   }
 
   span{
     font-weight: bold;
-    font-size:14px;
+    font-size:rem(14px);
   }
 
 p{
   width: 208px;
-  margin: 13px 0 0 0;
+  margin: rem(13px) 0 0 0;
   @include tablets{
     width: 334px;
   }
