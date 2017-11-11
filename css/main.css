@@ -249,6 +249,52 @@ header, section {
     border-radius: 50%;
     transform: translate(-50%, 20%); }
 
+.full__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 50, 52, 0.99);
+  display: flex;
+  z-index: 998; }
+
+.full__menu-list {
+  margin: 20% auto 0;
+  font-family: 'ubuntu-regular', sans-serif;
+  font-size: 1.5rem; }
+
+.full__menu-link {
+  color: #fff; }
+
+.full__menu-close {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  cursor: pointer; }
+
+.close-icon {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden; }
+  .close-icon:before {
+    transform: rotate(45deg); }
+  .close-icon:after {
+    transform: rotate(-45deg); }
+  .close-icon:after, .close-icon:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    height: 4px;
+    margin-top: -4px; }
+
 .welcome__page {
   background: url("../img/welcome_page_bg.jpg") no-repeat center;
   background-size: cover;
@@ -273,7 +319,8 @@ header, section {
       padding: 0.625rem 0.8125rem 0 0.3125rem; } }
 
 .logo--header {
-  margin: 0 auto 0 0; }
+  margin: 0 auto 0 0;
+  z-index: 999; }
 
 .nav {
   font-size: 0.8125rem; }

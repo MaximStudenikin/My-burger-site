@@ -1,0 +1,53 @@
+.full__menu{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(40,50,52,.99);;
+  display: flex;
+  z-index: 998;
+}
+
+.full__menu-list{
+  margin: 20% auto 0;
+  font-family:'ubuntu-regular', sans-serif;
+  font-size: rem(24px);
+}
+
+.full__menu-link{
+  color: #fff;
+}
+
+.full__menu-close{
+  position: absolute;
+  right:0;
+  top: 18px;
+  cursor: pointer;
+}
+.close-icon{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+  &:after, &:before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    height: 4px;
+    margin-top: -4px;
+  }
+}
