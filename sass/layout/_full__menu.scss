@@ -1,3 +1,11 @@
+.full__menu--hide{
+  display: none;
+}
+
+.full__menu--show{
+  display: flex;
+}
+
 .full__menu{
   position: absolute;
   top:0;
@@ -5,7 +13,6 @@
   right:0;
   bottom:0;
   background: rgba(40,50,52,.99);;
-  display: flex;
   z-index: 998;
 }
 

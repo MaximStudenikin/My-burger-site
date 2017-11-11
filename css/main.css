@@ -249,6 +249,12 @@ header, section {
     border-radius: 50%;
     transform: translate(-50%, 20%); }
 
+.full__menu--hide {
+  display: none; }
+
+.full__menu--show {
+  display: flex; }
+
 .full__menu {
   position: absolute;
   top: 0;
@@ -256,7 +262,6 @@ header, section {
   right: 0;
   bottom: 0;
   background: rgba(40, 50, 52, 0.99);
-  display: flex;
   z-index: 998; }
 
 .full__menu-list {
