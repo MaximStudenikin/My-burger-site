@@ -265,18 +265,43 @@ header, section {
   z-index: 998; }
 
 .full__menu-list {
-  margin: 20% auto 0;
-  font-family: 'ubuntu-regular', sans-serif;
-  font-size: 1.5rem; }
+  margin: 34% auto 0;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .full__menu-list {
+      margin: 39% auto 0; } }
+
+.full__menu-item {
+  margin: 0 0 50px 0; }
+  @media screen and (max-width: 480px) {
+    .full__menu-item {
+      margin: 0 0 53px 0; } }
+  .full__menu-item:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+    margin: -26px 0 0 0; }
+  .full__menu-item:first-child:before {
+    display: none; }
 
 .full__menu-link {
   color: #fff; }
 
 .full__menu-close {
   position: absolute;
-  right: 0;
-  top: 18px;
+  right: -5px;
+  top: 13px;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .full__menu-close {
+      right: -19px; } }
 
 .close-icon {
   position: relative;
@@ -291,14 +316,13 @@ header, section {
   .close-icon:after, .close-icon:before {
     content: '';
     position: absolute;
-    height: 2px;
     width: 50%;
     top: 50%;
     left: 0;
-    margin-top: -1px;
-    background: #fff;
+    background: white;
     height: 4px;
-    margin-top: -4px; }
+    margin-top: -4px;
+    border-radius: 2px; }
 
 .welcome__page {
   background: url("../img/welcome_page_bg.jpg") no-repeat center;

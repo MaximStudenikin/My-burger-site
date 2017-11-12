@@ -1,38 +1,67 @@
-.full__menu--hide{
+.full__menu--hide {
   display: none;
 }
 
-.full__menu--show{
+.full__menu--show {
   display: flex;
 }
 
-.full__menu{
+.full__menu {
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background: rgba(40,50,52,.99);;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 50, 52, .99);;
   z-index: 998;
 }
 
-.full__menu-list{
-  margin: 20% auto 0;
-  font-family:'ubuntu-regular', sans-serif;
+.full__menu-list {
+  margin: 34% auto 0;
   font-size: rem(24px);
+  display: flex;
+  flex-direction: column;
+  @include phones {
+    margin: 39% auto 0;
+  }
 }
 
-.full__menu-link{
+.full__menu-item {
+  margin: 0 0 50px 0;
+@include phones{
+  margin: 0 0 53px 0;
+}
+  &:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    background: #fff;
+    border-radius: 50%;
+    margin: -26px 0 0 0;
+  }
+  &:first-child:before {
+    display: none;
+  }
+}
+
+.full__menu-link {
   color: #fff;
 }
 
-.full__menu-close{
+.full__menu-close {
   position: absolute;
-  right:0;
-  top: 18px;
+  right: -5px;
+  top: 13px;
   cursor: pointer;
+  @include phones{
+    right: -19px;
+  }
 }
-.close-icon{
+
+.close-icon {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -45,16 +74,15 @@
   &:after {
     transform: rotate(-45deg);
   }
-  &:after, &:before{
+  &:after, &:before {
     content: '';
     position: absolute;
-    height: 2px;
     width: 50%;
     top: 50%;
     left: 0;
-    margin-top: -1px;
-    background: #fff;
+    background: white;
     height: 4px;
     margin-top: -4px;
+    border-radius: 2px;
   }
 }
