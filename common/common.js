@@ -1,16 +1,16 @@
-const doc = document,
-      hamburgerMenu = doc.getElementById('hamburger-menu'),
-        fullMenu = doc.getElementById('full__menu')
-        closeMenu = doc.getElementById('full__menu-close');
+( () => {
 
-hamburgerMenu.onclick = () => {
-   let el = fullMenu;
-    el.classList.remove('full__menu--hide');
-    el.classList.add('full__menu--show');
-};
+    const doc = document,
+        hamburgerMenu = doc.getElementById('hamburger-menu'),
+        fullMenu = doc.getElementById('full__menu'),
+        closeFullMenu = doc.getElementById('full__menu-close');
 
-closeMenu.onclick = () => {
-    let el = fullMenu;
-    el.classList.remove('full__menu--show');
-    el.classList.add('full__menu--hide');
-}
+    hamburgerMenu.addEventListener('click', () => {
+        fullMenu.classList.toggle('visuallyhidden');
+    });
+
+    closeFullMenu.addEventListener('click', () => {
+        fullMenu.classList.toggle('visuallyhidden');
+    });
+
+})();
