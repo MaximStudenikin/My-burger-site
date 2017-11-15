@@ -1,0 +1,142 @@
+.slaider {
+  position: relative;
+  background: linear-gradient(180deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+  display: flex;
+  .section__heading {
+    @include colo-white;
+    width: 35%;
+  }
+}
+
+.composition{
+  position: absolute;
+  top: 25%;
+  left: 23%;
+}
+
+.composition__icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  background: #e3502870;
+  display: flex;
+  flex-direction: column;
+}
+
+.composition__img{
+  margin: auto;
+  fill: #fff;
+  width: 45px;
+  height:45px;
+}
+
+.composition__title{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 14px;
+  line-height: 2.01;
+  text-align: center;
+  color: #ffffff;
+  margin: -10px 0 10px 0;
+}
+
+.slaider__teg,
+.slider__row{
+  display: flex;
+}
+
+.slaider__teg{
+  margin:auto;
+}
+
+.slaider__img, .slaider__description{
+  float: left;
+  width:50%;
+}
+
+.slaider__img{
+  text-align: right;
+  img{
+    display: inline-block;
+    margin:0 20px 0 0;
+  }
+}
+
+.slaider__description {
+  p {
+    width: 50%;
+    font-size: 14px;
+    font-family: "ubuntu-regular", sans-serif;
+    line-height: 1.714;
+    color: #fff;
+    margin:20px 0;
+  }
+}
+
+.price {
+  display: inline-block;
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: rem(72px);
+  color: #e35028;
+  margin: 0;
+  font-weight: 200;
+  line-height: 1;
+  .price__small {
+    font-size: rem(30px);
+  }
+}
+
+.btn__slaider{
+  align-self: flex-end;
+  margin: 0 0 0 20px;
+}
+
+.slider__controls{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.slider__controls_next {
+  position: absolute;
+  right: -530px;
+}
+
+.slider__controls_pref {
+  position: absolute;
+  left: -530px;
+}
+
+.slider__controls-arrow_right{
+@include arrow;
+  transform: rotate(45deg);
+}
+
+.slider__controls-arrow_left{
+  @include arrow;
+  transform: rotate(-135deg);
+}
+
+.calories{
+  position: absolute;
+  left: 24%;
+  top: 70%;
+}
+
+.calories__img{
+  width: 60px;
+  height: 60px;
+  fill: #fff;
+}
+
+.calories__title,
+.calories__unit{
+  font-family: 'gagalin-regular',sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+}
+
+.calories__title{
+  margin: -39px 0 15px 0;
+}
