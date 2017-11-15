@@ -1,11 +1,10 @@
 ( () => {
 
     const doc = document,
+        body = doc.body,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
         fullMenu = doc.getElementById('full__menu'),
-        closeFullMenu = doc.getElementById('full__menu-close'),
-        content = doc.getElementsByClassName('section__heading');
-
+        closeFullMenu = doc.getElementById('full__menu-close');
     //one page scroll
 
     const addOnWheel = (elem, handler) => {
@@ -23,21 +22,20 @@
         }
     }
 
-    // let scale = 1;
-    //
-    // addOnWheel (gggf, function(e) {
-    //
-    //     var delta = e.deltaY || e.detail || e.wheelDelta;
-    //
-    //     // отмасштабируем при помощи CSS
-    //     if (delta > 0) scale += 0.05;
-    //     else scale -= 0.05;
-    //
-    //     gggf.style.transform = gggf.style.WebkitTransform = gggf.style.MsTransform = 'scale(' + scale + ')';
-    //
-    //     // отменим прокрутку
-    //     e.preventDefault();
-    // });
+    addOnWheel (body, (event) => {
+
+        let translateY = 0,
+            delta = event.deltaY || event.detail || event.wheelDelta,
+            content = doc.getElementById('maincontent');
+
+        if (delta > 0) {
+            translateY += 100;
+        } else translateY -= 100;
+
+        // content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + ')';
+        content.style.transform = 'translateY(' + translateY + '%' + ')';
+
+    });
 
     //hamburger menu
 
