@@ -24,16 +24,16 @@
 
     addOnWheel (body, (event) => {
 
-        let translateY = 0,
+        let translate3d = 0,
             delta = event.deltaY || event.detail || event.wheelDelta,
             content = doc.getElementById('maincontent');
 
         if (delta > 0) {
-            translateY += 100;
-        } else translateY -= 100;
+            translate3d += 100;
+        } else translate3d -= 100;
 
         // content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + ')';
-        content.style.transform = 'translateY(' + translateY + '%' + ')';
+        content.style.transform = 'translate3d(' + translate3d + '%' + ')';
 
     });
 
@@ -41,6 +41,12 @@
 
     hamburgerMenu.addEventListener('click', () => {
         fullMenu.classList.toggle('visuallyhidden');
+
+        addOnWheel (fullMenu, event => {
+            let delta = event.deltaY || event.detail || event.wheelDelta;
+
+            event.preventDefault();
+        });
     });
 
     closeFullMenu.addEventListener('click', () => {
