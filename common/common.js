@@ -31,12 +31,11 @@
             delta = event.deltaY || event.detail || event.wheelDelta;
 
         if(delta > 0){
-            translateY -= 100.0;
+            translateY -= 100;
         } else {
-            translateY += 100.0;
+            translateY += 100;
         }
         content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + '%' + ')';
-        // content.style.transform = 'translateY(' + translateY + '%' + ')';
     });
 
     //hamburger menu

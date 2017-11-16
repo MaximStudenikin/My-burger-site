@@ -67,8 +67,11 @@ footer {
 
 html,
 body {
+  position: static;
+  display: block;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  transition: opacity 400ms; }
 
 body {
   position: relative;
@@ -106,7 +109,8 @@ header, section {
 
 .maincontent {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  min-height: 650px; }
 
 .container {
   position: relative;
