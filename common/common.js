@@ -1,18 +1,19 @@
 ( () => {
 
-    const doc = document,
+    let doc = document,
         body = doc.body,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
         fullMenu = doc.getElementById('full__menu'),
-        closeFullMenu = doc.getElementById('full__menu-close');
+        closeFullMenu = doc.getElementById('full__menu-close'),
+        content = doc.getElementById('maincontent');
     //one page scroll
 
     const addOnWheel = (elem, handler) => {
         if (elem.addEventListener) {
-            if ('onwheel' in document) {
+            if ('onwheel' in doc) {
                 // IE9+, FF17+
                 elem.addEventListener("wheel", handler);
-            } else if ('onmousewheel' in document) {
+            } else if ('onmousewheel' in doc) {
                 // устаревший вариант события
                 elem.addEventListener("mousewheel", handler);
             } else {
@@ -22,19 +23,20 @@
         }
     }
 
-    addOnWheel (body, (event) => {
+    addOnWheel (content, (event) => {
 
-        let translate3d = 0,
-            delta = event.deltaY || event.detail || event.wheelDelta,
-            content = doc.getElementById('maincontent');
+        content.style.transform = 'translateY(0)';
 
-        if (delta > 0) {
-            translate3d += 100;
-        } else translate3d -= 100;
+        let translateY = 0,
+            delta = event.deltaY || event.detail || event.wheelDelta;
 
-        // content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + ')';
-        content.style.transform = 'translate3d(' + translate3d + '%' + ')';
-
+        if(delta > 0){
+            translateY -= 100.0;
+        } else {
+            translateY += 100.0;
+        }
+        content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + '%' + ')';
+        // content.style.transform = 'translateY(' + translateY + '%' + ')';
     });
 
     //hamburger menu
