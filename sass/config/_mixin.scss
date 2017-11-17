@@ -30,6 +30,10 @@
   padding:0;
 }
 
+@mixin slider__margin{
+  margin: 0 0 rem(30px) 0;
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;

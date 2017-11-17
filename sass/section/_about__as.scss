@@ -55,6 +55,8 @@
   }
 
   .about__as-img{
+    width: 90px;
+    height: 90px;
     margin: 0 auto rem(35px) auto;
     @include phones{
       float: left;

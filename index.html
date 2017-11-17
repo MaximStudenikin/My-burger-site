@@ -11,7 +11,7 @@
 <body>
 <div class="wrap">
   <div class="maincontent" id="maincontent">
-    <section class="welcome__page">
+    <header class="welcome__page">
       <div class="container">
         <div class="header">
           <a href="#" class="logo logo--header">
@@ -45,25 +45,30 @@
           </a>
         </aside>
       </div>
-    </section>
+    </header>
     <section class="about__as">
       <div class="container">
         <h2 class="section__heading section__heading--black">Мы лучшие</h2>
         <ul class="about__as-list">
           <li class="about__as-item">
-            <img src="./img/Icon/meet.png" alt="100% свежее мясо" class="about__as-img">
+            <svg class="about__as-img" style="fill: #e25028">
+              <use xlink:href="./img/Icon/svg/sprite.svg#meat"></use>
+            </svg>
             <h3>100% свежее мясо</h3>
             <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
           </li>
           <li class="about__as-item">
-            <img src="./img/Icon/hand.png" alt="Ручная  сборка" class="about__as-img">
+            <svg class="about__as-img" style="fill: #f8b43a">
+              <use xlink:href="./img/Icon/svg/sprite.svg#hand"></use>
+            </svg>
             <h3>Ручная сборка</h3>
             <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие
               притягивает сюжетный реформаторский пафос.</p>
           </li>
           <li class="about__as-item">
-            <img src="./img/Icon/natural.png" alt="Натуральные
-ингредиенты" class="about__as-img">
+            <svg class="about__as-img" style="fill: #8ac03e">
+              <use xlink:href="./img/Icon/svg/sprite.svg#natural"></use>
+            </svg>
             <h3>Натуральны ингредиенты</h3>
             <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
           </li>
@@ -71,53 +76,103 @@
       </div>
     </section>
     <section class="slaider">
-      <div class="composition">
-        <div class="composition__icon">
-          <svg class="composition__img">
-            <use xlink:href="./img/Icon/svg/sprite.svg#burger"></use>
-          </svg>
-        <div class="composition__title">Состав</div>
-        </div>
-        <ul class="composition-list">
-          <li class="composition-item"></li>
-          <li class="composition-item"></li>
-          <li class="composition-item"></li>
-          <li class="composition-item"></li>
-          <li class="composition-item"></li>
-          <li class="composition-item"></li>
-        </ul>
-      </div>
-      <div class="slaider__teg">
-        <div class="slider__list--wrap">
-          <ul class="slaider__list">
-            <li class="slaider__item">
-              <div class="slaider__img">
-              <img src="./img/slader_img.png" alt="alt">
+      <div class="container">
+        <div class="slaider__teg">
+          <div class="slider__list--wrap">
+            <div class="composition">
+              <div class="composition__icon-btn">
+                <svg class="composition__img-icon">
+                  <use xlink:href="./img/Icon/svg/sprite.svg#burger"></use>
+                </svg>
+                <div class="composition__title">Состав</div>
               </div>
-              <div class="slaider__description">
-                <h2 class="section__heading">Dark BEEF Burger</h2>
-                <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
-                  эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
-                  чураско.</p>
-                <div class="slider__row">
-                <h3 class="price">500<span class="price__small">рублей</span></h3>
-                <a href="#" class="btn btn__slaider">Заказать</a>
+              <ul class="composition__list">
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #e25028">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#beef"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Говядина</div>
+                  <div class="composition__weight">300 г</div>
+                </li>
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #f8b43a">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#buns"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Булочки</div>
+                  <div class="composition__weight">100 г</div>
+                </li>
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #8ac03e">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#salad"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Зелень</div>
+                  <div class="composition__weight">70 г</div>
+                </li>
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #e25028">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#sauce"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Соус</div>
+                  <div class="composition__weight">150 г</div>
+                </li>
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #8ac03e">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#cucumber"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Овощи</div>
+                  <div class="composition__weight">200 г</div>
+                </li>
+                <li class="compositio__item">
+                  <div class="composition__icon">
+                    <svg class="composition__img" style="fill: #f8b43a">
+                      <use xlink:href="./img/Icon/svg/sprite.svg#cheese"></use>
+                    </svg>
+                  </div>
+                  <div class="composition__product">Сыр</div>
+                  <div class="composition__weight">80 г</div>
+                </li>
+              </ul>
+            </div>
+            <ul class="slaider__list">
+              <li class="slaider__item">
+                <div class="slaider__img">
+                  <img src="./img/slader_img.png" alt="alt">
                 </div>
-              </div>
-            </li>
-          </ul>
+                <div class="slaider__description">
+                  <h2 class="section__heading">Dark BEEF Burger</h2>
+                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра
+                    эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                    чураско.</p>
+                  <div class="slider__row">
+                    <h3 class="price">500<span class="price__small">рублей</span></h3>
+                    <a href="#" class="btn btn__slaider">Заказать</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="slider__controls">
+              <a class="slider__controls_next" href="#"><div class="slider__controls-arrow_right"></div></a>
+              <a class="slider__controls_pref" href="#"><div class="slider__controls-arrow_left"></div></a>
+            </div>
+            <div class="calories">
+              <svg class="calories__img">
+                <use xlink:href="./img/Icon/svg/sprite.svg#kkal"></use>
+              </svg>
+              <div class="calories__title">220</div>
+              <div class="calories__unit">ККАЛ</div>
+            </div>
+          </div>
         </div>
-        <div class="slider__controls">
-          <a class="slider__controls_next" href="#"><div class="slider__controls-arrow_right"></div></a>
-          <a class="slider__controls_pref" href="#"><div class="slider__controls-arrow_left"></div></a>
-        </div>
-      </div>
-      <div class="calories">
-        <svg class="calories__img">
-          <use xlink:href="./img/Icon/svg/sprite.svg#kkal"></use>
-        </svg>
-        <div class="calories__title">220</div>
-        <div class="calories__unit">ККАЛ</div>
       </div>
     </section>
     <section class="team">
@@ -420,7 +475,7 @@
       <script type="text/javascript" charset="utf-8" async
               src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A65f6439a6a403467b9ee421ef2adfb92a14d0ca6b2d24aa6b9f486f84cc9046e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;"></script>
     </section>
-    <section class="footer">
+    <footer class="footer">
       <div class="footer__container">
         <div class="footer__left">
           <div class="footer__address">
@@ -457,7 +512,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </footer>
     <aside class="pagination">
       <ul class="pagination__list">
         <li class="pagination__item"><a href="#" class="pagination__link pagination__link--activ"><span

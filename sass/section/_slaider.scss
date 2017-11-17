@@ -4,39 +4,8 @@
   display: flex;
   .section__heading {
     @include colo-white;
-    width: 35%;
+    @include slider__margin;
   }
-}
-
-.composition{
-  position: absolute;
-  top: 25%;
-  left: 23%;
-}
-
-.composition__icon{
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  background: #e3502870;
-  display: flex;
-  flex-direction: column;
-}
-
-.composition__img{
-  margin: auto;
-  fill: #fff;
-  width: 45px;
-  height:45px;
-}
-
-.composition__title{
-  font-family: 'gagalin-regular', sans-serif;
-  font-size: 14px;
-  line-height: 2.01;
-  text-align: center;
-  color: #ffffff;
-  margin: -10px 0 10px 0;
 }
 
 .slaider__teg,
@@ -45,30 +14,126 @@
 }
 
 .slaider__teg{
-  margin:auto;
+  margin: auto;
+  width: 100%;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .slaider__img, .slaider__description{
-  float: left;
   width:50%;
 }
 
 .slaider__img{
-  text-align: right;
+  margin:0 rem(20px) 0 0;
   img{
-    display: inline-block;
-    margin:0 20px 0 0;
+    display: block;
+    width: 100%;
   }
+  @include tablets {
+    align-items: flex-end;
+    width: 60%;
+    height: rem(370px);
+    margin-right: 0;
+    padding: 0 2%;
+  }
+  @include phones {
+    width: 90%;
+  }
+}
+
+.slaider__description{
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.composition{
+  position: absolute;
+  top: -80px;
+  left: 0;
+}
+
+.composition__icon-btn{
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background: #e3502870;
+  display: flex;
+  flex-direction: column;
+}
+
+.composition__img-icon{
+  margin: auto;
+  fill: $white;
+  width: 45px;
+  height:45px;
+}
+
+.composition__icon{
+  margin-right: rem(25px);
+}
+
+.composition__img{
+  width: 40px;
+  height: 40px;
+}
+
+.compositio__item {
+  display: flex;
+  align-items: center;
+}
+
+.composition__product{
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.composition__list{
+  position: absolute;
+  left: 90px;
+  top: 0;
+  transition: opacity .5s;
+  background: $white;
+  width: 270px;
+  border-radius: rem(10px);
+  padding: rem(20px) rem(25px);
+  user-select: none;
+  z-index: 10;
+}
+
+.composition__title{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: $white;
+  margin: -10px 0 10px 0;
+}
+
+.slaider__item{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slider__list--wrap{
+  position: relative;
 }
 
 .slaider__description {
   p {
-    width: 50%;
     font-size: 14px;
     font-family: "ubuntu-regular", sans-serif;
     line-height: 1.714;
-    color: #fff;
-    margin:20px 0;
+    color: $white;
+    @include slider__margin;
   }
 }
 
@@ -91,19 +156,19 @@
 }
 
 .slider__controls{
-  position: absolute;
+  position: relative;
   left: 50%;
-  top: 50%;
+  bottom: 205px;
 }
 
 .slider__controls_next {
   position: absolute;
-  right: -530px;
+  left: 50%;
 }
 
 .slider__controls_pref {
   position: absolute;
-  left: -530px;
+  left: -53%;
 }
 
 .slider__controls-arrow_right{
@@ -118,14 +183,14 @@
 
 .calories{
   position: absolute;
-  left: 24%;
-  top: 70%;
+  left: 0;
+  bottom: -80px;
 }
 
 .calories__img{
   width: 60px;
   height: 60px;
-  fill: #fff;
+  fill: $white;
 }
 
 .calories__title,
@@ -135,6 +200,10 @@
   line-height: 1.2;
   color: #fff;
   text-align: center;
+}
+
+.calories__unit{
+  font-size: 12px;
 }
 
 .calories__title{
