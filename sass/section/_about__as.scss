@@ -5,8 +5,10 @@
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
+
   .section__heading{
     margin: rem(108px) rem(3px) 0 0;
+
     @include phones{
       margin: rem(48px) rem(3px) 0 0;
       font-size: rem(50px);
@@ -18,6 +20,7 @@
   @include tablets{
     margin: rem(167px) 0 0 0;
   }
+
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -26,6 +29,7 @@
   color: #2f3234;
   margin: rem(79px) rem(10px) 0 0;
   align-items: center;
+
   @include phones{
     flex-direction: column;
     margin: rem(83px) 0 0 0;
@@ -35,6 +39,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 300px;
+
     @include tablets{
       margin: 0 rem(25px) 0 0;
     }
@@ -61,8 +66,9 @@
     font-family: 'lifehackmedium', sans-serif;
     font-size: rem(24px);
     text-align: center;
-    color: #2f3234;
+    color: $dark;
     margin: 0 0 rem(7px) 0;
+
     @include phones{
       width: 100%;
       width: 100%;

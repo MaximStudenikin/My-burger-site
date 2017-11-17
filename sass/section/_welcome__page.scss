@@ -2,9 +2,7 @@
   background: url("../img/welcome_page_bg.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  //display: flex;
-  //justify-content: space-between;
-  //align-content: center;
+
   .section__heading{
     padding: rem(80px) 0 0 0;
     @include tablets{
@@ -55,7 +53,7 @@
   }
 
   .nav__link{
-    color: #fff;
+    color: $white;
 
     &:hover{
       text-decoration: underline;
@@ -114,10 +112,11 @@
 
 .description-text {
   font-family: 'lifehackmedium', sans-serif;
-  color: #fff;
+  color: $white;
   font-size: rem(62px);
   margin: 28px 0 0 0;
   display: inline-block;
+
   @include phones{
     font-size: rem(52px);
     margin: rem(14px) 0 0 0;

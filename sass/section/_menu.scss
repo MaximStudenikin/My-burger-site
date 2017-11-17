@@ -2,13 +2,15 @@
   position: relative;
   background: url("../img/menu_bg.jpg") no-repeat center;
   background-size: cover;
-  color: #fff;
+  color: $white;
   font-size:rem(14px);
   font-family: 'ubuntu-light', sans-serif;
+
   .section__heading{
     position: absolute;
     top: 10%;
     left: 10%;
+
     @include tablets{
       top: 6%;
       left: 12%;
@@ -46,7 +48,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(25, 25, 25, .8);
+      background: desaturate($dark,80%);
     }
   }
 
@@ -68,7 +70,7 @@
 
   .accordeon__inner-item {
     width: 0;
-    background: rgba(40,50,52, 0.9);
+    background: desaturate($dark,0.9%);
     height:100%;
     overflow: hidden;
 

@@ -1,6 +1,9 @@
 header, section{
+  position: static;
+  display: block;
+  width:100%;
   height: 100%;
-  background-color: rgba(0,0,0,.31);
+  background: desaturate($dark,31%);
   min-height: 650px;
 }
 
@@ -36,32 +39,33 @@ header, section{
   padding: rem(10px) rem(15px);
   border-radius: 5px;
   font-weight: 500;
-  background-color: #e45028;
+  background-color: $orange;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
 
   &:hover {
-    background-color: #C1401E;
+    background-color: $orange;
   }
 }
 
 .section__heading {
   font-family: 'gagalin-regular', sans-serif;
   font-size: rem(72px);
-  color: #f9b43b;
+  color: $yellow;
   margin: 0;
   font-weight: 200;
   line-height: 1;
+
   @include tablets {
     padding: 0;
   }
 }
 
 .section__heading--white{
-  color: #fff
+  color:$white;
 }
 
 .section__heading--black{
-  color: #000;
+  color: $dark;
 }
