@@ -68,14 +68,13 @@ footer {
 html,
 body {
   width: 100%;
-  height: 100%;
-  transition: opacity 400ms; }
+  height: 100%; }
 
 body {
   position: relative;
   margin: 0;
   padding: 0;
-  color: #221f1f;
+  color: #2f3234;
   font-family: 'ubuntu-regular', sans-serif;
   font-size: 16px;
   line-height: 1.42;
@@ -99,7 +98,7 @@ header, section {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.31);
+  background: #323232;
   min-height: 650px; }
 
 .wrap {
@@ -131,17 +130,17 @@ header, section {
   padding: 0.625rem 0.9375rem;
   border-radius: 5px;
   font-weight: 500;
-  background-color: #e45028;
+  background-color: #e25028;
   text-transform: uppercase;
   color: #fff;
   text-align: center; }
   .btn:hover {
-    background-color: #C1401E; }
+    background-color: #e25028; }
 
 .section__heading {
   font-family: 'gagalin-regular', sans-serif;
   font-size: 4.5rem;
-  color: #f9b43b;
+  color: #f8b43a;
   margin: 0;
   font-weight: 200;
   line-height: 1; }
@@ -153,7 +152,7 @@ header, section {
   color: #fff; }
 
 .section__heading--black {
-  color: #000; }
+  color: #2f3234; }
 
 .hamburger-menu {
   position: fixed;
@@ -191,7 +190,7 @@ header, section {
   width: 100%;
   height: 100%; }
   .hamburger-menu__close-icon use {
-    fill: #c1c2c2;
+    fill: #fff;
     transition: fill .3s; }
 
 .hamburger-menu-link {
@@ -326,7 +325,7 @@ header, section {
     width: 50%;
     top: 50%;
     left: 0;
-    background: white;
+    background: #fff;
     height: 4px;
     margin-top: -4px;
     border-radius: 2px; }
@@ -583,7 +582,7 @@ header, section {
   display: inline-block;
   font-family: 'gagalin-regular', sans-serif;
   font-size: 4.5rem;
-  color: #e35028;
+  color: #e25028;
   margin: 0;
   font-weight: 200;
   line-height: 1; }
@@ -704,7 +703,7 @@ header, section {
       width: 0;
       border: 5px solid transparent;
       border-bottom-width: 0;
-      border-top-color: #f9b43b;
+      border-top-color: #f8b43a;
       margin: 0 0.5625rem 0 0; }
       @media screen and (max-width: 768px) {
         .vertical__accordeon .accordeon__trigger:before {
@@ -716,7 +715,7 @@ header, section {
       .vertical__accordeon .accordeon__item--activ .accordeon__inner-item {
         height: 220px; } }
   .vertical__accordeon .accordeon__item--activ .accordeon__trigger {
-    color: #f9b43b; }
+    color: #f8b43a; }
     .vertical__accordeon .accordeon__item--activ .accordeon__trigger:before {
       transform: rotate(-180deg); }
   .vertical__accordeon .accordeon__inner-item {
@@ -732,7 +731,7 @@ header, section {
     font-size: 0.875rem;
     line-height: 2.01;
     text-align: left;
-    color: #f9b43b;
+    color: #f8b43a;
     display: flex; }
     @media screen and (max-width: 768px) {
       .vertical__accordeon .accordeon__trigger {
@@ -810,7 +809,7 @@ header, section {
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(25, 25, 25, 0.8); }
+      background: #323232; }
   .horizontal__accordeon .accordeon__trigger-title {
     color: #fff;
     font-family: 'gagalin-regular', sans-serif;
@@ -827,7 +826,7 @@ header, section {
         top: 72%; } }
   .horizontal__accordeon .accordeon__inner-item {
     width: 0;
-    background: rgba(40, 50, 52, 0.9);
+    background: #2f3234;
     height: 100%;
     overflow: hidden; }
     .horizontal__accordeon .accordeon__inner-item p {
@@ -837,7 +836,7 @@ header, section {
     width: 0; }
 
 .reviews {
-  background-color: #000;
+  background: #2f3234;
   font-family: 'ubuntu-light', sans-serif;
   font-size: 13px;
   color: #fff; }
@@ -868,7 +867,7 @@ header, section {
     z-index: 100;
     left: -9999px;
     top: 0;
-    background-color: rgba(20, 20, 20, 0.7);
+    background-color: #2f3234;
     font-weight: 300;
     line-height: 1.9; }
     @media screen and (max-width: 768px) {
@@ -898,7 +897,7 @@ header, section {
 .reviews__text--btn .btn {
   background-color: #2f3234; }
   .reviews__text--btn .btn:hover {
-    background-color: #1f2122; }
+    background-color: #2f3234; }
 
 .order {
   background: url("../img/form_bg.jpg") no-repeat center;
@@ -991,7 +990,7 @@ header, section {
   height: 109px;
   border-radius: 5px;
   background-color: #fff;
-  border: solid 1px #d1cfcb; }
+  border: solid 1px #fff; }
 
 .form__submit {
   border: 0;
@@ -1016,7 +1015,7 @@ header, section {
   position: relative;
   background: #2f3234;
   height: 60px;
-  color: #ffffff;
+  color: #fff;
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px; }
   @media screen and (max-width: 480px) {
@@ -1063,7 +1062,7 @@ header, section {
 
 .phone {
   font-family: 'ubuntu-regular', sans-serif;
-  color: #e45028;
+  color: #e25028;
   font-weight: bold; }
   @media screen and (max-width: 480px) {
     .phone {
