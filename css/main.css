@@ -530,6 +530,10 @@ header, section {
 .slider__row {
   display: flex; }
 
+@media screen and (max-width: 768px) {
+  .slider__row {
+    margin: 13px 0 0 0; } }
+
 .slaider__teg {
   margin: auto;
   width: 100%; }
@@ -542,20 +546,18 @@ header, section {
   width: 50%; }
 
 .slaider__img {
-  margin: 0 1.25rem 0 0; }
+  margin: 0 20px 0 0; }
   .slaider__img img {
     display: block;
     width: 100%; }
   @media screen and (max-width: 768px) {
     .slaider__img {
-      align-items: flex-end;
-      width: 60%;
-      height: 23.125rem;
-      margin-right: 0;
-      padding: 0 2%; } }
+      width: 70%;
+      margin: 26% 1% 0 0; } }
   @media screen and (max-width: 480px) {
     .slaider__img {
-      width: 90%; } }
+      width: 90%;
+      margin: 50% -7% 0 0; } }
 
 .slaider__description {
   display: flex;
@@ -563,13 +565,23 @@ header, section {
   @media screen and (max-width: 768px) {
     .slaider__description {
       text-align: center;
-      align-items: center;
+      align-items: center; } }
+  @media screen and (max-width: 480px) {
+    .slaider__description {
       width: 100%; } }
 
 .composition {
   position: absolute;
   top: -80px;
   left: 0; }
+  @media screen and (max-width: 768px) {
+    .composition {
+      top: 14%;
+      left: 18%; } }
+  @media screen and (max-width: 480px) {
+    .composition {
+      top: 14.3%;
+      left: 4%; } }
 
 .composition__icon-btn {
   width: 90px;
@@ -586,7 +598,7 @@ header, section {
   height: 45px; }
 
 .composition__icon {
-  margin-right: 1.5625rem; }
+  margin-right: 25px; }
 
 .composition__img {
   width: 40px;
@@ -607,8 +619,8 @@ header, section {
   transition: opacity .5s;
   background: #fff;
   width: 270px;
-  border-radius: 0.625rem;
-  padding: 1.25rem 1.5625rem;
+  border-radius: 10px;
+  padding: 20px 25px;
   user-select: none;
   z-index: 10; }
 
@@ -623,45 +635,74 @@ header, section {
 .slaider__item {
   position: relative;
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-end;
+  margin: 20px 0;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .slaider__item {
+      flex-direction: column;
+      align-items: center; } }
 
 .slider__list--wrap {
   position: relative; }
 
-.slaider__description p {
-  font-size: 14px;
-  font-family: "ubuntu-regular", sans-serif;
-  line-height: 1.714;
-  color: #fff;
+.slaider__description {
   margin: 0 0 1.875rem 0; }
+  .slaider__description p {
+    font-size: 14px;
+    font-family: "ubuntu-regular", sans-serif;
+    line-height: 1.714;
+    color: #fff; }
+  @media screen and (max-width: 480px) {
+    .slaider__description {
+      width: 100%; } }
 
 .price {
   display: inline-block;
   font-family: 'gagalin-regular', sans-serif;
-  font-size: 4.5rem;
+  font-size: 72px;
   color: #e25028;
   margin: 0;
   font-weight: 200;
   line-height: 1; }
+  @media screen and (max-width: 768px) {
+    .price {
+      font-size: 50px; } }
   .price .price__small {
-    font-size: 1.875rem; }
+    font-size: 30px;
+    padding: 0 0 0 5px; }
+    @media screen and (max-width: 480px) {
+      .price .price__small {
+        font-size: 21px; } }
 
 .btn__slaider {
   align-self: flex-end;
   margin: 0 0 0 20px; }
+  @media screen and (max-width: 768px) {
+    .btn__slaider {
+      margin: 0 0 0 30px; } }
 
 .slider__controls {
   position: relative;
   left: 50%;
   bottom: 205px; }
+  @media screen and (max-width: 768px) {
+    .slider__controls {
+      bottom: 430px; } }
 
 .slider__controls_next {
   position: absolute;
   left: 50%; }
+  @media screen and (max-width: 768px) {
+    .slider__controls_next {
+      left: 43%; } }
 
 .slider__controls_pref {
   position: absolute;
   left: -53%; }
+  @media screen and (max-width: 768px) {
+    .slider__controls_pref {
+      left: -43%; } }
 
 .slider__controls-arrow_right {
   height: 25px;
@@ -689,6 +730,16 @@ header, section {
   position: absolute;
   left: 0;
   bottom: -80px; }
+  @media screen and (max-width: 768px) {
+    .calories {
+      left: auto;
+      bottom: auto;
+      top: 14%;
+      right: 17%; } }
+  @media screen and (max-width: 480px) {
+    .calories {
+      top: 14%;
+      right: -3%; } }
 
 .calories__img {
   width: 60px;
