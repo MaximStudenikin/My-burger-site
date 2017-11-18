@@ -1,4 +1,7 @@
 $( document ).ready( () => {
+
+    //var
+
     let doc = document,
         body = doc.body,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
@@ -7,6 +10,8 @@ $( document ).ready( () => {
         content = doc.getElementById('maincontent');
 
 //one page scroll
+
+    //begin and not ready
     const addOnWheel = (elem, handler) => {
         if (elem.addEventListener) {
             if ('onwheel' in doc) {
@@ -21,30 +26,6 @@ $( document ).ready( () => {
             }
         }
     }
-//
-// let section = doc.getElementsByTagName('section');
-//
-// content.style.transform = 'translateY(0)';
-//
-//
-//
-// addOnWheel (section, event => {
-//
-//
-//
-//
-//     let translateY = 0,
-//         delta = event.deltaY || event.detail || event.wheelDelta;
-//
-//     if(delta > 0){
-//         translateY -= 100;
-//     } else {
-//         translateY += 100;
-//     }
-//     // content.style.transform = content.style.WebkitTransform = content.style.MsTransform = 'translateY(' + translateY + '%' + ')';
-//     content.style.transform = 'translateY(' + translateY + '%' + ')';
-//
-// });
 
 //hamburger menu
 
@@ -57,8 +38,15 @@ $( document ).ready( () => {
             event.preventDefault();
         });
     });
-
     closeFullMenu.addEventListener('click', () => {
         fullMenu.classList.toggle('visuallyhidden');
     });
+
+    //slider
+
+    //vertical accordion
+
+    // horisontal accordion
+
+    //modal window
 });
