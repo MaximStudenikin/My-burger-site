@@ -138,7 +138,7 @@ $(document).ready(() => {
     });
 
     // клик вне аккордеона
-    $(document).on('click', (e) => {
+    $(document).on('click', e => {
         const $this = $(e.currentTarget);
 
         if (!$this.closest('.menu__acco').length) {
@@ -148,11 +148,13 @@ $(document).ready(() => {
 
     //modal window
 
-    $('.btn-reviews').on('click', (e) => {
+    $('.btn-reviews').on('click', e => {
         e.preventDefault();
         const content = $('.reviews__text');
-
-        $.fancybox.open(content);
+        $.fancybox.open(content, {
+            arrows : false,
+            infobar: false
+        });
 
     });
 
