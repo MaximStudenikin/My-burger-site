@@ -115,5 +115,27 @@ $( document ).ready( () => {
         }, () => { accoText.fadeIn() })
     }
 
+    const closeItem = item => {
+        item.removeClass('active');
+
+        item.closest('.horizontal__accordeon').find('.accordeon__inner-item p')
+            .stop(true, true).fadeOut(() => {
+            item.find('.accordeon__inner-item').animate({ 'width': '0px' });
+        });
+    }
+
+    $('.accordeon__trigger').on('click', (e) => {
+        e.preventDefault();
+
+        const $this = $(e.target)
+        const item = $this.closest('.accordeon__item--activ')
+
+        item.hasClass('accordeon__item--activ')
+            ? closeItem(item)
+            : openItem(item)
+
+
+    });
+
     //modal window
 });

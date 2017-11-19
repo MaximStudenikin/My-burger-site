@@ -1117,7 +1117,7 @@ header, section {
         left: 12%;
         font-size: 3.125rem; } }
 
-.horizontal__accordeon {
+.menu__acco {
   position: absolute;
   right: 0;
   top: 0;
@@ -1127,22 +1127,22 @@ header, section {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden; }
-  .horizontal__accordeon .accordeon__item {
+  .menu__acco .menu__item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     height: 100%; }
-  .horizontal__accordeon .accordeon__trigger {
+  .menu__acco .menu__trigger {
     position: relative;
     display: block;
     width: 76px;
     height: 100%;
     background: url("./img/menu_section_1.jpg") no-repeat center; }
     @media screen and (max-width: 480px) {
-      .horizontal__accordeon .accordeon__trigger {
+      .menu__acco .menu__trigger {
         width: 80px; } }
-    .horizontal__accordeon .accordeon__trigger:after {
+    .menu__acco .menu__trigger:after {
       content: '';
       position: absolute;
       top: 0;
@@ -1150,7 +1150,7 @@ header, section {
       left: 0;
       right: 0;
       background: #323232; }
-  .horizontal__accordeon .accordeon__trigger-title {
+  .menu__acco .menu__trigger-title {
     color: #fff;
     font-family: 'gagalin-regular', sans-serif;
     white-space: nowrap;
@@ -1164,18 +1164,18 @@ header, section {
     z-index: 1;
     font-size: 2.5rem; }
     @media screen and (max-width: 480px) {
-      .horizontal__accordeon .accordeon__trigger-title {
+      .menu__acco .menu__trigger-title {
         top: 72%; } }
-  .horizontal__accordeon .accordeon__inner-item {
+  .menu__acco .menu__content {
     width: 0;
     background: #2f3234;
     height: 100%;
     overflow: hidden; }
-    .horizontal__accordeon .accordeon__inner-item p {
+    .menu__acco .menu__content p {
       padding: 3.125rem;
       width: 100%; }
-  .horizontal__accordeon .accordeon__item--activ .accordeon__inner-item {
-    width: 500px; }
+  .menu__acco .menu__item--activ menu__trigger-title {
+    color: #f8b43a; }
 
 .reviews {
   background: #2f3234;
