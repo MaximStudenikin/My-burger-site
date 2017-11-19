@@ -1,4 +1,4 @@
-$( document ).ready( () => {
+$(document).ready(() => {
 
     //var
 
@@ -31,7 +31,7 @@ $( document ).ready( () => {
     hamburgerMenu.addEventListener('click', () => {
         fullMenu.classList.toggle('visuallyhidden');
 
-        addOnWheel (fullMenu, event => {
+        addOnWheel(fullMenu, event => {
             let delta = event.deltaY || event.detail || event.wheelDelta;
 
             event.preventDefault();
@@ -74,7 +74,7 @@ $( document ).ready( () => {
 
                 item.removeClass('accordeon__item--activ');
                 content.css({
-                    'height' : 0
+                    'height': 0
                 })
             }
 
@@ -94,22 +94,25 @@ $( document ).ready( () => {
 
     const openItem = item => {
         const container = $('.menu__acco'),
-         items = $('.menu__item', container),
-         accoText = $('.menu__content-text', container),
-         activeItem = items.filter('.menu__item--activ'),
-         activeContent = activeItem.find('.menu__acco-content'),                   content = item.find('.menu__acco-content'),
-         reqWidth = calcWidth();
+            items = $('.menu__item', container),
+            accoText = $('.menu__content-text', container),
+            activeItem = items.filter('.menu__item--activ'),
+            activeContent = activeItem.find('.menu__acco-content'),
+            content = item.find('.menu__acco-content'),
+            reqWidth = calcWidth();
 
 
         items.removeClass('.menu__item--activ');
         item.addClass('.menu__item--activ');
 
         accoText.hide();
-        activeContent.animate({ 'width': '0px' });
+        activeContent.animate({'width': '0px'});
 
         content.animate({
             'width': reqWidth + 'px'
-        }, () => { accoText.fadeIn() })
+        }, () => {
+            accoText.fadeIn()
+        })
     }
 
     const closeItem = item => {
@@ -117,7 +120,7 @@ $( document ).ready( () => {
 
         item.closest('.menu__acco').find('.menu__content-text')
             .stop(true, true).fadeOut(() => {
-            item.find('.menu__acco-content').animate({ 'width': '0px' });
+            item.find('.menu__acco-content').animate({'width': '0px'});
         });
     }
 
@@ -125,7 +128,7 @@ $( document ).ready( () => {
         e.preventDefault();
 
         const $this = $(e.currentTarget),
-                item = $this.closest('.menu__item--activ');
+            item = $this.closest('.menu__item--activ');
 
         item.hasClass('.menu__item--activ')
             ? closeItem(item)
@@ -144,4 +147,13 @@ $( document ).ready( () => {
     });
 
     //modal window
+
+    $('.btn-reviews').on('click', (e) => {
+        e.preventDefault();
+        const content = $('.reviews__text');
+
+        $.fancybox.open(content);
+
+    });
+
 });
