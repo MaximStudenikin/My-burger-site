@@ -37,7 +37,7 @@
     display: block;
     width: 76px;
     height: 100%;
-    background: url("../img/menu_section_1.jpg") no-repeat center;
+    background: url("./img/menu_section_1.jpg") no-repeat center;
     @include phones{
       width: 80px;
     }
@@ -82,7 +82,7 @@
 
   .accordeon__item--activ{
     .accordeon__inner-item{
-      width: 0;
+      width: 500px;
     }
   }
 

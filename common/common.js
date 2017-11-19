@@ -47,15 +47,15 @@ $( document ).ready( () => {
     //vertical accordion
 
     $(function () {
-        $('.accordeon__trigger').on('click', e => {
-            e.preventDefault()
+        $('.accordeon__trigger').on('click', event => {
+            event.preventDefault();
 
-            const $this = $(e.currentTarget);
+            const $this = $(event.currentTarget);
             const container = $this.closest('.vertical__accordeon');
             const item = $this.closest('.accordeon__item');
             const items = $('.accordeon__item', container);
             const content = $('.accordeon__inner', item);
-            const otherContent = $('.team__description', container);
+            const otherContent = $('.accordeon__inner', container);
             const textBlock = $('.team__description p', item);
             const reqHeight = textBlock.outerHeight();
 
@@ -83,6 +83,37 @@ $( document ).ready( () => {
     });
 
     // horisontal accordion
+
+    const calcWidth = () => {
+        const wWidth = $(window).width();
+        const titles = $('.accordeon__trigger-title');
+        const titleWidth = titles.width();
+        const reqWidth = wWidth - (titleWidth * titles.length);
+        console.log(titles.length);
+
+        return (reqWidth > 550) ? 550 : reqWidth
+    }
+
+    const openItem = item => {
+        const container = $('.horizontal__accordeon')
+        const items = $('.accordeon__item', container)
+        const accoText = $('.accordeon__inner-item p', container)
+        const activeItem = items.filter('.accordeon__item--activ')
+        const activeContent = activeItem.find('.accordeon__inner-item')
+        const content = item.find('.accordeon__inner-item')
+        const reqWidth = calculateWidth()
+
+        items.removeClass('.accordeon__item--activ');
+        item.addClass('.accordeon__item--activ');
+
+        accoText.hide();
+        activeContent.animate({ 'width': '0px' });
+        console.log(reqWidth);
+
+        content.animate({
+            'width': reqWidth + 'px'
+        }, () => { accoText.fadeIn() })
+    }
 
     //modal window
 });
