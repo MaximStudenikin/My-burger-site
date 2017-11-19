@@ -3,7 +3,6 @@ $( document ).ready( () => {
     //var
 
     let doc = document,
-        body = doc.body,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
         fullMenu = doc.getElementById('full__menu'),
         closeFullMenu = doc.getElementById('full__menu-close'),
@@ -86,29 +85,27 @@ $( document ).ready( () => {
 
     const calcWidth = () => {
         const wWidth = $(window).width();
-        const titles = $('.accordeon__trigger-title');
+        const titles = $('.menu__trigger');
         const titleWidth = titles.width();
         const reqWidth = wWidth - (titleWidth * titles.length);
-        console.log(titles.length);
 
         return (reqWidth > 550) ? 550 : reqWidth
     }
 
     const openItem = item => {
-        const container = $('.horizontal__accordeon')
-        const items = $('.accordeon__item', container)
-        const accoText = $('.accordeon__inner-item p', container)
-        const activeItem = items.filter('.accordeon__item--activ')
-        const activeContent = activeItem.find('.accordeon__inner-item')
-        const content = item.find('.accordeon__inner-item')
-        const reqWidth = calculateWidth()
+        const container = $('.menu__acco'),
+         items = $('.menu__item', container),
+         accoText = $('.menu__content-text', container),
+         activeItem = items.filter('.menu__item--activ'),
+         activeContent = activeItem.find('.menu__acco-content'),                   content = item.find('.menu__acco-content'),
+         reqWidth = calcWidth();
 
-        items.removeClass('.accordeon__item--activ');
-        item.addClass('.accordeon__item--activ');
+
+        items.removeClass('.menu__item--activ');
+        item.addClass('.menu__item--activ');
 
         accoText.hide();
         activeContent.animate({ 'width': '0px' });
-        console.log(reqWidth);
 
         content.animate({
             'width': reqWidth + 'px'
@@ -116,25 +113,34 @@ $( document ).ready( () => {
     }
 
     const closeItem = item => {
-        item.removeClass('active');
+        item.removeClass('.menu__item--activ');
 
-        item.closest('.horizontal__accordeon').find('.accordeon__inner-item p')
+        item.closest('.menu__acco').find('.menu__content-text')
             .stop(true, true).fadeOut(() => {
-            item.find('.accordeon__inner-item').animate({ 'width': '0px' });
+            item.find('.menu__acco-content').animate({ 'width': '0px' });
         });
     }
 
-    $('.accordeon__trigger').on('click', (e) => {
+    $('.menu__trigger').on('click', (e) => {
         e.preventDefault();
 
-        const $this = $(e.target)
-        const item = $this.closest('.accordeon__item--activ')
+        const $this = $(e.currentTarget),
+                item = $this.closest('.menu__item--activ');
 
-        item.hasClass('accordeon__item--activ')
+        item.hasClass('.menu__item--activ')
             ? closeItem(item)
             : openItem(item)
 
 
+    });
+
+    // клик вне аккордеона
+    $(document).on('click', (e) => {
+        const $this = $(e.currentTarget);
+
+        if (!$this.closest('.menu__acco').length) {
+            closeItem($('.menu__item'))
+        }
     });
 
     //modal window

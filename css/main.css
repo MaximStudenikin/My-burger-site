@@ -1138,7 +1138,7 @@ header, section {
     display: block;
     width: 76px;
     height: 100%;
-    background: url("./img/menu_section_1.jpg") no-repeat center; }
+    background: url("../img/menu_section_1.jpg") no-repeat center; }
     @media screen and (max-width: 480px) {
       .menu__acco .menu__trigger {
         width: 80px; } }
@@ -1166,15 +1166,15 @@ header, section {
     @media screen and (max-width: 480px) {
       .menu__acco .menu__trigger-title {
         top: 72%; } }
-  .menu__acco .menu__content {
+  .menu__acco .menu__acco-content {
     width: 0;
     background: #2f3234;
     height: 100%;
     overflow: hidden; }
-    .menu__acco .menu__content p {
+    .menu__acco .menu__acco-content p {
       padding: 3.125rem;
       width: 100%; }
-  .menu__acco .menu__item--activ menu__trigger-title {
+  .menu__acco .menu__item--activ .menu__trigger-title {
     color: #f8b43a; }
 
 .reviews {
