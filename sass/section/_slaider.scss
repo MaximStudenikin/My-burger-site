@@ -1,0 +1,263 @@
+.slaider {
+  position: relative;
+  background: linear-gradient(180deg, rgb(249, 180, 59) 0%, rgb(235, 140, 56) 48%, rgb(249, 180, 59) 74%);
+  display: flex;
+  .section__heading {
+    @include colo-white;
+    @include slider__margin;
+  }
+}
+
+.slaider__teg,
+.slider__row{
+  display: flex;
+}
+
+.slider__row{
+  @include tablets{
+    margin: 13px 0 0 0;
+  }
+}
+
+.slaider__teg{
+  margin: auto;
+  width: 100%;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.slaider__img, .slaider__description{
+  width:50%;
+}
+
+.slaider__img{
+  margin:0 20px 0 0;
+  img{
+    display: block;
+    width: 100%;
+  }
+  @include tablets {
+    width: 70%;
+    margin: 26% 1% 0 0;
+  }
+  @include phones {
+    width: 90%;
+    margin: 50% -7% 0 0;
+  }
+}
+
+.slaider__description{
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    text-align: center;
+    align-items: center;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
+
+.composition{
+  position: absolute;
+  top: -80px;
+  left: 0;
+  @include tablets{
+    top: 14%;
+    left: 18%;
+  }
+  @include phones{
+    top: 14.3%;
+    left: 4%;
+  }
+}
+
+.composition__icon-btn{
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background: #e3502870;
+  display: flex;
+  flex-direction: column;
+}
+
+.composition__img-icon{
+  margin: auto;
+  fill: $white;
+  width: 45px;
+  height:45px;
+}
+
+.composition__icon{
+  margin-right: 25px;
+}
+
+.composition__img{
+  width: 40px;
+  height: 40px;
+}
+
+.compositio__item {
+  display: flex;
+  align-items: center;
+}
+
+.composition__product{
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.composition__list{
+  position: absolute;
+  left: 90px;
+  top: 0;
+  transition: opacity .5s;
+  background: $white;
+  width: 270px;
+  border-radius: 10px;
+  padding: 20px 25px;
+  user-select: none;
+  z-index: 10;
+}
+
+.composition__title{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  color: $white;
+  margin: -10px 0 10px 0;
+}
+
+.slaider__item{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin: 20px 0;
+  width: 100%;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.slider__list--wrap{
+  position: relative;
+}
+
+.slaider__description {
+  p {
+    font-size: 14px;
+    font-family: "ubuntu-regular", sans-serif;
+    line-height: 1.714;
+    color: $white;
+  }
+  @include slider__margin;
+  @include phones{
+    width: 100%;
+  }
+}
+
+.price {
+  display: inline-block;
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 72px;
+  color: $orange;
+  margin: 0;
+  font-weight: 200;
+  line-height: 1;
+  @include tablets{
+    font-size: 50px;
+  }
+  .price__small {
+    font-size: 30px;
+    padding: 0 0 0 5px;
+    @include phones{
+      font-size: 21px;
+    }
+  }
+}
+
+.btn__slaider{
+  align-self: flex-end;
+  margin: 0 0 0 20px;
+  @include tablets{
+    margin: 0 0 0 30px;
+  }
+}
+
+.slider__controls{
+  position: relative;
+  left: 50%;
+  bottom: 205px;
+  @include tablets{
+    bottom: 430px;
+  }
+}
+
+.slider__controls_next {
+  position: absolute;
+  left: 50%;
+  @include tablets{
+    left: 43%;
+  }
+}
+
+.slider__controls_pref {
+  position: absolute;
+  left: -53%;
+  @include tablets{
+    left: -43%;
+  }
+}
+
+.slider__controls-arrow_right{
+@include arrow;
+  transform: rotate(45deg);
+}
+
+.slider__controls-arrow_left{
+  @include arrow;
+  transform: rotate(-135deg);
+}
+
+.calories{
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  @include tablets{
+    left: auto;
+    bottom: auto;
+    top: 14%;
+    right: 17%;
+  }
+  @include phones{
+    top: 14%;
+    right: -3%;
+  }
+}
+
+.calories__img{
+  width: 60px;
+  height: 60px;
+  fill: $white;
+}
+
+.calories__title,
+.calories__unit{
+  font-family: 'gagalin-regular',sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+}
+
+.calories__unit{
+  font-size: 12px;
+}
+
+.calories__title{
+  margin: -39px 0 15px 0;
+}

@@ -1,10 +1,15 @@
+//colors
+$orange: #e25028;
+$yellow: #f8b43a;
+$dark: #2f3234;
+$white: #fff;
+
 // resolutions
 $tablets: 768px;
 $phones: 480px;
 
 //config
 @import "config/_mixin";
-@import "config/_var";
 
 //layout
 @import "layout/_fonts";
@@ -13,14 +18,15 @@ $phones: 480px;
 @import "layout/_adjustment";
 @import "layout/_hamburger-menu";
 @import "layout/_pagination";
+@import "layout/_full__menu";
+@import "layout/_fancybox__My__style";
 
 //section
 @import "section/_welcome__page";
 @import "section/_about__as";
+@import "section/_slaider";
 @import "section/_team";
 @import "section/_menu";
 @import "section/_reviews";
 @import "section/_order";
 @import "section/_footer";
-
-

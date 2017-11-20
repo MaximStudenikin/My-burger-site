@@ -1,0 +1,86 @@
+.full__menu {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  background: rgba(40, 50, 52, .99);
+  z-index: 998;
+  overflow: hidden;
+}
+
+.full__menu-list {
+  margin: 34% auto 0;
+  font-size: rem(24px);
+  display: flex;
+  flex-direction: column;
+  @include phones {
+    margin: 39% auto 0;
+  }
+}
+
+.full__menu-item {
+  margin: 0 0 50px 0;
+  &:last-child{
+    margin: 0;
+  }
+@include phones{
+  margin: 0 0 53px 0;
+}
+  &:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    background: $white;
+    border-radius: 50%;
+    margin: -26px 0 0 0;
+  }
+  &:first-child:before {
+    display: none;
+  }
+}
+
+.full__menu-link {
+  color: $white;
+}
+
+.full__menu-close {
+  position: absolute;
+  right: -5px;
+  top: 13px;
+  cursor: pointer;
+  @include phones{
+    right: -19px;
+  }
+}
+
+.close-icon {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 0;
+    background: $white;
+    height: 4px;
+    margin-top: -4px;
+    border-radius: 2px;
+  }
+}

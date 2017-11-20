@@ -1,0 +1,19 @@
+.fancybox-slide > * {
+  width      : 30%;
+  max-width  : 30%;
+
+  span {
+    font-family: 'gagalin-regular', sans-serif;
+    font-size: rem(14px);
+    margin: 0 0 rem(32px) 0;
+  }
+
+  p {
+    margin: rem(17px) 0 0 0;
+    font-size: rem(14px);
+    letter-spacing: 0.6px;
+    @include tablets {
+      margin: rem(10px) 0;
+    }
+  }
+}

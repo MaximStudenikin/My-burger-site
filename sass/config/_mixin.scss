@@ -3,13 +3,6 @@
   @return $px / 16px+0rem;
 }
 
-//@mixin welcome__page-container{
-//  //display: flex;
-//  //flex-direction: column;
-//  //justify-content: center;
-//
-//}
-
 @mixin colo-white{
   color: #fff;
 }
@@ -22,18 +15,23 @@
   padding: 0;
 }
 
-//@mixin big-heading{
-//  font-family: 'gagalin-regular', sans-serif;
-//  font-size: 72px;
-//  color: #f9b43b;
-//  padding: 80px 0 0 0;
-//  margin: 0;
-//  font-weight: 200;
-//  line-height: 1;
-//}
+@mixin arrow{
+  height: 25px;
+  width: 25px;
+  border: 1px solid #fff;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-width: 2px 2px 0 0;
+}
 
 @mixin team__section-title{
   padding:0;
+}
+
+@mixin slider__margin{
+  margin: 0 0 rem(30px) 0;
 }
 
 @mixin tablets {

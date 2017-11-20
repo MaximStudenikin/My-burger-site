@@ -35,7 +35,7 @@
   &:hover {
     .hamburger-menu__close-icon {
       use {
-        fill: #fff;
+        fill: $white;
       }
     }
   }
@@ -46,7 +46,7 @@
   height: 100%;
 
   use {
-    fill: #c1c2c2;
+    fill: $white;
     transition: fill .3s;
   }
 }
@@ -67,7 +67,7 @@
 
 .hamburger-menu-link__bars {
   &, &:before, &:after {
-    background: #fff;
+    background: $white;
     width: rem(24px);
     height: rem(5px);
     border-radius: rem(3px);

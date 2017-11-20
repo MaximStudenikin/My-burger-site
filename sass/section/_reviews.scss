@@ -1,8 +1,8 @@
 .reviews{
-  background-color: #000;
+  background: $dark;
   font-family: 'ubuntu-light', sans-serif;
   font-size: 13px;
-  color: #fff;
+  color: $white;
 }
 
 .reviews__content{
@@ -35,7 +35,7 @@
     z-index: 100;
     left: -9999px;
     top: 0;
-    background-color: rgba(20, 20, 20, 0.7);
+    background-color: desaturate($dark,0.7%);
     font-weight: 300;
     line-height: 1.9;
 
@@ -71,15 +71,16 @@
   width: 100%;
   height: 100%;
   filter: grayscale(100%);
+
 }
 
 .reviews__text--btn {
 
   .btn {
-    background-color: #2f3234;
+    background-color: $dark;
 
     &:hover {
-      background-color: #1f2122;
+      background-color: $dark;
     }
   }
 }

@@ -2,7 +2,7 @@
   position: relative;
   background: #2f3234;
   height: 60px;
-  color: #ffffff;
+  color: $white;
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px;
   @include phones{
@@ -76,7 +76,7 @@
 .social__icon{
   width: 20px;
   height: 20px;
-  fill: #fff;
+  fill: $white;
   opacity: .3;
   &:hover{
     opacity:1
