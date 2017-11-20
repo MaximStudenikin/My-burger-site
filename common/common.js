@@ -150,12 +150,22 @@ $(document).ready(() => {
 
     $('.btn-reviews').on('click', e => {
         e.preventDefault();
-        const content = $('.reviews__text');
+        const content = $('.reviews__text'),
+            item = content.find('.btn');
+        content.addClass('.reviews__text-open');
         $.fancybox.open(content, {
             arrows : false,
             infobar: false
         });
 
+        // if (content.open(){
+        //     item.removeClass('.btn')
+        // } else {
+        //     item.show()
+        // }
+
     });
+
+        //onePageScroll
 
 });
