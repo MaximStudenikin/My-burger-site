@@ -86,27 +86,29 @@ $(document).ready(() => {
     const calcWidth = () => {
         const wWidth = $(window).width();
         const titles = $('.menu__trigger');
+        console.log(titles);
         const titleWidth = titles.width();
         const reqWidth = wWidth - (titleWidth * titles.length);
-
         return (reqWidth > 550) ? 550 : reqWidth
+        console.log(titles.length);
     }
 
     const openItem = item => {
         const container = $('.menu__acco'),
             items = $('.menu__item', container),
-            accoText = $('.menu__content-text', container),
+            content = item.find('.menu__item'),
             activeItem = items.filter('.menu__item--activ'),
             activeContent = activeItem.find('.menu__acco-content'),
-            content = item.find('.menu__acco-content'),
+            accoText = $('.menu__content-text', container),
             reqWidth = calcWidth();
-
+        console.log(activeContent)
 
         items.removeClass('.menu__item--activ');
         item.addClass('.menu__item--activ');
 
         accoText.hide();
         activeContent.animate({'width': '0px'});
+        console.log(reqWidth);
 
         content.animate({
             'width': reqWidth + 'px'
