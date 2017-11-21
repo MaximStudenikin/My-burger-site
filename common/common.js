@@ -86,17 +86,16 @@ $(document).ready(() => {
     const calcWidth = () => {
         const wWidth = $(window).width();
         const titles = $('.menu__trigger');
-        console.log(titles);
         const titleWidth = titles.width();
         const reqWidth = wWidth - (titleWidth * titles.length);
-        return (reqWidth > 550) ? 550 : reqWidth;
+        return (reqWidth > 550) ? 550 : reqWidth
     };
 
 
     const openItem = item => {
-        const container = $('.menu-acco');
+        const container = $('.menu__acco');
         const items = $('.menu__item', container);
-        const accoText = $('.menu__acco-content', container);
+        const accoText = $('.menu__content-text', container);
         const activeItem = items.filter('active');
         const activeContent = activeItem.find('.menu__acco-content');
         const content = item.find('.menu__acco-content');
@@ -106,35 +105,43 @@ $(document).ready(() => {
         item.addClass('active');
 
         accoText.hide();
-        activeContent.animate({ 'width': '0px' });
-        console.log(reqWidth);
+        activeContent.animate({ 'width': 0 });
 
         content.animate({
             'width': reqWidth + 'px'
         }, () => { accoText.fadeIn() })
-    }
+    };
 
 
     const closeItem = item => {
         item.removeClass('active');
 
-        item.closest('.menu-acco').find('.menu__acco-content')
+        item.closest('.menu__acco').find('.menu__content-text')
             .stop(true, true).fadeOut(() => {
-            item.find('.menu-acco__content').animate({ 'width': '0px' });
+            item.find('.menu__acco-content').animate({ 'width': 0 });
         });
     }
 
     $('.menu__trigger').on('click', (e) => {
         e.preventDefault();
 
-        const $this = $(e.target)
-        const item = $this.closest('.menu__item')
+        const $this = $(e.target);
+        const item = $this.closest('.menu__item');
 
         item.hasClass('active')
             ? closeItem(item)
             : openItem(item)
 
 
+    });
+
+    // клик вне аккордеона
+    $(document).on('click', (e) => {
+        const $this = $(e.target);
+
+        if (!$this.closest('.menu__acco').length) {
+            closeItem($('.menu__acco-content'))
+        }
     });
 
     //modal window
