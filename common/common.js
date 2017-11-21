@@ -115,43 +115,6 @@ $(document).ready(() => {
     }
 
 
-
-
-//     const openItem = item => {
-//         //     const container = $('.menu-acco');
-//         const cont = $('.menu__acco');
-//         //     const items = $('.menu__item', container);
-//            const elems = $('.menu__item', cont);
-//         //     const accoText = $('.menu__acco-content', container);
-//            const elemText = $('.menu__acco-content', cont);
-//         //     const activeItem = items.filter('active');
-//            const activeElem = elems.filter('active');
-//            //     const activeContent = activeItem.find('.menu__acco-content');
-//            const activeCont = activeElem.find('.menu__acco-content');
-//         //     const content = item.find('.menu__acco-content');
-//            const elemCont = item.find('.menu__acco-content');
-//         //     const reqWidth = calcWidth();
-//            const reqWidth = calcWidth();
-//
-//         //     items.removeClass('active');
-//         elems.removeClass('active');
-//         //     item.addClass('active');
-//         item.addClass('active');
-//
-//
-//         //     accoText.hide();
-//         elemText.hide();
-//         //     activeContent.animate({ 'width': '0px' });
-//         activeCont.animate({ 'width': '0px' });
-//
-//         //     content.animate({
-//         elemCont.animate({
-//  //         'width': reqWidth + 'px'
-//             'width': reqWidth + 'px'
-// //     }, () => { accoText.fadeIn() })
-//         }, () => { elemText.fedeIn() })
-//     }
-
     const closeItem = item => {
         item.removeClass('active');
 
