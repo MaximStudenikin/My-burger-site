@@ -2,44 +2,40 @@ $(document).ready(() => {
 
     //var
 
-    // let doc = document,
-    //     hamburgerMenu = doc.getElementById('hamburger-menu'),
-    //     fullMenu = doc.getElementById('full__menu'),
-    //     closeFullMenu = doc.getElementById('full__menu-close'),
-    //     content = doc.getElementById('maincontent');
+    let doc = document,
+        hamburgerMenu = doc.getElementById('hamburger-menu'),
+        fullMenu = doc.getElementById('full__menu'),
+        closeFullMenu = doc.getElementById('full__menu-close');
 
-// //one page scroll
-//
-//     //begin and not ready
-//     const addOnWheel = (elem, handler) => {
-//         if (elem.addEventListener) {
-//             if ('onwheel' in doc) {
-//                 // IE9+, FF17+
-//                 elem.addEventListener("wheel", handler);
-//             } else if ('onmousewheel' in doc) {
-//                 // устаревший вариант события
-//                 elem.addEventListener("mousewheel", handler);
-//             } else {
-//                 // 3.5 <= Firefox < 17, более старое событие DOMMouseScroll пропустим
-//                 elem.addEventListener("MozMousePixelScroll", handler);
-//             }
-//         }
-//     }
 
-//hamburger menu
+// hamburger menu
+    const addOnWheel = (elem, handler) => {
+        if (elem.addEventListener) {
+            if ('onwheel' in doc) {
+                // IE9+, FF17+
+                elem.addEventListener("wheel", handler);
+            } else if ('onmousewheel' in doc) {
+                // устаревший вариант события
+                elem.addEventListener("mousewheel", handler);
+            } else {
+                // 3.5 <= Firefox < 17, более старое событие DOMMouseScroll пропустим
+                elem.addEventListener("MozMousePixelScroll", handler);
+            }
+        }
+    }
 
-    // hamburgerMenu.addEventListener('click', () => {
-    //     fullMenu.classList.toggle('visuallyhidden');
-    //
-    //     addOnWheel(fullMenu, event => {
-    //         let delta = event.deltaY || event.detail || event.wheelDelta;
-    //
-    //         event.preventDefault();
-    //     });
-    // });
-    // closeFullMenu.addEventListener('click', () => {
-    //     fullMenu.classList.toggle('visuallyhidden');
-    // });
+    hamburgerMenu.addEventListener('click', () => {
+        fullMenu.classList.toggle('visuallyhidden');
+
+        addOnWheel(fullMenu, event => {
+            let delta = event.deltaY || event.detail || event.wheelDelta;
+
+            event.preventDefault();
+        });
+    });
+    closeFullMenu.addEventListener('click', () => {
+        fullMenu.classList.toggle('visuallyhidden');
+    });
 
     //slider
 
@@ -105,20 +101,21 @@ $(document).ready(() => {
         item.addClass('active');
 
         accoText.hide();
-        activeContent.animate({ 'width': 0 });
+        activeContent.animate({'width': 0});
 
         content.animate({
             'width': reqWidth + 'px'
-        }, () => { accoText.fadeIn() })
+        }, () => {
+            accoText.fadeIn()
+        })
     };
-
 
     const closeItem = item => {
         item.removeClass('active');
 
         item.closest('.menu__acco').find('.menu__content-text')
             .stop(true, true).fadeOut(() => {
-            item.find('.menu__acco-content').animate({ 'width': 0 });
+            item.find('.menu__acco-content').animate({'width': 0});
         });
     }
 
@@ -146,18 +143,43 @@ $(document).ready(() => {
 
     //modal window
 
-    $('.btn-reviews').on('click', e => {
-        e.preventDefault();
-        const content = $('.reviews__text'),
-            item = content.find('.btn');
-        content.addClass('.reviews__text-open');
-        $.fancybox.open(content, {
-            arrows : false,
-            infobar: false
-        });
+    $('.btn-reviews').on('click', event => {
+        event.preventDefault();
 
+        const $this = $(event.currentTarget);
+        const container = $this.closest('.reviews__list');
+        const item = $this.closest('.reviews__item');
+        const items = $('.reviews__item', container);
+        const content = $('.reviews__text', item);
+
+        // items.removeClass('active');
+        // item.addClass('active');
+
+        if (!item.hasClass('active')) {
+            items.removeClass('active');
+            item.addClass('active');
+
+            $.fancybox.open(content, {
+                arrows: false,
+                infobar: false,
+                beforeShow: content.find('.btn-reviews').hide()
+            });
+
+        } else {
+            item.removeClass('active');
+
+            $('[data-fancybox-close]').on('click', e => {
+                e.preventDefault();
+
+                $('.reviews__item').find('.reviews__text').removeAttr('style');
+                $('.reviews__text').find('.btn-reviews').show();
+
+            });
+
+        }
     });
 
-        //onePageScroll
+
+    //onePageScroll
 
 });
