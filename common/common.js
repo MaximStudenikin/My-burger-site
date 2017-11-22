@@ -159,26 +159,26 @@ $(document).ready(() => {
             items.removeClass('active');
             item.addClass('active');
 
-            $.fancybox.open(content, {
-                arrows: false,
-                infobar: false,
-                beforeShow: content.find('.btn-reviews').hide()
-            });
-
         } else {
             item.removeClass('active');
 
-            $('[data-fancybox-close]').on('click', e => {
-                e.preventDefault();
-
-                $('.reviews__item').find('.reviews__text').removeAttr('style');
-                $('.reviews__text').find('.btn-reviews').show();
-
-            });
-
         }
+
+        $.fancybox.open(content, {
+            arrows: false,
+            infobar: false,
+            beforeShow: content.find('.btn-reviews').hide()
+        });
+
     });
 
+    $('[data-fancybox-close]').on('click', e => {
+        e.preventDefault();
+
+        $('.reviews__item').find('.reviews__text').removeAttr('style');
+        $('.reviews__text').find('.btn-reviews').show();
+
+    });
 
     //onePageScroll
 
