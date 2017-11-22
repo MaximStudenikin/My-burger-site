@@ -39,6 +39,7 @@ $(document).ready(() => {
 
     //slider
 
+
     //vertical accordion
 
     $(function () {
@@ -152,8 +153,6 @@ $(document).ready(() => {
         const items = $('.reviews__item', container);
         const content = $('.reviews__text', item);
 
-        // items.removeClass('active');
-        // item.addClass('active');
 
         if (!item.hasClass('active')) {
             items.removeClass('active');
@@ -161,13 +160,13 @@ $(document).ready(() => {
 
         } else {
             item.removeClass('active');
-
         }
 
         $.fancybox.open(content, {
             arrows: false,
             infobar: false,
-            beforeShow: content.find('.btn-reviews').hide()
+            beforeShow: content.find('.btn-reviews').hide(),
+            beforeLoad: $('.reviews__text').removeAttr('style')
         });
 
     });
@@ -175,11 +174,14 @@ $(document).ready(() => {
     $('[data-fancybox-close]').on('click', e => {
         e.preventDefault();
 
-        $('.reviews__item').find('.reviews__text').removeAttr('style');
         $('.reviews__text').find('.btn-reviews').show();
 
     });
 
     //onePageScroll
+
+    onePageScroll("#maincontent", () => {
+        sectionContainer: "section"
+    });
 
 });
