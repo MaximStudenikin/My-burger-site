@@ -583,7 +583,8 @@ header, section {
   border-radius: 5px;
   background: #e3502870;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  cursor: pointer; }
 
 .composition__img-icon {
   margin: auto;

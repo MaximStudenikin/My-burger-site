@@ -39,6 +39,23 @@ $(document).ready(() => {
 
     //slider
 
+    //composition
+
+    $('.composition__icon-btn').hover(e => {
+
+        const $this = $(e.target),
+        container = $this.closest('.composition'),
+        item = container.find('.composition__list ');
+
+        if(item.hasClass('visuallyhidden')){
+            item.removeClass('visuallyhidden');
+        } else {
+            item.addClass('visuallyhidden')
+        }
+
+    });
+
+
     const moveSlide = (cont, slideNum) => {
 
         const items = cont.find('.slaider__item'),
