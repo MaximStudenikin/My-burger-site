@@ -67,17 +67,32 @@ $(document).ready(() => {
             items = $('.slaider__item', cont),
             activeItem = items.filter('.active'),
             nextItem = activeItem.next(),
-            prevItem = activeItem.prev();
+            prevItem = activeItem.prev(),
+            existedItem, edgeItem, reqItem;
 
         if ($this.hasClass('slider__controls_next')) {
-            moveSlide(cont, nextItem.index());
+            existedItem = nextItem.index();
+            edgeItem = items.first().index();
+
+        }
+
+
+        if ($this.hasClass('slider__controls_pref') {
+
+            existedItem = prevItem.index();
+            edgeItem = items.first().index();
+
+        }
+
+        if(existedItem.length){
+            moveSlide(cont, existedItem);
         } else {
-            moveSlide(cont, prevItem.index());
+            moveSlide(cont, edgeItem);
         }
     });
 
 
-    //vertical accordion
+//vertical accordion
 
     $(function () {
         $('.accordeon__trigger').on('click', event => {
@@ -115,7 +130,7 @@ $(document).ready(() => {
         })
     });
 
-    // horisontal accordion
+// horisontal accordion
 
     const calcWidth = () => {
         const wWidth = $(window).width();
@@ -145,7 +160,7 @@ $(document).ready(() => {
             'width': reqWidth + 'px'
         }, () => {
             accoText.fadeIn()
-        })
+        });
     };
 
     const closeItem = item => {
@@ -155,7 +170,7 @@ $(document).ready(() => {
             .stop(true, true).fadeOut(() => {
             item.find('.menu__acco-content').animate({'width': 0});
         });
-    }
+    };
 
     $('.menu__trigger').on('click', (e) => {
         e.preventDefault();
@@ -170,7 +185,7 @@ $(document).ready(() => {
 
     });
 
-    // клик вне аккордеона
+// клик вне аккордеона
     $(document).on('click', (e) => {
         const $this = $(e.target);
 
@@ -179,7 +194,7 @@ $(document).ready(() => {
         }
     });
 
-    //modal window
+//modal window
 
     $('.btn-reviews').on('click', event => {
         event.preventDefault();
@@ -215,7 +230,7 @@ $(document).ready(() => {
 
     });
 
-    //onePageScroll
+//onePageScroll
 
     onePageScroll("#maincontent", () => {
         sectionContainer: "section"
