@@ -124,10 +124,13 @@
 .slaider__list{
   position: relative;
   display: flex;
+
 }
 
 .slaider__item{
+  position: relative;
   padding: 0 60px 0 0;
+  left: 0;
 }
 
 .slaider__content{

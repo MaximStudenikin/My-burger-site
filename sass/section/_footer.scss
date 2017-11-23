@@ -5,6 +5,7 @@
   color: $white;
   font-family: 'ubuntu-light', sans-serif;
   padding: 10px 5px;
+  bottom: 60px;
   @include phones{
     height: 115px;
   }

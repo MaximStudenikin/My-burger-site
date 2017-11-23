@@ -39,6 +39,41 @@ $(document).ready(() => {
 
     //slider
 
+    $('.slider__controls_next').on('click', event => {
+        event.preventDefault();
+
+        const $this =  $(event.currentTarget),
+            cont = $this.closest('.slaider__teg'),
+            items = cont.find('.slaider__item'),
+            activeSlide = items.filter('.active'),
+            reqItem = activeSlide.next(),
+            reqIndex = reqItem.index(),
+            list = cont.find('.slaider__list'),
+            dur = 500;
+
+
+        console.log($this);
+        console.log(cont);
+        console.log(items);
+        console.log(activeSlide);
+        console.log(reqItem);
+        console.log(reqIndex);
+        console.log(reqIndex);
+        console.log(list);
+        var but = $('.slider__controls_next');
+        console.log(but);
+
+        list.animate({
+            'left': -reqIndex * 100 + '%'
+        }, dur, () => {
+            activeSlide.removeClass('active');
+            reqItem.addClass('active');
+        });
+
+
+
+    });
+
 
     //vertical accordion
 
