@@ -67,7 +67,7 @@ $(document).ready(() => {
             items = $('.slaider__item', cont),
             activeItem = items.filter('.active'),
             nextItem = activeItem.next(),
-            prevItem = activeItem.pref();
+            prevItem = activeItem.prev();
 
         if ($this.hasClass('slider__controls_next')) {
             moveSlide(cont, nextItem.index());
