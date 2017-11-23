@@ -65,30 +65,25 @@ $(document).ready(() => {
         const $this = $(event.currentTarget),
             cont = $this.closest('.slaider__teg'),
             items = $('.slaider__item', cont),
-            activeItem = items.filter('.active'),
-            nextItem = activeItem.next(),
-            prevItem = activeItem.prev(),
-            existedItem, edgeItem, reqItem;
+            activeItem = items.filter('.active');
+        let existedItem,
+            edgeItem,
+            reqItem;
 
         if ($this.hasClass('slider__controls_next')) {
-            existedItem = nextItem.index();
-            edgeItem = items.first().index();
-
+            existedItem = activeItem.next();
+            edgeItem = items.first();
         }
 
-
-        if ($this.hasClass('slider__controls_pref') {
-
-            existedItem = prevItem.index();
-            edgeItem = items.first().index();
-
+        if ($this.hasClass('slider__controls_prev')) {
+            existedItem = activeItem.prev();
+            edgeItem = items.last();
         }
 
-        if(existedItem.length){
-            moveSlide(cont, existedItem);
-        } else {
-            moveSlide(cont, edgeItem);
-        }
+        reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+            moveSlide(cont, reqItem);
+
     });
 
 

@@ -745,11 +745,11 @@ header, section {
     .slider__controls_next {
       left: 10%; } }
 
-.slider__controls_pref {
+.slider__controls_prev {
   position: absolute;
   left: -79%; }
   @media screen and (max-width: 768px) {
-    .slider__controls_pref {
+    .slider__controls_prev {
       left: -74%; } }
 
 .slider__controls-arrow_right {
