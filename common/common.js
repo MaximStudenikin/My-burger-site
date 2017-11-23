@@ -50,7 +50,7 @@ $(document).ready(() => {
         if(item.hasClass('visuallyhidden')){
             item.removeClass('visuallyhidden');
         } else {
-            item.addClass('visuallyhidden')
+            item.addClass('visuallyhidden');
         }
 
     });
