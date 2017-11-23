@@ -39,29 +39,14 @@ $(document).ready(() => {
 
     //slider
 
-    $('.slider__controls_next').on('click', event => {
-        event.preventDefault();
+    const moveSlide = (cont, slideNum) => {
 
-        const $this = $(event.currentTarget),
-            cont = $this.closest('.slaider__teg'),
-            items = cont.find('.slaider__item'),
+        const items = cont.find('.slaider__item'),
             activeSlide = items.filter('.active'),
-            reqItem = activeSlide.next(),
+            reqItem = items.eq(slideNum),
             reqIndex = reqItem.index(),
             list = cont.find('.slaider__list'),
             dur = 500;
-
-
-        console.log($this);
-        console.log(cont);
-        console.log(items);
-        console.log(activeSlide);
-        console.log(reqItem);
-        console.log(reqIndex);
-        console.log(reqIndex);
-        console.log(list);
-        var but = $('.slider__controls_next');
-        console.log(but);
 
         if (reqItem.length) {
             list.animate({
@@ -70,6 +55,24 @@ $(document).ready(() => {
                 activeSlide.removeClass('active');
                 reqItem.addClass('active');
             });
+        }
+
+    };
+
+    $('.slider__controls_btn').on('click', event => {
+        event.preventDefault();
+
+        const $this = $(event.currentTarget),
+            cont = $this.closest('.slaider__teg'),
+            items = $('.slaider__item', cont),
+            activeItem = items.filter('.active'),
+            nextItem = activeItem.next(),
+            prevItem = activeItem.pref();
+
+        if ($this.hasClass('slider__controls_next')) {
+            moveSlide(cont, nextItem.index());
+        } else {
+            moveSlide(cont, prevItem.index());
         }
     });
 
