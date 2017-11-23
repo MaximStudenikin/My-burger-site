@@ -42,7 +42,7 @@ $(document).ready(() => {
     $('.slider__controls_next').on('click', event => {
         event.preventDefault();
 
-        const $this =  $(event.currentTarget),
+        const $this = $(event.currentTarget),
             cont = $this.closest('.slaider__teg'),
             items = cont.find('.slaider__item'),
             activeSlide = items.filter('.active'),
@@ -63,15 +63,14 @@ $(document).ready(() => {
         var but = $('.slider__controls_next');
         console.log(but);
 
-        list.animate({
-            'left': -reqIndex * 100 + '%'
-        }, dur, () => {
-            activeSlide.removeClass('active');
-            reqItem.addClass('active');
-        });
-
-
-
+        if (reqItem.length) {
+            list.animate({
+                'left': -reqIndex * 100 + '%'
+            }, dur, () => {
+                activeSlide.removeClass('active');
+                reqItem.addClass('active');
+            });
+        }
     });
 
 
