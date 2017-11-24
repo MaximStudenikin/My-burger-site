@@ -211,17 +211,16 @@ $(document).ready(() => {
     $('.btn-reviews').on('click', event => {
         event.preventDefault();
 
-        const $this = $(event.currentTarget);
+        const $this = $(event.target);
         const container = $this.closest('.reviews__list');
         const item = $this.closest('.reviews__item');
         const items = $('.reviews__item', container);
-        const content = $('.reviews__text', item);
+        const content = $('.reviews__modal', item);
 
 
         if (!item.hasClass('active')) {
             items.removeClass('active');
             item.addClass('active');
-
         } else {
             item.removeClass('active');
         }
@@ -229,23 +228,26 @@ $(document).ready(() => {
         $.fancybox.open(content, {
             arrows: false,
             infobar: false,
-            beforeShow: content.find('.btn-reviews').hide(),
-            beforeLoad: $('.reviews__text').removeAttr('style')
         });
 
     });
 
-    $('[data-fancybox-close]').on('click', e => {
-        e.preventDefault();
+    // $('[data-fancybox-close]').on('click', event => {
+    //     event.preventDefault();
+    //
+    //     const $this = $(event.currentTarget);
+    //
+    //     css('display', 'inline-block')
+    //
+    //
+    //     });
 
-        $('.reviews__text').find('.btn-reviews').show();
-
-    });
-
-//onePageScroll
+    //onePageScroll
 
     onePageScroll("#maincontent", () => {
         sectionContainer: "section"
     });
 
+
 });
+
