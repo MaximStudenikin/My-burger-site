@@ -889,7 +889,7 @@ header, section {
     font-size: 0.875rem;
     line-height: 2.01;
     text-align: left;
-    color: #f8b43a;
+    color: white;
     display: flex; }
     @media screen and (max-width: 768px) {
       .vertical__accordeon .accordeon__trigger {
