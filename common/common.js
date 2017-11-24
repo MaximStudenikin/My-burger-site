@@ -106,41 +106,41 @@ $(document).ready(() => {
 
 //vertical accordion
 
-    $(function () {
-        $('.accordeon__trigger').on('click', event => {
-            event.preventDefault();
-
-            const $this = $(event.currentTarget);
-            const container = $this.closest('.vertical__accordeon');
-            const item = $this.closest('.accordeon__item');
-            const items = $('.accordeon__item', container);
-            const content = $('.accordeon__inner', item);
-            const otherContent = $('.accordeon__inner', container);
-            const block = $('.accordeon__inner-item', item);
-            const reqHeight = block.outerHeight();
-
-            if (!item.hasClass('accordeon__item--activ')) {
-                items.removeClass('accordeon__item--activ')
-                item.addClass('accordeon__item--activ')
-
-                otherContent.css({
-                    'height': 0
-                })
-
-                content.css({
-                    'height': reqHeight
-                })
-
-            } else {
-
-                item.removeClass('accordeon__item--activ');
-                content.css({
-                    'height' : 0
-                })
-            }
-
-        })
-    });
+    // $(function () {
+    //     $('.accordeon__trigger').on('click', event => {
+    //         event.preventDefault();
+    //
+    //         const $this = $(event.currentTarget);
+    //         const container = $this.closest('.vertical__accordeon');
+    //         const item = $this.closest('.accordeon__item');
+    //         const items = $('.accordeon__item', container);
+    //         const content = $('.accordeon__inner', item);
+    //         const otherContent = $('.accordeon__inner', container);
+    //         const block = $('.accordeon__inner-item', item);
+    //         const reqHeight = block.outerHeight();
+    //
+    //         if (!item.hasClass('accordeon__item--activ')) {
+    //             items.removeClass('accordeon__item--activ')
+    //             item.addClass('accordeon__item--activ')
+    //
+    //             otherContent.css({
+    //                 'height': 0
+    //             })
+    //
+    //             content.css({
+    //                 'height': reqHeight
+    //             })
+    //
+    //         } else {
+    //
+    //             item.removeClass('accordeon__item--activ');
+    //             content.css({
+    //                 'height' : 0
+    //             })
+    //         }
+    //
+    //     })
+    // });
 
 // horisontal accordion
 
