@@ -73,14 +73,6 @@
 
 .accordeon__item--activ{
 
-  .accordeon__content {
-    height: 130px;
-    overflow: hidden;
-    @include tablets{
-      height: 220px;
-    }
-  }
-
   .accordeon__trigger{
     color: $yellow;
     &:before{
@@ -90,7 +82,12 @@
 
 }
 
-.accordeon__content{
+  .accordeon__content {
+    height: 0;
+    overflow: hidden;
+  }
+
+.accordeon__content_inner{
   display: flex;
   height: 130px;
   overflow: hidden;
