@@ -116,8 +116,8 @@ $(document).ready(() => {
             const items = $('.accordeon__item', container);
             const content = $('.accordeon__inner', item);
             const otherContent = $('.accordeon__inner', container);
-            const textBlock = $('.accordeon__inner-item', item);
-            const reqHeight = textBlock.outerHeight();
+            const block = $('.accordeon__inner-item', item);
+            const reqHeight = block.outerHeight();
 
             if (!item.hasClass('accordeon__item--activ')) {
                 items.removeClass('accordeon__item--activ')
@@ -127,14 +127,16 @@ $(document).ready(() => {
                     'height': 0
                 })
 
-                content.attr({
-                    'height': reqHeight + 'px'
+                content.css({
+                    'height': reqHeight
                 })
 
             } else {
 
                 item.removeClass('accordeon__item--activ');
-
+                content.css({
+                    'height' : 0
+                })
             }
 
         })
