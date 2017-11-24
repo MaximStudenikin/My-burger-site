@@ -878,7 +878,8 @@ header, section {
   .vertical__accordeon .accordeon__inner-item {
     display: flex;
     height: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 1.0625rem 0 0 0; }
     @media screen and (max-width: 768px) {
       .vertical__accordeon .accordeon__inner-item {
         flex-direction: column;
@@ -907,8 +908,6 @@ header, section {
       max-width: 100%;
       overflow: hidden;
       border-radius: 50%; }
-  .vertical__accordeon .accordeon__inner-item {
-    margin: 1.0625rem 0 0 0; }
   @media screen and (max-width: 768px) {
     .vertical__accordeon .team__description {
       margin: 0.5625rem 0 0 -1.25rem;

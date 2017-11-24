@@ -44,10 +44,10 @@ $(document).ready(() => {
     $('.composition__icon-btn').hover(e => {
 
         const $this = $(e.target),
-        container = $this.closest('.composition'),
-        item = container.find('.composition__list ');
+            container = $this.closest('.composition'),
+            item = container.find('.composition__list ');
 
-        if(item.hasClass('visuallyhidden')){
+        if (item.hasClass('visuallyhidden')) {
             item.removeClass('visuallyhidden');
         } else {
             item.addClass('visuallyhidden');
@@ -99,7 +99,7 @@ $(document).ready(() => {
 
         reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
 
-            moveSlide(cont, reqItem);
+        moveSlide(cont, reqItem);
 
     });
 
@@ -116,27 +116,23 @@ $(document).ready(() => {
             const items = $('.accordeon__item', container);
             const content = $('.accordeon__inner', item);
             const otherContent = $('.accordeon__inner', container);
-            const textBlock = $('.team__description p', item);
+            const textBlock = $('.accordeon__inner-item', item);
             const reqHeight = textBlock.outerHeight();
 
             if (!item.hasClass('accordeon__item--activ')) {
                 items.removeClass('accordeon__item--activ')
                 item.addClass('accordeon__item--activ')
 
-                otherContent.css({
-                    'height': 0
-                })
+                otherContent.attr('height', '0')
 
-                content.css({
+                content.attr({
                     'height': reqHeight
                 })
 
             } else {
 
                 item.removeClass('accordeon__item--activ');
-                content.css({
-                    'height': 0
-                })
+                content.attr('height', '0');
             }
 
         })
