@@ -866,7 +866,6 @@ header, section {
         .vertical__accordeon .accordeon__trigger:before {
           margin: 0 0.875rem 0 -1.0625rem; } }
   .vertical__accordeon .accordeon__item--activ .accordeon__inner-item {
-    height: 130px;
     overflow: hidden; }
     @media screen and (max-width: 768px) {
       .vertical__accordeon .accordeon__item--activ .accordeon__inner-item {

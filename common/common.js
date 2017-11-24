@@ -123,16 +123,20 @@ $(document).ready(() => {
                 items.removeClass('accordeon__item--activ')
                 item.addClass('accordeon__item--activ')
 
-                otherContent.attr('height', '0')
+                otherContent.attr({
+                    'height': 0
+                })
 
                 content.attr({
-                    'height': reqHeight
+                    'height': reqHeight + 'px'
                 })
 
             } else {
 
                 item.removeClass('accordeon__item--activ');
-                content.attr('height', '0');
+                content.attr({
+                    'height': 0
+                });
             }
 
         })

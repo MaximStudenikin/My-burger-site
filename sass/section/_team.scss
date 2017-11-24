@@ -74,7 +74,6 @@
 .accordeon__item--activ{
 
   .accordeon__inner-item {
-    height: 130px;
     overflow: hidden;
     @include tablets{
       height: 220px;
