@@ -866,6 +866,7 @@ header, section {
         .vertical__accordeon .accordeon__trigger:before {
           margin: 0 0.875rem 0 -1.0625rem; } }
   .vertical__accordeon .accordeon__item--activ .accordeon__inner-item {
+    height: 130px;
     overflow: hidden; }
     @media screen and (max-width: 768px) {
       .vertical__accordeon .accordeon__item--activ .accordeon__inner-item {
@@ -1028,19 +1029,21 @@ header, section {
     @media screen and (max-width: 768px) {
       .reviews__item .reviews__text {
         font-size: 0.875rem;
-        padding: 2% 20%;
+        padding: 2% 10%;
         text-align: center; } }
     .reviews__item .reviews__text span {
       font-family: 'gagalin-regular', sans-serif;
       font-size: 14px;
-      margin: 0 0 32px 0; }
+      margin: 0 0 2rem 0; }
     .reviews__item .reviews__text p {
       width: 230px;
-      margin: 17px 0;
+      margin: 1.0625rem 0;
       letter-spacing: 0.6px; }
       @media screen and (max-width: 768px) {
         .reviews__item .reviews__text p {
-          margin: 10px 0; } }
+          width: 80%;
+          margin: 0.625rem auto;
+          font-size: 0.75rem; } }
   .reviews__item:hover .reviews__text {
     left: 0; }
 
@@ -1051,8 +1054,11 @@ header, section {
 
 .reviews__text--btn .btn {
   background-color: #2f3234; }
+  @media screen and (max-width: 768px) {
+    .reviews__text--btn .btn {
+      margin: 20px 0 0 0; } }
   .reviews__text--btn .btn:hover {
-    background-color: #2f3234; }
+    background-color: #18191a; }
 
 .order {
   background: url("../img/form_bg.jpg") no-repeat center;

@@ -123,7 +123,7 @@ $(document).ready(() => {
                 items.removeClass('accordeon__item--activ')
                 item.addClass('accordeon__item--activ')
 
-                otherContent.attr({
+                otherContent.css({
                     'height': 0
                 })
 
@@ -134,9 +134,7 @@ $(document).ready(() => {
             } else {
 
                 item.removeClass('accordeon__item--activ');
-                content.attr({
-                    'height': 0
-                });
+
             }
 
         })
