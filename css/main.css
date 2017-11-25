@@ -346,7 +346,7 @@ header, section {
   display: inline-block;
   border: 1px solid #fff;
   border-radius: 50%;
-  transform: translate(-40%, -37%); }
+  transform: translate(-37%, -38%); }
 
 .welcome__page {
   background: url("../img/welcome_page_bg.jpg") no-repeat center;
@@ -1019,6 +1019,8 @@ header, section {
     .reviews__item {
       width: 50%;
       height: 25%; } }
+  .reviews__item .reviews__modal {
+    display: none; }
   .reviews__item .reviews__text {
     position: absolute;
     display: inline-block;
