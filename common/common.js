@@ -232,6 +232,7 @@ $(document).ready(() => {
 
     onePageScroll("#maincontent", () => {
         sectionContainer: "section"
+        keyboard: true
     });
 
 
