@@ -41,9 +41,9 @@ $(document).ready(() => {
 
     //composition
 
-    $('.composition__icon-btn').hover(e => {
+    $('.composition__icon-btn').hover(event => {
 
-        const $this = $(e.target),
+        const $this = $(event.target),
             container = $this.closest('.composition'),
             item = container.find('.composition__list ');
 
@@ -147,69 +147,67 @@ $(document).ready(() => {
         const titles = $('.menu__trigger');
         const titleWidth = titles.width();
         const reqWidth = wWidth - (titleWidth * titles.length);
+
         return (reqWidth > 550) ? 550 : reqWidth
     };
 
-
-    const openItem = item => {
+    const openItem = (item) => {
         const container = $('.menu__acco');
         const items = $('.menu__item', container);
-        const accoText = $('.menu__content-text', container);
         const activeItem = items.filter('active');
         const activeContent = activeItem.find('.menu__acco-content');
-        const content = item.find('.menu__acco-content');
-        const reqWidth = calcWidth();
+        const content = item.find('.menu__acco-menu__item');
+        const accoText = $('.menu__content-text', container);
+        const reqWidthItem = calcWidth();
 
-        items.removeClass('active');
-        item.addClass('active');
+        items.removeClass('active')
+        item.addClass('active')
+        console.log(item);
 
-        accoText.hide();
-        activeContent.animate({'width': 0});
+        accoText.hide()
+        activeContent.animate({'width': '0px'})
 
         content.animate({
-            'width': reqWidth + 'px'
-        }, () => {
-            accoText.fadeIn()
-        });
+            'width': reqWidthItem + 'px'
+        }, () => { accoText.fadeIn() })
+
     };
 
-    const closeItem = item => {
+    const closeItem = (item) => {
         item.removeClass('active');
 
         item.closest('.menu__acco').find('.menu__content-text')
             .stop(true, true).fadeOut(() => {
-            item.find('.menu__acco-content').animate({'width': 0});
+            item.find('.menu__acco-content').animate({'width': '0px'});
         });
     };
 
-    $('.menu__trigger').on('click', (e) => {
-        e.preventDefault();
+    $('.menu__trigger').on('click', (event) => {
+        event.preventDefault();
 
-        const $this = $(e.target);
-        const item = $this.closest('.menu__item');
+        const $this = $(event.currentTarget);
+        const item = $this.closest('.accordeon__item');
 
         item.hasClass('active')
             ? closeItem(item)
             : openItem(item)
-
-
     });
 
-// клик вне аккордеона
-    $(document).on('click', (e) => {
-        const $this = $(e.target);
-
-        if (!$this.closest('.menu__acco').length) {
-            closeItem($('.menu__acco-content'))
-        }
-    });
+// // клик вне аккордеона
+//     $(document).on('click', (event) => {
+//         const $this = $(event.currentTarget);
+//
+//         if (!$this.closest('.menu__acco').length) {
+//             closeItem($('.accordeon__item'))
+//         }
+//     });
 
 //modal window
 
     $('.btn-reviews').on('click', event => {
         event.preventDefault();
 
-        const $this = $(event.target);
+        const $this = $(event.currentTarget);
         const container = $this.closest('.reviews__list');
         const item = $this.closest('.reviews__item');
         const items = $('.reviews__item', container);
@@ -230,16 +228,6 @@ $(document).ready(() => {
 
     });
 
-    // $('[data-fancybox-close]').on('click', event => {
-    //     event.preventDefault();
-    //
-    //     const $this = $(event.currentTarget);
-    //
-    //     css('display', 'inline-block')
-    //
-    //
-    //     });
-
     //onePageScroll
 
     onePageScroll("#maincontent", () => {
@@ -248,4 +236,3 @@ $(document).ready(() => {
 
 
 });
-

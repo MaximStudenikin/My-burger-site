@@ -950,8 +950,6 @@ header, section {
     display: flex;
     text-decoration: none;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     width: 5rem;
     height: 100%;
@@ -991,7 +989,7 @@ header, section {
     .menu__acco .menu__acco-content p {
       padding: 3.125rem;
       width: 100%; }
-  .menu__acco .menu__item--activ .menu__trigger-title {
+  .menu__acco .active .menu__trigger-title {
     color: #f8b43a; }
 
 .reviews {
