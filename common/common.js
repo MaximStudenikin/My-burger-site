@@ -162,7 +162,6 @@ $(document).ready(() => {
 
         items.removeClass('active')
         item.addClass('active')
-        console.log(item);
 
         accoText.hide()
         activeContent.animate({'width': '0px'})
@@ -185,13 +184,14 @@ $(document).ready(() => {
     $('.menu__trigger').on('click', (event) => {
         event.preventDefault();
 
-        const $this = $(event.currentTarget);
-        const item = $this.closest('.accordeon__item');
+        let $this = $(event.target);
+        let item = $this.closest('.menu__item');
+        // debugger;
 
         item.hasClass('active')
             ? closeItem(item)
             : openItem(item)
-    });
+    })
 
 // // клик вне аккордеона
 //     $(document).on('click', (event) => {
