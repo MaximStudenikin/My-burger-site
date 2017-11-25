@@ -19,33 +19,8 @@
   }
 }
 
-.slaider__teg{
-  margin: auto;
-  width: 100%;
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .slaider__img, .slaider__description{
   width:50%;
-}
-
-.slaider__img{
-  margin:0 20px 0 0;
-  img{
-    display: block;
-    width: 100%;
-  }
-  @include tablets {
-    width: 70%;
-    margin: 26% 1% 0 0;
-  }
-  @include phones {
-    width: 90%;
-    margin: 50% -7% 0 0;
-  }
 }
 
 .slaider__description{
@@ -62,15 +37,14 @@
 
 .composition{
   position: absolute;
-  top: -80px;
-  left: 0;
+  top: 0;
   @include tablets{
-    top: 14%;
-    left: 18%;
+    top: 8%;
+    left: 19%;
   }
   @include phones{
-    top: 14.3%;
-    left: 4%;
+    top: 6%;
+    left: 2%;
   }
 }
 
@@ -81,6 +55,7 @@
   background: #e3502870;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .composition__img-icon{
@@ -131,11 +106,8 @@
   margin: -10px 0 10px 0;
 }
 
-.slaider__item{
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  margin: 20px 0;
+.slaider__teg{
+  margin: auto;
   width: 100%;
   @include tablets {
     flex-direction: column;
@@ -145,6 +117,60 @@
 
 .slider__list--wrap{
   position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slaider__list{
+  position: relative;
+  display: flex;
+
+}
+
+.slaider__item{
+  position: relative;
+  padding: 0 60px 0 0;
+  left: 0;
+}
+
+.slaider__content{
+  display: flex;
+  align-items: flex-end;
+  margin: 20px 0;
+  width: 100%;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16%;
+  }
+  @include tablets{
+    padding:0;
+  }
+  @include phones{
+    height: 100%;
+  }
+}
+
+.slaider__img{
+  margin: 0 70px 0 0;
+  img{
+    min-width: 100%;
+    display: block;
+  }
+  @include tablets {
+    width: 100%;
+    margin: 26% 1% 0 0;
+  }
+  @include phones {
+    width: 80%;
+    margin: 0;
+    top: 17%;
+    display: flex;
+    height: 34%;
+    position: relative;
+    left: -3%;
+  }
 }
 
 .slaider__description {
@@ -155,8 +181,13 @@
     color: $white;
   }
   @include slider__margin;
-  @include phones{
+  @include tablets{
     width: 100%;
+    margin: 0;
+  }
+  @include phones{
+    width: 90%;
+    margin: 27% 5% 0 0;
   }
 }
 
@@ -190,26 +221,30 @@
 
 .slider__controls{
   position: relative;
-  left: 50%;
+  left: 80%;
   bottom: 205px;
   @include tablets{
+    bottom: 389px;
+  }
+  @include phones{
     bottom: 430px;
   }
 }
 
 .slider__controls_next {
   position: absolute;
-  left: 50%;
+  left: 16%;
+  z-index:10;
   @include tablets{
-    left: 43%;
+    left: 10%;
   }
 }
 
-.slider__controls_pref {
+.slider__controls_prev {
   position: absolute;
-  left: -53%;
+  left: -79%;
   @include tablets{
-    left: -43%;
+    left: -74%;
   }
 }
 
@@ -225,17 +260,15 @@
 
 .calories{
   position: absolute;
-  left: 0;
-  bottom: -80px;
+  bottom: 10px;
   @include tablets{
-    left: auto;
-    bottom: auto;
-    top: 14%;
-    right: 17%;
+    top: 8%;
+    right: 19%;
   }
   @include phones{
-    top: 14%;
-    right: -3%;
+    top: 6%;
+    right: 3%;
+    height: 10%;
   }
 }
 

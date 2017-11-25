@@ -5,6 +5,7 @@
   color: $white;
   font-size:rem(14px);
   font-family: 'ubuntu-light', sans-serif;
+
 @include tablets{
   display: flex;
   flex-direction: column;
@@ -72,14 +73,6 @@
 
 .accordeon__item--activ{
 
-  .accordeon__inner-item {
-    height: 130px;
-    overflow: hidden;
-    @include tablets{
-      height: 220px;
-    }
-  }
-
   .accordeon__trigger{
     color: $yellow;
     &:before{
@@ -89,10 +82,16 @@
 
 }
 
-.accordeon__inner-item{
+  .accordeon__content {
+    height: 0;
+    overflow: hidden;
+  }
+
+.accordeon__content_inner{
   display: flex;
-  height: 0;
+  height: 130px;
   overflow: hidden;
+  margin:rem(17px) 0 0 0;
   @include tablets{
     flex-direction: column;
     align-items: center;
@@ -104,7 +103,7 @@
   font-size: rem(14px);
   line-height: 2.01;
   text-align: left;
-  color: $yellow;
+  color: white;
   display: flex;
   @include tablets{
     font-size: rem(24px);
@@ -128,11 +127,6 @@
     border-radius: 50%;
   }
 }
-
-.accordeon__inner-item{
-  margin:rem(17px) 0 0 0;
-}
-
 
 .team__description{
 

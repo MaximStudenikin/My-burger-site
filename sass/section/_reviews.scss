@@ -26,37 +26,43 @@
     height: 25%;
   }
 
+  .reviews__modal{
+    display: none;
+  }
+
   .reviews__text {
     position: absolute;
-    display: block;
+    display: inline-block;
     padding: 42px 10px;
     width: 100%;
     height: 100%;
     z-index: 100;
     left: -9999px;
     top: 0;
-    background-color: desaturate($dark,0.7%);
+    background-color: rgba($dark, .7);
     font-weight: 300;
     line-height: 1.9;
 
     @include tablets {
       font-size: rem(14px);
-      padding: 2% 20%;
+      padding: 2% 10%;
       text-align: center;
     }
 
     span {
       font-family: 'gagalin-regular', sans-serif;
       font-size: 14px;
-      margin: 0 0 32px 0;
+      margin: 0 0 rem(32px) 0;
     }
 
     p {
       width: 230px;
-      margin: 17px 0;
+      margin: rem(17px) 0;
       letter-spacing: 0.6px;
       @include tablets{
-        margin: 10px 0;
+        width: 80%;
+        margin: rem(10px) auto;
+        font-size: rem(12px);
       }
     }
   }
@@ -71,16 +77,17 @@
   width: 100%;
   height: 100%;
   filter: grayscale(100%);
-
 }
 
 .reviews__text--btn {
-
   .btn {
     background-color: $dark;
+    @include tablets{
+      margin: 20px 0 0 0;
+    }
 
     &:hover {
-      background-color: $dark;
+      background-color: $dark / 2;
     }
   }
 }
