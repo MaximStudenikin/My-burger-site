@@ -154,9 +154,9 @@ $(document).ready(() => {
     const openItem = (item) => {
         const container = $('.menu__acco');
         const items = $('.menu__item', container);
-        const activeItem = items.filter('active');
+        const activeItem = items.filter('.active');
         const activeContent = activeItem.find('.menu__acco-content');
-        const content = item.find('.menu__acco-menu__item');
+        const content = item.find('.menu__acco-content');
         const accoText = $('.menu__content-text', container);
         const reqWidthItem = calcWidth();
 
