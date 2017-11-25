@@ -33,10 +33,19 @@
   }
 
   .menu__trigger {
+    display: flex;
+    text-decoration: none;
     position: relative;
-    display: block;
-    width: 76px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 5rem;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    z-index: 2;
     background: url("../img/menu_section_1.jpg") no-repeat center;
     @include phones{
       width: 80px;
@@ -48,19 +57,16 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: desaturate($dark,80%);
+      background-color: rgba($dark, .7);
     }
   }
 
   .menu__trigger-title {
-    @include colo-white;
+    color: #fff;
     font-family: 'gagalin-regular', sans-serif;
     white-space: nowrap;
     transform: rotate(-90deg);
-    padding: 0;
-    position: absolute;
-    top: 390px;
-    right: -93px;
+    padding: 0 1rem;
     z-index: 1;
     font-size: rem(40px);
     @include phones{
