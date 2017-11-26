@@ -192,14 +192,14 @@ $(document).ready(() => {
             : openItem(item)
     })
 
-// // клик вне аккордеона
-//     $(document).on('click', (event) => {
-//         const $this = $(event.currentTarget);
-//
-//         if (!$this.closest('.menu__acco').length) {
-//             closeItem($('.accordeon__item'))
-//         }
-//     });
+// клик вне аккордеона
+    $(document).on('click', (event) => {
+        const $this = $(event.currentTarget);
+
+        if (!$this.closest('.menu__acco').length) {
+            closeItem($('.menu__item'))
+        }
+    });
 
 //modal window
 
@@ -261,7 +261,15 @@ $(document).ready(() => {
         });
 
         request.fail(function(jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
+            console.log("Request failed: " + textStatus);
+            $.fancybox.open({
+                src: '<div class="error">О_О все пошло не так</div>',
+                type : 'html'
+            });
+        });
+
+        request.always(()=>{
+            doc.getElementById("order_form").reset();
         });
     }
 
