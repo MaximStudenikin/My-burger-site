@@ -263,9 +263,10 @@ $(document).ready(() => {
 
     const switchMenuActiveClass = sectionEq => {
 
-        $('.onepage-pagination li a').eq(sectionEq).addClass('active').siblings().removeClass('active');
-    }
+            $('.onepage-pagination').find('a').removeClass('active');
 
+        $('.onepage-pagination li a').eq(sectionEq).addClass('active');
+    }
 
     // mail
 
