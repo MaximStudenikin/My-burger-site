@@ -192,15 +192,6 @@ $(document).ready(() => {
             : openItem(item)
     })
 
-// клик вне аккордеона
-    $(document).on('click', (event) => {
-        const $this = $(event.currentTarget);
-
-        if (!$this.closest('.menu__acco').length) {
-            closeItem($('.menu__item'))
-        }
-    });
-
 //modal window
 
     $('.btn-reviews').on('click', event => {
@@ -233,6 +224,47 @@ $(document).ready(() => {
         sectionContainer: "section"
         keyboard: true
     });
+
+
+    //nav menu
+    const display = $('.maincontent');
+    const sections = $('.section');
+
+    let inScroll = false;
+
+    const performTransition = sectionEq => {
+        if (inScroll) return
+        inScroll = true
+
+        const position = (sectionEq * -100) + '%';
+
+        display.css({
+            'transform': `translate(0, ${position})`,
+            '-webkit-transform': `translate(0, ${position})`
+        })
+
+        sections.eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
+
+        setTimeout(() => {
+            inScroll = false;
+            switchMenuActiveClass(sectionEq);
+        }, 1300);
+    }
+
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        performTransition(sectionIndex);
+
+    });
+
+    const switchMenuActiveClass = sectionEq => {
+
+        $('.onepage-pagination li a').eq(sectionEq).addClass('active').siblings().removeClass('active');
+    }
 
 
     // mail
@@ -288,5 +320,55 @@ $(document).ready(() => {
     }
 
     $('#order_form').on('submit', submitForm);
+
+    //map
+
+    //map
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [59.939764, 30.350236],
+            zoom: 12,
+            controls: ['zoomControl']
+        });
+        var objects = [
+            {
+                str: 'Test!',
+                str2: 'Hdsfdsfsdsds!!!',
+                coords: [59.945396, 30.382825]
+            },
+            {
+                str: 'Test2!',
+                str2: 'dfdsfdsfdsfdsfdgds!!!',
+                coords: [59.888716, 30.311712]
+            },
+            {
+                str: 'Test3!',
+                str2: 'jfgjjtyjtyjty!!!',
+                coords: [59.971920, 30.313874]
+            },
+            {
+                str: 'Test4!',
+                str2: 'Hgdfghhtrjr6u567!!!',
+                coords: [59.917428, 30.491673]
+            }
+        ]
+
+        myMap.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom'])
+
+        for (var i = 0; i < objects.length; i++) {
+            myMap.geoObjects.add(new ymaps.Placemark(objects[i].coords, {
+                hintContent: objects[i].str,
+                balloonContent: objects[i].str2
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/Icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-23, -57],
+            }))
+        }
+    }
 
 });

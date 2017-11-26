@@ -5,6 +5,10 @@ $green: #8ac03e;
 $dark: #2f3234;
 $white: #fff;
 
+#map {
+  width: 100%; height: 100%; padding: 0; margin: 0;
+}
+
 // resolutions
 $tablets: 768px;
 $phones: 480px;
