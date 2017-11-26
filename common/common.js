@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    //var
+    //let
 
     let doc = document,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
@@ -186,7 +186,6 @@ $(document).ready(() => {
 
         let $this = $(event.target);
         let item = $this.closest('.menu__item');
-        // debugger;
 
         item.hasClass('active')
             ? closeItem(item)
@@ -235,5 +234,51 @@ $(document).ready(() => {
         keyboard: true
     });
 
+
+    // mail
+
+    let submitForm = function (ev) {
+        ev.preventDefault();
+
+        let form = $(ev.target);
+
+        let request = ajaxForm(form);
+
+        request.done(function(msg) {
+            let mes = msg.mes,
+                status = msg.status;
+            if (status === 'OK') {
+                $.fancybox.open({
+                    src: '<div class="success">' + mes + '</div>',
+                    type : 'html'
+                });
+            } else{
+                $.fancybox.open({
+                    src: '<div class="error">' + mes + '</div>',
+                    type : 'html'
+                });
+            }
+        });
+
+        request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+        });
+    }
+
+    let ajaxForm = function (form) {
+
+        let url = form.attr('action'),
+            data = form.serialize();
+
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'JSON'
+        });
+
+    }
+
+    $('#order_form').on('submit', submitForm);
 
 });

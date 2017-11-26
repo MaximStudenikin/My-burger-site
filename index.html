@@ -591,49 +591,49 @@
     <section class="order">
       <div class="container">
         <h2 class="section__heading">Закажите доставку</h2>
-        <form class="teg__form">
+        <form id="order_form" class="teg__form" method="post" action="mail.php">
           <div class="form__content">
             <div class="form__section-one">
               <div class="form__row">
-                <label class="form__block">
+                <label class="form__block" for="user_name">
                   <div class="form__block-title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input id="user_name" type="text" class="form__input" name="user_name">
                 </label>
-                <label class="form__block">
+                <label class="form__block" for="user_phone">
                   <div class="form__block-title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input id="user_phone" type="text" class="form__input" name="user_phone">
                 </label>
               </div>
               <div class="form__row">
-                <label class="form__block">
+                <label class="form__block" for="user_street">
                   <div class="form__block-title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input id="user_street" type="text" class="form__input" name="user_street">
                 </label>
               </div>
               <div class="form__row">
-                <label class="form__block">
+                <label class="form__block" for="user_home">
                   <div class="form__block-title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input id="user_home" type="text" class="form__input" name="user_home">
                 </label>
-                <label class="form__block">
+                <label class="form__block" for="user_block">
                   <div class="form__block-title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input id="user_block" type="text" class="form__input" name="user_block">
                 </label>
-                <label class="form__block">
+                <label class="form__block" for="user_room">
                   <div class="form__block-title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input id="user_room" type="text" class="form__input" name="user_room">
                 </label>
-                <label class="form__block">
+                <label class="form__block" for="user_floor">
                   <div class="form__block-title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input id="user_floor" type="text" class="form__input" name="user_floor">
                 </label>
               </div>
             </div>
             <div class="form__section-two">
               <div class="form__row">
                 <div class="form__texarea">
-                  <div for="#" class="form__block-title">Комментарий</div>
-                  <textarea class="form__big-text-input" placeholder="..."></textarea>
+                  <label for="user_message" class="form__block-title">Комментарий</label>
+                  <textarea id="user_message" class="form__big-text-input" name="user_message" placeholder="..."></textarea>
                 </div>
               </div>
               <div class="form__buttons">
@@ -641,22 +641,20 @@
                   <div class="form__radios">
                     <div class="form__radios-container">
                       <div class="form__radio">
-                        <input type="radio" name="#" id="form__radio--ansver-yes" class="form__radio-elem">
-                        <div class="form__radio-elem-cercle"></div>
-                        <label for="form__radio--ansver-yes" class="form__block-title">Потребуеться сдача</label>
+                        <input type="radio" name="pay_option" id="pay_cash" class="form__radio-elem" value="налом" checked>
+                        <label id="сash" for="pay_cash" class="form__block-title" for="сash">Потребуеться сдача</label>
                       </div>
                       <div class="form__radio">
-                        <input type="radio" name="#" id="form__radio--ansver-no" class="form__radio-elem" checked>
-                        <div class="form__radio-elem-cercle"></div>
-                        <label for="form__radio--ansver-no" class="form__block-title">Оплата по карте</label>
+                        <input type="radio" name="pay_option" id="pay_card" class="form__radio-elem" value="картой">
+                        <label for="pay_card" class="form__block-title">Оплата по карте</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="form__row">
                   <div class="form__checkbox">
-                    <input name="#" class="form__radio-elem" type="checkbox">
-                    <div class="form__block-title">Не перезванивать</div>
+                    <input id="dont_disturb" name="dont_disturb" class="form__radio-elem" type="checkbox" value="disturb_no">
+                    <label class="form__block-title" for="dont_disturb">Не перезванивать</label>
                   </div>
                 </div>
                 <div class="form__row">

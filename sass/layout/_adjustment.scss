@@ -44,7 +44,7 @@ header, section{
   text-align: center;
 
   &:hover {
-    background-color: $orange;
+    background-color: $orange / 1.2;
   }
 }
 
@@ -59,6 +59,24 @@ header, section{
   @include tablets {
     padding: 0;
   }
+}
+
+.success{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: rem(50px);
+  color: $green;
+  margin: 0;
+  line-height: 1;
+  padding:15px;
+}
+
+.error{
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: rem(50px);
+  color: $dark;
+  margin: 0;
+  line-height: 1;
+  padding:15px;
 }
 
 .section__heading--white{
