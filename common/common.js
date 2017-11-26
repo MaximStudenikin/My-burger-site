@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    //var
+    //let
 
     let doc = document,
         hamburgerMenu = doc.getElementById('hamburger-menu'),
@@ -186,21 +186,11 @@ $(document).ready(() => {
 
         let $this = $(event.target);
         let item = $this.closest('.menu__item');
-        // debugger;
 
         item.hasClass('active')
             ? closeItem(item)
             : openItem(item)
     })
-
-// // клик вне аккордеона
-//     $(document).on('click', (event) => {
-//         const $this = $(event.currentTarget);
-//
-//         if (!$this.closest('.menu__acco').length) {
-//             closeItem($('.accordeon__item'))
-//         }
-//     });
 
 //modal window
 
@@ -235,5 +225,151 @@ $(document).ready(() => {
         keyboard: true
     });
 
+
+    //nav menu
+    const display = $('.maincontent');
+    const sections = $('.section');
+
+    let inScroll = false;
+
+    const performTransition = sectionEq => {
+        if (inScroll) return
+        inScroll = true
+
+        const position = (sectionEq * -100) + '%';
+
+        display.css({
+            'transform': `translate(0, ${position})`,
+            '-webkit-transform': `translate(0, ${position})`
+        })
+
+        sections.eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
+
+        setTimeout(() => {
+            inScroll = false;
+            switchMenuActiveClass(sectionEq);
+        }, 1300);
+    }
+
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        performTransition(sectionIndex);
+
+    });
+
+    const switchMenuActiveClass = sectionEq => {
+
+            $('.onepage-pagination').find('a').removeClass('active');
+
+        $('.onepage-pagination li a').eq(sectionEq).addClass('active');
+    }
+
+    // mail
+
+    let submitForm = function (ev) {
+        ev.preventDefault();
+
+        let form = $(ev.target);
+
+        let request = ajaxForm(form);
+
+        request.done(function(msg) {
+            let mes = msg.mes,
+                status = msg.status;
+            if (status === 'OK') {
+                $.fancybox.open({
+                    src: '<div class="success">' + mes + '</div>',
+                    type : 'html'
+                });
+            } else{
+                $.fancybox.open({
+                    src: '<div class="error">' + mes + '</div>',
+                    type : 'html'
+                });
+            }
+        });
+
+        request.fail(function(jqXHR, textStatus) {
+            console.log("Request failed: " + textStatus);
+            $.fancybox.open({
+                src: '<div class="error">О_О все пошло не так</div>',
+                type : 'html'
+            });
+        });
+
+        request.always(()=>{
+            doc.getElementById("order_form").reset();
+        });
+    }
+
+    let ajaxForm = function (form) {
+
+        let url = form.attr('action'),
+            data = form.serialize();
+
+        return $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'JSON'
+        });
+
+    }
+
+    $('#order_form').on('submit', submitForm);
+
+    //map
+
+    //map
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [59.939764, 30.350236],
+            zoom: 12,
+            controls: ['zoomControl']
+        });
+        var objects = [
+            {
+                str: 'Test!',
+                str2: 'Hdsfdsfsdsds!!!',
+                coords: [59.945396, 30.382825]
+            },
+            {
+                str: 'Test2!',
+                str2: 'dfdsfdsfdsfdsfdgds!!!',
+                coords: [59.888716, 30.311712]
+            },
+            {
+                str: 'Test3!',
+                str2: 'jfgjjtyjtyjty!!!',
+                coords: [59.971920, 30.313874]
+            },
+            {
+                str: 'Test4!',
+                str2: 'Hgdfghhtrjr6u567!!!',
+                coords: [59.917428, 30.491673]
+            }
+        ]
+
+        myMap.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom'])
+
+        for (var i = 0; i < objects.length; i++) {
+            myMap.geoObjects.add(new ymaps.Placemark(objects[i].coords, {
+                hintContent: objects[i].str,
+                balloonContent: objects[i].str2
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/Icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-23, -57],
+            }))
+        }
+    }
 
 });
