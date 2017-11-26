@@ -134,7 +134,7 @@ header, section {
   color: #fff;
   text-align: center; }
   .btn:hover {
-    background-color: #e25028; }
+    background-color: #bc4321; }
 
 .section__heading {
   font-family: 'gagalin-regular', sans-serif;
@@ -1158,9 +1158,11 @@ header, section {
   height: 109px;
   border-radius: 5px;
   background-color: #fff;
-  border: solid 1px #fff; }
+  border: solid 1px #fff;
+  margin: 0.5625rem 0 0 0; }
 
 .form__submit {
+  cursor: pointer;
   border: 0;
   margin: 0 1.25rem 0 0; }
   @media screen and (max-width: 480px) {
@@ -1168,6 +1170,7 @@ header, section {
       margin: 2rem 0 0 0; } }
 
 .form__reset {
+  cursor: pointer;
   padding: 0.625rem;
   border: transparent;
   background: none;
